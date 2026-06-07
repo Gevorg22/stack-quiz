@@ -1,4 +1,11 @@
-export type Category = 'javascript' | 'react' | 'html' | 'css' | 'all';
+export type Category =
+  | 'javascript'
+  | 'react'
+  | 'html'
+  | 'css'
+  | 'typescript'
+  | 'network'
+  | 'all';
 
 export interface Question {
   id: string;

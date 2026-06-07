@@ -1,15 +1,19 @@
-import { Category, CategoryInfo, Question } from '@/types/quiz';
+import type { Category, CategoryInfo, Question } from '@/types/quiz';
 import { shuffle } from '@/utils/shuffle';
 import { javascriptQuestions } from './javascript';
 import { reactQuestions } from './react';
 import { htmlQuestions } from './html';
 import { cssQuestions } from './css';
+import { typescriptQuestions } from './typescript';
+import { networkQuestions } from './network';
 
 export const allQuestions: Question[] = [
   ...javascriptQuestions,
   ...reactQuestions,
   ...htmlQuestions,
   ...cssQuestions,
+  ...typescriptQuestions,
+  ...networkQuestions,
 ];
 
 export const questionsByCategory: Record<Exclude<Category, 'all'>, Question[]> =
@@ -18,6 +22,8 @@ export const questionsByCategory: Record<Exclude<Category, 'all'>, Question[]> =
     react: reactQuestions,
     html: htmlQuestions,
     css: cssQuestions,
+    typescript: typescriptQuestions,
+    network: networkQuestions,
   };
 
 export function getQuestions(category: Category): Question[] {
@@ -45,6 +51,14 @@ export const categories: CategoryInfo[] = [
     gradient: 'from-cyan-400 to-cyan-600',
   },
   {
+    id: 'typescript',
+    label: 'TypeScript',
+    icon: 'TS',
+    description: `${typescriptQuestions.length} вопросов о типах, дженериках, утилитах и паттернах`,
+    color: 'text-blue-700',
+    gradient: 'from-blue-500 to-blue-700',
+  },
+  {
     id: 'html',
     label: 'HTML',
     icon: 'H',
@@ -57,15 +71,23 @@ export const categories: CategoryInfo[] = [
     label: 'CSS',
     icon: 'C',
     description: `${cssQuestions.length} вопросов о каскаде, Flexbox, Grid, анимациях`,
-    color: 'text-blue-700',
-    gradient: 'from-blue-400 to-blue-600',
+    color: 'text-purple-700',
+    gradient: 'from-purple-400 to-purple-600',
+  },
+  {
+    id: 'network',
+    label: 'Сети и Web',
+    icon: '🌐',
+    description: `${networkQuestions.length} вопросов о HTTP, CORS, REST, WebSocket, безопасности`,
+    color: 'text-teal-700',
+    gradient: 'from-teal-400 to-teal-600',
   },
   {
     id: 'all',
     label: 'Все темы',
     icon: '★',
     description: `${allQuestions.length} вопросов по всем технологиям вперемешку`,
-    color: 'text-purple-700',
-    gradient: 'from-purple-400 to-pink-500',
+    color: 'text-rose-700',
+    gradient: 'from-rose-400 to-pink-500',
   },
 ];

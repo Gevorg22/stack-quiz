@@ -20,6 +20,8 @@ const CATEGORY_LABELS: Record<string, string> = {
   react: 'React',
   html: 'HTML',
   css: 'CSS',
+  typescript: 'TypeScript',
+  network: 'Сети и Web',
 };
 
 export function QuizQuestion({
