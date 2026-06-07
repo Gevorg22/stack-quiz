@@ -8,7 +8,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Stack Quiz — тренажёр по веб-технологиям',
+  title: 'Stack Quiz | Тренажёр по веб-технологиям',
   description:
     'Проверь знания по JavaScript, React, HTML и CSS. Интерактивный квиз с подробными объяснениями.',
   keywords: ['javascript', 'react', 'html', 'css', 'quiz', 'тест', 'обучение'],

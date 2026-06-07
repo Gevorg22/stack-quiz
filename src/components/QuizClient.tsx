@@ -35,7 +35,7 @@ export function QuizClient() {
         <div className="mx-auto flex w-full max-w-2xl flex-1 flex-col px-4 py-10 sm:py-16">
           <div className="mb-10 text-center">
             <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm text-indigo-200 backdrop-blur-sm">
-              <span>🧠</span>
+              <span>🎯</span>
               <span>Тренажёр для разработчиков</span>
             </div>
             <h1 className="text-4xl font-black text-white sm:text-5xl">
