@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Stack Quiz
 
-## Getting Started
+Интерактивный тренажёр для подготовки к собеседованиям по веб-технологиям. Проверяй знания в дороге, в очереди или в любое свободное время.
 
-First, run the development server:
+**Ссылка на приложение:** https://gevorg22.github.io/stack-quiz/
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Категории вопросов
+
+**JavaScript** — 75 вопросов по замыканиям, промисам, Event Loop, прототипам, ES2022+, паттернам проектирования, оптимизации и многому другому.
+
+**React** — 75 вопросов по хукам, Concurrent Mode, Server Components, React 19, архитектурным паттернам, производительности и экосистеме.
+
+**HTML** — 50 вопросов по семантике, доступности, Web API, PWA, производительности и современным браузерным возможностям.
+
+**CSS** — 50 вопросов по специфичности, Flexbox, Grid, Container Queries, Cascade Layers, анимациям и современным CSS-функциям.
+
+**Все темы** — все 250 вопросов в случайном порядке для комплексной подготовки.
+
+## Как устроено
+
+Выбираешь категорию и отвечаешь на вопросы с вариантами ответов. При правильном ответе карточка подсвечивается зелёным, при неправильном — красным. После каждого ответа появляется подробное объяснение. Вопросы перемешиваются при каждом запуске. В конце показывается итоговый результат с процентом правильных ответов.
+
+## Стек технологий
+
+**Next.js 16** с App Router и статической генерацией (output: export).
+
+**React 19** с TypeScript.
+
+**Tailwind CSS v4** для адаптивной вёрстки.
+
+**ESLint** с eslint-config-next и eslint-config-prettier.
+
+**Prettier** для форматирования кода.
+
+**GitHub Actions** для автоматического деплоя на GitHub Pages.
+
+## Архитектура
+
+```
+src/
+  app/          — Next.js App Router (layout, page)
+  components/   — UI компоненты (QuizClient, QuizQuestion, AnswerOption, ExplanationModal, ResultScreen, ProgressBar, CategoryCard)
+  data/
+    questions/  — Базы вопросов по категориям (javascript, react, html, css)
+  hooks/        — useQuiz (логика квиза)
+  types/        — TypeScript типы (Question, Category, QuizState, CategoryInfo)
+  utils/        — shuffle (алгоритм Фишера-Йейтса)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Запуск локально
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm install
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Открой http://localhost:3000
 
-## Learn More
+## Сборка
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Статические файлы генерируются в папку `out/`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Деплой
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Деплой происходит автоматически через GitHub Actions при пуше в ветку `main`. Приложение публикуется на GitHub Pages.
