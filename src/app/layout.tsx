@@ -12,9 +12,16 @@ export const metadata: Metadata = {
   description:
     'Проверь знания по JavaScript, React, HTML и CSS. Интерактивный квиз с подробными объяснениями.',
   keywords: ['javascript', 'react', 'html', 'css', 'quiz', 'тест', 'обучение'],
+  manifest: '/manifest.webmanifest',
+  appleWebApp: {
+    capable: true,
+    title: 'Stack Quiz',
+    statusBarStyle: 'black-translucent',
+  },
   icons: {
     icon: [{ url: '/favicon.svg', type: 'image/svg+xml' }],
     shortcut: '/favicon.svg',
+    apple: [{ url: '/icons/icon-192.svg', sizes: '192x192', type: 'image/svg+xml' }],
   },
 };
 
