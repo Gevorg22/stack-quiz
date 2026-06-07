@@ -10,7 +10,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'Stack Quiz | Тренажёр по веб-технологиям',
   description:
-    'Проверь знания по JavaScript, React, HTML и CSS. Интерактивный квиз с подробными объяснениями.',
+    'Интерактивный тренажёр для подготовки к собеседованиям. 250 вопросов по JavaScript, React, HTML и CSS с подробными объяснениями. Построен на Next.js, React, TypeScript и Tailwind CSS.',
   keywords: ['javascript', 'react', 'html', 'css', 'quiz', 'тест', 'обучение'],
   manifest: '/manifest.webmanifest',
   appleWebApp: {
