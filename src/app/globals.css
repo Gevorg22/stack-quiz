@@ -1,45 +1,57 @@
 @import 'tailwindcss';
 
+@variant dark (&:where(.dark, .dark *));
+
 @theme inline {
   --font-sans: var(--font-inter);
 }
 
 @layer utilities {
   @keyframes slide-up {
-    from {
-      transform: translateY(100%);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
+    from { transform: translateY(100%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
   }
 
   @keyframes fade-in {
-    from {
-      opacity: 0;
-      transform: translateY(8px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 
-  .animate-slide-up {
-    animation: slide-up 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  @keyframes streak-pop {
+    0%, 100% { transform: scale(1); }
+    40% { transform: scale(1.55); }
   }
 
-  .animate-fade-in {
-    animation: fade-in 0.25s ease forwards;
+  @keyframes confetti-fall {
+    0% { transform: translateY(-20px) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
   }
+
+  @keyframes bounce-in {
+    0% { transform: scale(0.5); opacity: 0; }
+    70% { transform: scale(1.1); }
+    100% { transform: scale(1); opacity: 1; }
+  }
+
+  .animate-slide-up { animation: slide-up 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+  .animate-fade-in { animation: fade-in 0.25s ease forwards; }
+  .animate-streak-pop { animation: streak-pop 0.35s ease-out; }
+  .animate-bounce-in { animation: bounce-in 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
 }
 
-* {
-  -webkit-tap-highlight-color: transparent;
+* { -webkit-tap-highlight-color: transparent; }
+body { overscroll-behavior: none; }
+
+code {
+  background: #e0e7ff;
+  color: #3730a3;
+  border-radius: 4px;
+  padding: 1px 5px;
+  font-size: 0.85em;
+  font-family: ui-monospace, SFMono-Regular, monospace;
 }
 
-body {
-  overscroll-behavior: none;
+.dark code {
+  background: #312e81;
+  color: #a5b4fc;
 }

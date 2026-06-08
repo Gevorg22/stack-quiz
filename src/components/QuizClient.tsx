@@ -1,95 +1,207 @@
 'use client';
 
-import { useState } from 'react';
-import { Category } from '@/types/quiz';
-import { categories } from '@/data/questions';
-import { useQuiz } from '@/hooks/useQuiz';
+import { useCallback, useState } from 'react';
+import { Category, QuizCount, QuizResult, Question } from '@/types/quiz';
+import { categories, getQuestions, getQuestionCount } from '@/data/questions';
+import { allQuestions } from '@/data/questions';
+import { shuffle } from '@/utils/shuffle';
+import { useDarkMode } from '@/hooks/useDarkMode';
+import { useBookmarks } from '@/hooks/useBookmarks';
+import { useHistory } from '@/hooks/useHistory';
 import { CategoryCard } from './CategoryCard';
-import { QuizQuestion } from './QuizQuestion';
+import { QuizSetup } from './QuizSetup';
+import { QuizRunner } from './QuizRunner';
 import { ResultScreen } from './ResultScreen';
+import { BookmarksView } from './BookmarksView';
+import { DarkModeToggle } from './DarkModeToggle';
+
+type View = 'home' | 'setup' | 'quiz' | 'result' | 'bookmarks';
 
 export function QuizClient() {
-  const [selectedCategory, setSelectedCategory] = useState<Category | null>(
-    null,
-  );
+  const { isDark, toggle: toggleDark } = useDarkMode();
+  const { bookmarks, toggle: toggleBookmark, clearAll: clearBookmarks } = useBookmarks();
+  const { history, addEntry, clearHistory } = useHistory();
 
-  const { questions, currentQuestion, state, selectAnswer, closeExplanation, nextQuestion, restart } =
-    useQuiz(selectedCategory ?? 'javascript');
+  const [view, setView] = useState<View>('home');
+  const [selectedCategory, setSelectedCategory] = useState<Category>('javascript');
+  const [activeQuestions, setActiveQuestions] = useState<Question[]>([]);
+  const [quizKey, setQuizKey] = useState(0);
+  const [quizResult, setQuizResult] = useState<QuizResult | null>(null);
 
   const handleSelectCategory = (category: Category) => {
     setSelectedCategory(category);
+    setView('setup');
   };
 
-  const handleBack = () => {
-    setSelectedCategory(null);
-  };
+  const handleStartQuiz = useCallback(
+    (count: QuizCount) => {
+      const questions = getQuestions(selectedCategory);
+      const sliced =
+        count === 'all' ? questions : questions.slice(0, count);
+      setActiveQuestions(sliced);
+      setQuizKey((k) => k + 1);
+      setView('quiz');
+    },
+    [selectedCategory],
+  );
 
-  const handleHome = () => {
-    setSelectedCategory(null);
-    restart();
-  };
+  const handleQuizComplete = useCallback(
+    (result: QuizResult) => {
+      addEntry({
+        category: result.category,
+        score: result.score,
+        total: result.total,
+      });
+      setQuizResult(result);
+      setView('result');
+    },
+    [addEntry],
+  );
 
-  if (!selectedCategory) {
+  const handleRetryWrong = useCallback(() => {
+    if (!quizResult?.wrongQuestions.length) return;
+    setActiveQuestions(shuffle(quizResult.wrongQuestions));
+    setQuizKey((k) => k + 1);
+    setView('quiz');
+  }, [quizResult]);
+
+  const handleRestart = useCallback(() => {
+    setActiveQuestions(shuffle(activeQuestions));
+    setQuizKey((k) => k + 1);
+    setView('quiz');
+  }, [activeQuestions]);
+
+  const handleHome = useCallback(() => {
+    setView('home');
+    setQuizResult(null);
+  }, []);
+
+  const bookmarkedQuestions = allQuestions.filter((q) =>
+    bookmarks.includes(q.id),
+  );
+
+  const handleStartFromBookmarks = useCallback(() => {
+    if (!bookmarkedQuestions.length) return;
+    setSelectedCategory('all');
+    setActiveQuestions(shuffle(bookmarkedQuestions));
+    setQuizKey((k) => k + 1);
+    setView('quiz');
+  }, [bookmarkedQuestions]);
+
+  if (view === 'bookmarks') {
     return (
-      <div className="flex min-h-screen flex-col bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900">
-        <div className="mx-auto flex w-full max-w-2xl flex-1 flex-col px-4 py-10 sm:py-16">
-          <div className="mb-10 text-center">
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm text-indigo-200 backdrop-blur-sm">
-              <span>🎯</span>
-              <span>Тренажёр для разработчиков</span>
-            </div>
-            <h1 className="text-4xl font-black text-white sm:text-5xl">
-              Stack{' '}
-              <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
-                Quiz
-              </span>
-            </h1>
-            <p className="mt-3 text-base text-slate-300 sm:text-lg">
-              Выбери технологию и проверь свои знания
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-            {categories.map((category) => (
-              <CategoryCard
-                key={category.id}
-                category={category}
-                onSelect={handleSelectCategory}
-              />
-            ))}
-          </div>
-
-          <p className="mt-8 text-center text-sm text-slate-500">
-            Вопросы перемешиваются при каждом запуске
-          </p>
-        </div>
-      </div>
-    );
-  }
-
-  if (state.isFinished) {
-    return (
-      <ResultScreen
-        score={state.score}
-        total={questions.length}
-        category={selectedCategory}
-        onRestart={restart}
-        onHome={handleHome}
+      <BookmarksView
+        bookmarkedQuestions={bookmarkedQuestions}
+        isDark={isDark}
+        onToggleDark={toggleDark}
+        onRemoveBookmark={toggleBookmark}
+        onClearAll={clearBookmarks}
+        onStartQuiz={handleStartFromBookmarks}
+        onBack={handleHome}
       />
     );
   }
 
-  if (!currentQuestion) return null;
+  if (view === 'setup') {
+    return (
+      <QuizSetup
+        categoryLabel={
+          categories.find((c) => c.id === selectedCategory)?.label ??
+          selectedCategory
+        }
+        maxQuestions={getQuestionCount(selectedCategory)}
+        isDark={isDark}
+        onToggleDark={toggleDark}
+        onStart={handleStartQuiz}
+        onBack={() => setView('home')}
+      />
+    );
+  }
+
+  if (view === 'quiz') {
+    return (
+      <QuizRunner
+        key={quizKey}
+        questions={activeQuestions}
+        category={selectedCategory}
+        bookmarks={bookmarks}
+        isDark={isDark}
+        onBookmark={toggleBookmark}
+        onToggleDark={toggleDark}
+        onBack={() => setView('setup')}
+        onComplete={handleQuizComplete}
+      />
+    );
+  }
+
+  if (view === 'result' && quizResult) {
+    return (
+      <ResultScreen
+        result={quizResult}
+        history={history}
+        isDark={isDark}
+        onToggleDark={toggleDark}
+        onRetryWrong={
+          quizResult.wrongQuestions.length > 0 ? handleRetryWrong : undefined
+        }
+        onRestart={handleRestart}
+        onHome={handleHome}
+        onClearHistory={clearHistory}
+      />
+    );
+  }
 
   return (
-    <QuizQuestion
-      question={currentQuestion}
-      state={state}
-      totalQuestions={questions.length}
-      onSelectAnswer={selectAnswer}
-      onCloseExplanation={closeExplanation}
-      onNext={nextQuestion}
-      onBack={handleBack}
-    />
+    <div className="flex min-h-screen flex-col bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900">
+      <div className="mx-auto flex w-full max-w-2xl flex-1 flex-col px-4 py-10 sm:py-16">
+        <div className="mb-10 text-center">
+          <div className="mb-2 flex items-center justify-end">
+            <div className="flex items-center gap-2">
+              <button
+                onClick={() => setView('bookmarks')}
+                className="flex h-9 items-center gap-1.5 rounded-xl border border-white/20 bg-white/10 px-3 text-sm text-white backdrop-blur-sm transition-colors hover:bg-white/20"
+                aria-label="Закладки"
+              >
+                ★
+                {bookmarks.length > 0 && (
+                  <span className="rounded-full bg-yellow-400 px-1.5 py-0.5 text-xs font-bold text-slate-900">
+                    {bookmarks.length}
+                  </span>
+                )}
+              </button>
+              <DarkModeToggle isDark={isDark} onToggle={toggleDark} />
+            </div>
+          </div>
+
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm text-indigo-200 backdrop-blur-sm">
+            <span>🎯</span>
+            <span>Тренажёр для разработчиков</span>
+          </div>
+          <h1 className="text-4xl font-black text-white sm:text-5xl">
+            Stack{' '}
+            <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+              Quiz
+            </span>
+          </h1>
+          <p className="mt-3 text-base text-slate-300 sm:text-lg">
+            Выбери технологию и проверь свои знания
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          {categories.map((category) => (
+            <CategoryCard
+              key={category.id}
+              category={category}
+              onSelect={handleSelectCategory}
+            />
+          ))}
+        </div>
+
+        <p className="mt-8 text-center text-sm text-slate-500">
+          Вопросы перемешиваются при каждом запуске
+        </p>
+      </div>
+    </div>
   );
 }

@@ -32,6 +32,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru" className={`${inter.variable} h-full`}>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{var d=localStorage.getItem('sq-dark-mode');if(d==='true')document.documentElement.classList.add('dark')}catch(e){}`,
+          }}
+        />
+      </head>
       <body className="min-h-full font-sans antialiased">{children}</body>
     </html>
   );

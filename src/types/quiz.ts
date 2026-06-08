@@ -8,6 +8,8 @@ export type Category =
   | 'git'
   | 'all';
 
+export type QuizCount = 10 | 25 | 50 | 'all';
+
 export interface Question {
   id: string;
   category: Exclude<Category, 'all'>;
@@ -34,4 +36,20 @@ export interface CategoryInfo {
   description: string;
   color: string;
   gradient: string;
+}
+
+export interface HistoryEntry {
+  id: string;
+  category: Category;
+  score: number;
+  total: number;
+  date: string;
+}
+
+export interface QuizResult {
+  score: number;
+  total: number;
+  wrongQuestions: Question[];
+  maxStreak: number;
+  category: Category;
 }

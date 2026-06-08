@@ -36,6 +36,11 @@ export function getQuestions(category: Category): Question[] {
   return shuffle(questionsByCategory[category]);
 }
 
+export function getQuestionCount(category: Category): number {
+  if (category === 'all') return allQuestions.length;
+  return questionsByCategory[category].length;
+}
+
 export const categories: CategoryInfo[] = [
   {
     id: 'javascript',
