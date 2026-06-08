@@ -3,6 +3,7 @@ import type { Question } from '@/types/quiz';
 export const typescriptQuestions: Question[] = [
   {
     id: 'ts-1',
+    difficulty: 'beginner',
     category: 'typescript',
     question: 'Какое поведение будет при присвоении значения null переменной типа string при включенном флаге strictNullChecks?',
     options: [
@@ -16,6 +17,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-2',
+    difficulty: 'beginner',
     category: 'typescript',
     question: 'В чем основное отличие типа unknown от any в TypeScript?',
     options: [
@@ -29,6 +31,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-3',
+    difficulty: 'beginner',
     category: 'typescript',
     question: 'Для чего используется тип never в TypeScript?',
     options: [
@@ -42,6 +45,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-4',
+    difficulty: 'beginner',
     category: 'typescript',
     question: 'Каково отличие void от undefined в качестве возвращаемого значения функции?',
     options: [
@@ -55,6 +59,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-5',
+    difficulty: 'beginner',
     category: 'typescript',
     question: 'Какое из следующих утверждений об отличии type и interface является верным в контексте декларативного слияния (declaration merging)?',
     options: [
@@ -68,6 +73,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-6',
+    difficulty: 'beginner',
     category: 'typescript',
     question: 'Какое ограничение накладывается на использование mapped types при выборе между type и interface?',
     options: [
@@ -81,6 +87,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-7',
+    difficulty: 'beginner',
     category: 'typescript',
     question: 'Что произойдет, если создать пересечение (intersection) двух примитивных типов: type T = string & number?',
     options: [
@@ -94,6 +101,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-8',
+    difficulty: 'beginner',
     category: 'typescript',
     question: 'Почему проверка typeof value === "object" не всегда безопасна для сужения типа (type narrowing) в TypeScript?',
     options: [
@@ -107,6 +115,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-9',
+    difficulty: 'beginner',
     category: 'typescript',
     question: 'Можно ли использовать оператор instanceof для сужения типа переменной, типизированной через interface?',
     options: [
@@ -120,6 +129,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-10',
+    difficulty: 'beginner',
     category: 'typescript',
     question: 'Как ведет себя оператор in при сужении типов (type narrowing), если проверяемое свойство объявлено как опциональное (optional)?',
     options: [
@@ -133,6 +143,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-11',
+    difficulty: 'beginner',
     category: 'typescript',
     question: 'Что является ключевым требованием для создания дискриминированного объединения (discriminated union) в TypeScript?',
     options: [
@@ -146,6 +157,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-12',
+    difficulty: 'beginner',
     category: 'typescript',
     question: 'Какой синтаксис возвращаемого значения используется для объявления функции утверждения (assertion function)?',
     options: [
@@ -159,6 +171,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-13',
+    difficulty: 'beginner',
     category: 'typescript',
     question: 'Как ограничить дженерик T так, чтобы он мог быть только ключом объекта U?',
     options: [
@@ -172,6 +185,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-14',
+    difficulty: 'beginner',
     category: 'typescript',
     question: 'Что произойдет, если вызвать функцию с дженериком, имеющим тип по умолчанию <T = string>(arg: T): T, без передачи аргументов и явного указания типа?',
     options: [
@@ -185,6 +199,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-15',
+    difficulty: 'beginner',
     category: 'typescript',
     question: 'Как ведут себя условные типы (conditional types) вида T extends U ? X : Y, если в T передать union-тип (дистрибутивность)?',
     options: [
@@ -198,6 +213,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-16',
+    difficulty: 'beginner',
     category: 'typescript',
     question: 'Как извлечь тип элементов массива T с помощью условных типов и ключевого слова infer?',
     options: [
@@ -211,6 +227,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-17',
+    difficulty: 'beginner',
     category: 'typescript',
     question: 'Какое поведение демонстрирует infer, если оно используется несколько раз для одного и того же параметра типа в ковариантной позиции (например, в возвращаемом типе функций)?',
     options: [
@@ -224,6 +241,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-18',
+    difficulty: 'beginner',
     category: 'typescript',
     question: 'Как сделать все свойства объекта T опциональными и изменяемыми (убрать readonly) с помощью mapped types?',
     options: [
@@ -237,6 +255,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-19',
+    difficulty: 'beginner',
     category: 'typescript',
     question: 'Для чего используется ключевое слово as в mapped types (начиная с TypeScript 4.1)?',
     options: [
@@ -250,6 +269,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-20',
+    difficulty: 'beginner',
     category: 'typescript',
     question: 'Как полностью удалить модификаторы опциональности со всех свойств типа T при помощи mapped types?',
     options: [
@@ -263,6 +283,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-21',
+    difficulty: 'beginner',
     category: 'typescript',
     question: 'Что вернет тип, объявленный как: type Colors = "red" | "blue"; type Sizes = "S" | "M"; type Item = `${Colors}-${Sizes}`?',
     options: [
@@ -276,6 +297,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-22',
+    difficulty: 'beginner',
     category: 'typescript',
     question: 'Как с помощью template literal types переименовать ключи объекта T, добавив к каждому префикс "get"?',
     options: [
@@ -289,6 +311,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-23',
+    difficulty: 'beginner',
     category: 'typescript',
     question: 'Какая из утилит TypeScript делает все свойства объекта необязательными, но сохраняет их структуру?',
     options: [
@@ -302,6 +325,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-24',
+    difficulty: 'beginner',
     category: 'typescript',
     question: 'Чем Exclude<T, U> отличается от Omit<T, K>?',
     options: [
@@ -315,6 +339,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-25',
+    difficulty: 'beginner',
     category: 'typescript',
     question: 'Что произойдет при попытке использовать Record<string, any> для типизации объекта с произвольными ключами?',
     options: [
@@ -328,6 +353,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-26',
+    difficulty: 'intermediate',
     category: 'typescript',
     question: 'Какая встроенная утилита позволяет получить тип возвращаемого значения функции?',
     options: [
@@ -341,6 +367,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-27',
+    difficulty: 'intermediate',
     category: 'typescript',
     question: 'Для чего нужна утилита Extract<T, U> в TypeScript?',
     options: [
@@ -354,6 +381,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-28',
+    difficulty: 'intermediate',
     category: 'typescript',
     question: 'Какое поведение демонстрирует утилита NonNullable<T>?',
     options: [
@@ -367,6 +395,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-29',
+    difficulty: 'intermediate',
     category: 'typescript',
     question: 'Что вернет ReturnType<T>, если переданный тип функции имеет перегрузки (overloads)?',
     options: [
@@ -380,6 +409,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-30',
+    difficulty: 'intermediate',
     category: 'typescript',
     question: 'Как утилита Awaited<T> обрабатывает глубоко вложенные промисы (например, Promise<Promise<number>>)?',
     options: [
@@ -393,6 +423,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-31',
+    difficulty: 'intermediate',
     category: 'typescript',
     question: 'Какое из определений утилиты InstanceType является верным?',
     options: [
@@ -406,6 +437,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-32',
+    difficulty: 'intermediate',
     category: 'typescript',
     question: 'В чем ключевое преимущество оператора satisfies (TS 4.9) по сравнению с обычным аннотированием типа (: Type)?',
     options: [
@@ -419,6 +451,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-33',
+    difficulty: 'intermediate',
     category: 'typescript',
     question: 'Что произойдет с массивом при использовании утверждения as const (например, [1, 2] as const)?',
     options: [
@@ -432,6 +465,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-34',
+    difficulty: 'intermediate',
     category: 'typescript',
     question: 'Каковы особенности именованных кортежей (labeled tuples) вида [id: number, name: string] в TypeScript?',
     options: [
@@ -445,6 +479,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-35',
+    difficulty: 'intermediate',
     category: 'typescript',
     question: 'Какое поведение демонстрирует оператор rest (...) внутри кортежей?',
     options: [
@@ -458,6 +493,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-36',
+    difficulty: 'intermediate',
     category: 'typescript',
     question: 'Что такое вариативные типы кортежей (variadic tuple types)?',
     options: [
@@ -471,6 +507,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-37',
+    difficulty: 'intermediate',
     category: 'typescript',
     question: 'Какое правило совместимости накладывается на сигнатуру реализации (implementation signature) при перегрузке функций (function overloads)?',
     options: [
@@ -484,6 +521,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-38',
+    difficulty: 'intermediate',
     category: 'typescript',
     question: 'Что произойдет при слиянии объявлений (declaration merging) класса и пространства имен (namespace) с одинаковыми именами?',
     options: [
@@ -497,6 +535,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-39',
+    difficulty: 'intermediate',
     category: 'typescript',
     question: 'В чем разница компиляции namespace и ES-модулей (import/export)?',
     options: [
@@ -510,6 +549,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-40',
+    difficulty: 'intermediate',
     category: 'typescript',
     question: 'Для чего используются директивы с тремя слешами (/// <reference path="..." />)?',
     options: [
@@ -523,6 +563,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-41',
+    difficulty: 'intermediate',
     category: 'typescript',
     question: 'Какое из утверждений о .d.ts файлах является верным?',
     options: [
@@ -536,6 +577,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-42',
+    difficulty: 'intermediate',
     category: 'typescript',
     question: 'Предотвращает ли strictNullChecks ошибку обращения к несуществующему элементу массива по индексу (например, const x = arr[10] для массива string[])?',
     options: [
@@ -549,6 +591,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-43',
+    difficulty: 'intermediate',
     category: 'typescript',
     question: 'Как флаг strictFunctionTypes влияет на проверку параметров функций?',
     options: [
@@ -562,6 +605,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-44',
+    difficulty: 'intermediate',
     category: 'typescript',
     question: 'Какая опция tsconfig.json отвечает за алгоритм поиска модулей в node_modules?',
     options: [
@@ -575,6 +619,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-45',
+    difficulty: 'intermediate',
     category: 'typescript',
     question: 'Для чего нужна опция baseUrl в tsconfig.json?',
     options: [
@@ -588,6 +633,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-46',
+    difficulty: 'intermediate',
     category: 'typescript',
     question: 'Какие требования накладывает опция composite: true в tsconfig.json?',
     options: [
@@ -601,6 +647,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-47',
+    difficulty: 'intermediate',
     category: 'typescript',
     question: 'Какую ошибку предотвращает включение опции noImplicitThis?',
     options: [
@@ -614,6 +661,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-48',
+    difficulty: 'intermediate',
     category: 'typescript',
     question: 'Каким должен быть возвращаемый тип функции, являющейся пользовательским защитником типа (Type Guard)?',
     options: [
@@ -627,6 +675,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-49',
+    difficulty: 'intermediate',
     category: 'typescript',
     question: 'В чем разница между объявлением типа с сигнатурой индекса { [key: string]: T } и использованием типа Record<string, T>?',
     options: [
@@ -640,6 +689,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-50',
+    difficulty: 'intermediate',
     category: 'typescript',
     question: 'Как объявить тип readonly-массива строк?',
     options: [
@@ -653,6 +703,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-51',
+    difficulty: 'advanced',
     category: 'typescript',
     question: 'В чем заключается лазейка в безопасности обычных числовых Enum в TypeScript?',
     options: [
@@ -666,6 +717,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-52',
+    difficulty: 'advanced',
     category: 'typescript',
     question: 'Какое главное преимущество и особенность использования const enum в TypeScript?',
     options: [
@@ -679,6 +731,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-53',
+    difficulty: 'advanced',
     category: 'typescript',
     question: 'Согласно стандарту Stage 3 декораторов в TS 5.0, что возвращает декоратор метода, если он хочет заменить поведение метода?',
     options: [
@@ -692,6 +745,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-54',
+    difficulty: 'advanced',
     category: 'typescript',
     question: 'Каковы особенности инстанцирования абстрактного класса (abstract class)?',
     options: [
@@ -705,6 +759,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-55',
+    difficulty: 'advanced',
     category: 'typescript',
     question: 'Можно ли имплементировать (implements) интерфейс в классе, если этот интерфейс описывает private или protected свойства?',
     options: [
@@ -718,6 +773,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-56',
+    difficulty: 'advanced',
     category: 'typescript',
     question: 'Как реализуется паттерн Mixin (примесь) в TypeScript на уровне классов?',
     options: [
@@ -731,6 +787,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-57',
+    difficulty: 'advanced',
     category: 'typescript',
     question: 'Что такое брендирование типов (branded/nominal types) в TypeScript?',
     options: [
@@ -744,6 +801,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-58',
+    difficulty: 'advanced',
     category: 'typescript',
     question: 'Для чего используются фантомные типы (phantom/phantom types)?',
     options: [
@@ -757,6 +815,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-59',
+    difficulty: 'advanced',
     category: 'typescript',
     question: 'Как реализовать типобезопасный паттерн Builder, отслеживающий заполнение обязательных полей на этапе компиляции?',
     options: [
@@ -770,6 +829,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-60',
+    difficulty: 'advanced',
     category: 'typescript',
     question: 'Как реализовать exhaustiveness checking (проверку на полноту покрытия всех кейсов объединения) в блоке switch/case?',
     options: [
@@ -783,6 +843,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-61',
+    difficulty: 'advanced',
     category: 'typescript',
     question: 'Для чего нужен встроенный утилитный тип NoInfer<T> (представленный в TypeScript 5.4)?',
     options: [
@@ -796,6 +857,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-62',
+    difficulty: 'advanced',
     category: 'typescript',
     question: 'Какой трюк используется на уровне типов для преобразования объединения (Union) в пересечение (Intersection), например A | B -> A & B?',
     options: [
@@ -809,6 +871,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-63',
+    difficulty: 'advanced',
     category: 'typescript',
     question: 'Как ковариантность (covariance) выражается в типах TypeScript на практике?',
     options: [
@@ -822,6 +885,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-64',
+    difficulty: 'advanced',
     category: 'typescript',
     question: 'Почему в TypeScript методы класса проверяются бивариантно (bivariantly), в то время как свойства с функциональными типами проверяются контравариантно при strictFunctionTypes?',
     options: [
@@ -835,6 +899,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-65',
+    difficulty: 'advanced',
     category: 'typescript',
     question: 'Какую возможность предоставляет синтаксис const type parameters (например, <const T>(arg: T) => ...) в TS 5.0?',
     options: [
@@ -848,6 +913,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-66',
+    difficulty: 'advanced',
     category: 'typescript',
     question: 'В чем ключевой профит использования ссылок на проекты (Project References) в монорепозиториях через tsc --build?',
     options: [
@@ -861,6 +927,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-67',
+    difficulty: 'advanced',
     category: 'typescript',
     question: 'Как добавить новое свойство в существующий интерфейс сторонней библиотеки (Module Augmentation)?',
     options: [
@@ -874,6 +941,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-68',
+    difficulty: 'advanced',
     category: 'typescript',
     question: 'Как корректно типизировать кастомное свойство, добавленное в глобальный объект window в браузере?',
     options: [
@@ -887,6 +955,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-69',
+    difficulty: 'advanced',
     category: 'typescript',
     question: 'Какое поведение демонстрирует конструкция keyof typeof OBJ для runtime-объекта OBJ?',
     options: [
@@ -900,6 +969,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-70',
+    difficulty: 'advanced',
     category: 'typescript',
     question: 'Как объявить тип для структуры JSON-данных, которая может содержать бесконечно вложенные объекты и массивы (Recursive Types)?',
     options: [
@@ -913,6 +983,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-71',
+    difficulty: 'advanced',
     category: 'typescript',
     question: 'Как реализовать глубокий DeepReadonly<T>, делающий все вложенные свойства объекта readonly рекурсивно?',
     options: [
@@ -926,6 +997,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-72',
+    difficulty: 'advanced',
     category: 'typescript',
     question: 'Как на уровне типов проверить, является ли переданный тип строго never (IsNever<T>)?',
     options: [
@@ -939,6 +1011,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-73',
+    difficulty: 'advanced',
     category: 'typescript',
     question: 'Как объявить React-компонент, принимающий generic-параметр T для своих пропсов (например, список элементов List)?',
     options: [
@@ -952,6 +1025,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-74',
+    difficulty: 'advanced',
     category: 'typescript',
     question: 'В чем разница между useRef<HTMLInputElement>(null) и useRef<HTMLInputElement | null>(null) в React?',
     options: [
@@ -965,6 +1039,7 @@ export const typescriptQuestions: Question[] = [
   },
   {
     id: 'ts-75',
+    difficulty: 'advanced',
     category: 'typescript',
     question: 'Чем ComponentPropsWithRef<T> отличается от ComponentPropsWithoutRef<T>?',
     options: [

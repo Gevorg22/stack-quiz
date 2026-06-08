@@ -33,6 +33,12 @@ const CATEGORY_LABELS: Record<string, string> = {
   git: 'Git',
 };
 
+const DIFFICULTY_CONFIG = {
+  beginner:     { label: 'Базовый',     className: 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300', dot: '🟢' },
+  intermediate: { label: 'Средний',     className: 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/40 dark:text-yellow-300',   dot: '🟡' },
+  advanced:     { label: 'Продвинутый', className: 'bg-red-100 text-red-700 dark:bg-red-900/40 dark:text-red-300',               dot: '🔴' },
+};
+
 export function QuizQuestion({
   question,
   state,
@@ -105,10 +111,15 @@ export function QuizQuestion({
       <main className="mx-auto flex w-full max-w-2xl flex-1 flex-col gap-6 px-4 py-6">
         <div className="rounded-2xl bg-white p-6 shadow-sm dark:bg-slate-800 dark:shadow-slate-900/50">
           <div className="mb-4 flex items-center justify-between gap-2">
-            <div className="flex items-center gap-2">
+            <div className="flex flex-wrap items-center gap-2">
               <span className="rounded-full bg-indigo-100 px-3 py-1 text-xs font-semibold text-indigo-700 dark:bg-indigo-900/50 dark:text-indigo-300">
                 {CATEGORY_LABELS[question.category] ?? question.category}
               </span>
+              {DIFFICULTY_CONFIG[question.difficulty] && (
+                <span className={`rounded-full px-2.5 py-1 text-xs font-semibold ${DIFFICULTY_CONFIG[question.difficulty].className}`}>
+                  {DIFFICULTY_CONFIG[question.difficulty].dot} {DIFFICULTY_CONFIG[question.difficulty].label}
+                </span>
+              )}
               <span className="text-xs text-gray-400 dark:text-slate-500">
                 #{state.currentIndex + 1}
               </span>

@@ -3,6 +3,7 @@ import type { Question } from '@/types/quiz';
 export const networkQuestions: Question[] = [
   {
     id: 'network-1',
+    difficulty: 'beginner',
     category: 'network',
     question: 'Что было главным нововведением в HTTP/1.1 по сравнению с HTTP/1.0 в контексте управления соединениями?',
     options: [
@@ -16,6 +17,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-2',
+    difficulty: 'beginner',
     category: 'network',
     question: 'Как именно HTTP/2 решает проблему блокировки начала строки (Head-of-Line Blocking) на уровне прикладного протокола?',
     options: [
@@ -29,6 +31,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-3',
+    difficulty: 'beginner',
     category: 'network',
     question: 'Что такое "connection migration" (миграция соединения) в протоколе HTTP/3 (QUIC)?',
     options: [
@@ -42,6 +45,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-4',
+    difficulty: 'beginner',
     category: 'network',
     question: 'В чем ключевое различие между HTTP методами PUT и PATCH согласно спецификации RFC?',
     options: [
@@ -55,6 +59,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-5',
+    difficulty: 'beginner',
     category: 'network',
     question: 'Допускает ли спецификация HTTP отправку тела (body) в GET-запросах и как к этому относятся современные серверы/прокси?',
     options: [
@@ -68,6 +73,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-6',
+    difficulty: 'beginner',
     category: 'network',
     question: 'В каком случае браузер отправляет предварительный CORS-запрос OPTIONS (preflight)?',
     options: [
@@ -81,6 +87,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-7',
+    difficulty: 'beginner',
     category: 'network',
     question: 'Чем отличаются статус-коды перенаправления 302 Found и 307 Temporary Redirect?',
     options: [
@@ -94,6 +101,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-8',
+    difficulty: 'beginner',
     category: 'network',
     question: 'В чем разница в семантике статус-кодов 401 Unauthorized и 403 Forbidden?',
     options: [
@@ -107,6 +115,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-9',
+    difficulty: 'beginner',
     category: 'network',
     question: 'Какой статус-код наиболее подходит для индикации конфликта версий ресурса на сервере (например, при optimistic locking)?',
     options: [
@@ -120,6 +129,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-10',
+    difficulty: 'beginner',
     category: 'network',
     question: 'В чем разница между ошибками 502 Bad Gateway и 504 Gateway Timeout?',
     options: [
@@ -133,6 +143,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-11',
+    difficulty: 'beginner',
     category: 'network',
     question: 'В чем разница между директивами Cache-Control no-cache и no-store?',
     options: [
@@ -146,6 +157,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-12',
+    difficulty: 'beginner',
     category: 'network',
     question: 'Что представляет собой заголовок ETag и как он используется в механизме условных запросов (conditional requests)?',
     options: [
@@ -159,6 +171,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-13',
+    difficulty: 'beginner',
     category: 'network',
     question: 'Каково назначение HTTP-заголовка Vary?',
     options: [
@@ -172,6 +185,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-14',
+    difficulty: 'beginner',
     category: 'network',
     question: 'Для чего используется HTTP-заголовок X-Forwarded-For?',
     options: [
@@ -185,6 +199,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-15',
+    difficulty: 'beginner',
     category: 'network',
     question: 'Какую роль играет TLS Handshake при установлении HTTPS соединения?',
     options: [
@@ -198,6 +213,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-16',
+    difficulty: 'beginner',
     category: 'network',
     question: 'В чем ключевое улучшение TLS 1.3 по сравнению с TLS 1.2 в контексте производительности?',
     options: [
@@ -211,6 +227,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-17',
+    difficulty: 'beginner',
     category: 'network',
     question: 'Как браузер проверяет надежность SSL-сертификата, предоставленного сервером?',
     options: [
@@ -224,6 +241,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-18',
+    difficulty: 'beginner',
     category: 'network',
     question: 'Как соотносится действие директив s-maxage и max-age в заголовке Cache-Control?',
     options: [
@@ -237,6 +255,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-19',
+    difficulty: 'beginner',
     category: 'network',
     question: 'Что произойдет, если кэш браузера содержит устаревший ответ с заголовком Cache-Control: must-revalidate, но сервер временно недоступен?',
     options: [
@@ -250,6 +269,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-20',
+    difficulty: 'beginner',
     category: 'network',
     question: 'Как работает стратегия stale-while-revalidate в заголовке Cache-Control?',
     options: [
@@ -263,6 +283,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-21',
+    difficulty: 'beginner',
     category: 'network',
     question: 'В чем преимущество использования ETag перед Last-Modified для кэширования динамического контента?',
     options: [
@@ -276,6 +297,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-22',
+    difficulty: 'beginner',
     category: 'network',
     question: 'Какая стратегия cache-busting считается наиболее эффективной и современной для дистрибуции веб-приложений?',
     options: [
@@ -289,6 +311,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-23',
+    difficulty: 'beginner',
     category: 'network',
     question: 'Что такое Anycast в контексте работы глобальных сетей CDN?',
     options: [
@@ -302,6 +325,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-24',
+    difficulty: 'beginner',
     category: 'network',
     question: 'Какое из перечисленных условий вызовет обязательную отправку CORS Preflight запроса браузером?',
     options: [
@@ -315,6 +339,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-25',
+    difficulty: 'beginner',
     category: 'network',
     question: 'Какое ограничение накладывается на CORS-заголовок Access-Control-Allow-Origin при передаче учетных данных (withCredentials: true)?',
     options: [
@@ -328,6 +353,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-26',
+    difficulty: 'beginner',
     category: 'network',
     question: 'Что определяет "Origin" (источник) в рамках политики Same-Origin Policy?',
     options: [
@@ -341,6 +367,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-27',
+    difficulty: 'beginner',
     category: 'network',
     question: 'Каков был принцип работы технологии обхода ограничений SOP под названием JSONP (JSON with Padding)?',
     options: [
@@ -354,6 +381,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-28',
+    difficulty: 'beginner',
     category: 'network',
     question: 'Как директива CSP (Content Security Policy) default-src влияет на безопасность страницы?',
     options: [
@@ -367,6 +395,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-29',
+    difficulty: 'beginner',
     category: 'network',
     question: 'В чем заключается суть атаки CSRF (Cross-Site Request Forgery)?',
     options: [
@@ -380,6 +409,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-30',
+    difficulty: 'beginner',
     category: 'network',
     question: 'Какое поведение демонстрирует атрибут куки SameSite со значением Lax?',
     options: [
@@ -393,6 +423,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-31',
+    difficulty: 'beginner',
     category: 'network',
     question: 'В чем суть метода защиты от CSRF под названием Double Submit Cookie?',
     options: [
@@ -406,6 +437,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-32',
+    difficulty: 'beginner',
     category: 'network',
     question: 'В чем разница между хранимой (Stored) и отраженной (Reflected) XSS атаками?',
     options: [
@@ -419,6 +451,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-33',
+    difficulty: 'beginner',
     category: 'network',
     question: 'Какое из следующих свойств DOM в JavaScript является опасным "приемником" (sink) и может приводить к DOM-based XSS?',
     options: [
@@ -432,6 +465,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-34',
+    difficulty: 'intermediate',
     category: 'network',
     question: 'Почему параметризованные запросы (prepared statements) гарантируют защиту от SQL-инъекций?',
     options: [
@@ -445,6 +479,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-35',
+    difficulty: 'intermediate',
     category: 'network',
     question: 'Как современный заголовок CSP frame-ancestors превосходит устаревший заголовок X-Frame-Options для защиты от Clickjacking?',
     options: [
@@ -458,6 +493,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-36',
+    difficulty: 'intermediate',
     category: 'network',
     question: 'Что делает опция preload в HTTP-заголовке Strict-Transport-Security (HSTS)?',
     options: [
@@ -471,6 +507,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-37',
+    difficulty: 'intermediate',
     category: 'network',
     question: 'Для чего используется атрибут integrity в HTML-тегах <script> при подключении сторонних библиотек с CDN?',
     options: [
@@ -484,6 +521,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-38',
+    difficulty: 'intermediate',
     category: 'network',
     question: 'Что такое смешанное содержимое (Mixed Content) и как его обрабатывают современные браузеры?',
     options: [
@@ -497,6 +535,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-39',
+    difficulty: 'intermediate',
     category: 'network',
     question: 'Какую уязвимость минимизирует установка флага HttpOnly для авторизационных Cookie?',
     options: [
@@ -510,6 +549,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-40',
+    difficulty: 'intermediate',
     category: 'network',
     question: 'Как ведет себя область действия куки (cookie scope), если в ее атрибуте Domain указано значение "example.com"?',
     options: [
@@ -523,6 +563,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-41',
+    difficulty: 'intermediate',
     category: 'network',
     question: 'В чем заключается главная архитектурная сложность отзыва (revocation) JWT-токенов в stateless-системах?',
     options: [
@@ -536,6 +577,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-42',
+    difficulty: 'intermediate',
     category: 'network',
     question: 'Почему спецификация OAuth 2.1 признала Implicit Flow устаревшим (deprecated) в пользу Authorization Code Flow with PKCE?',
     options: [
@@ -549,6 +591,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-43',
+    difficulty: 'intermediate',
     category: 'network',
     question: 'Как механизм PKCE защищает процесс авторизации в OAuth 2.0?',
     options: [
@@ -562,6 +605,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-44',
+    difficulty: 'intermediate',
     category: 'network',
     question: 'Каково основное отличие OpenID Connect (OIDC) от базового стандарта OAuth 2.0?',
     options: [
@@ -575,6 +619,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-45',
+    difficulty: 'intermediate',
     category: 'network',
     question: 'Что означает ограничение "Stateless" (без сохранения состояния) в архитектуре REST API?',
     options: [
@@ -588,6 +633,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-46',
+    difficulty: 'intermediate',
     category: 'network',
     question: 'Какое из перечисленных требований НЕ является одним из 6 архитектурных ограничений REST?',
     options: [
@@ -601,6 +647,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-47',
+    difficulty: 'intermediate',
     category: 'network',
     question: 'Как GraphQL решает проблему избыточной выборки (over-fetching) данных, присущую традиционным REST API?',
     options: [
@@ -614,6 +661,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-48',
+    difficulty: 'intermediate',
     category: 'network',
     question: 'По какому протоколу обычно работают GraphQL Subscriptions для обеспечения реального времени (real-time)?',
     options: [
@@ -627,6 +675,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-49',
+    difficulty: 'intermediate',
     category: 'network',
     question: 'Для чего используются Fragments (фрагменты) в GraphQL?',
     options: [
@@ -640,6 +689,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-50',
+    difficulty: 'intermediate',
     category: 'network',
     question: 'В чем суть проблемы "N+1 запросов" в GraphQL и как ее решает утилита DataLoader?',
     options: [
@@ -653,6 +703,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-51',
+    difficulty: 'intermediate',
     category: 'network',
     question: 'Чем обусловлена высокая производительность gRPC по сравнению с традиционными JSON REST API?',
     options: [
@@ -666,6 +717,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-52',
+    difficulty: 'intermediate',
     category: 'network',
     question: 'Как происходит переход от стандартного HTTP соединения к постоянному соединению WebSocket?',
     options: [
@@ -679,6 +731,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-53',
+    difficulty: 'intermediate',
     category: 'network',
     question: 'Почему спецификация WebSocket обязывает маскировать (masking) фреймы, отправляемые от клиента к серверу?',
     options: [
@@ -692,6 +745,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-54',
+    difficulty: 'intermediate',
     category: 'network',
     question: 'Каково основное отличие технологии Server-Sent Events (SSE) от WebSockets?',
     options: [
@@ -705,6 +759,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-55',
+    difficulty: 'intermediate',
     category: 'network',
     question: 'В чем заключается основной недостаток технологии HTTP Long Polling по сравнению с SSE и WebSockets?',
     options: [
@@ -718,6 +773,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-56',
+    difficulty: 'intermediate',
     category: 'network',
     question: 'Какую функцию выполняет STUN-сервер в архитектуре WebRTC соединения?',
     options: [
@@ -731,6 +787,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-57',
+    difficulty: 'intermediate',
     category: 'network',
     question: 'Что представляет собой SDP (Session Description Protocol) в контексте WebRTC?',
     options: [
@@ -744,6 +801,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-58',
+    difficulty: 'intermediate',
     category: 'network',
     question: 'В чем разница между записями типа A и AAAA в системе DNS?',
     options: [
@@ -757,6 +815,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-59',
+    difficulty: 'intermediate',
     category: 'network',
     question: 'Какое ограничение накладывает спецификация DNS на использование записей типа CNAME (Canonical Name)?',
     options: [
@@ -770,6 +829,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-60',
+    difficulty: 'intermediate',
     category: 'network',
     question: 'Для чего используются TXT-записи в DNS в контексте безопасности электронной почты?',
     options: [
@@ -783,6 +843,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-61',
+    difficulty: 'intermediate',
     category: 'network',
     question: 'В чем разница между рекурсивным (recursive) и итеративным (iterative) запросами в процессе DNS lookup?',
     options: [
@@ -796,6 +857,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-62',
+    difficulty: 'intermediate',
     category: 'network',
     question: 'В чем заключается фундаментальное отличие транспортных протоколов TCP и UDP?',
     options: [
@@ -809,6 +871,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-63',
+    difficulty: 'intermediate',
     category: 'network',
     question: 'Какова последовательность флагов в пакетах при установлении соединения через TCP 3-way handshake?',
     options: [
@@ -822,6 +885,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-64',
+    difficulty: 'intermediate',
     category: 'network',
     question: 'Почему потеря единичного TCP-пакета при использовании HTTP/2 может снизить производительность сильнее, чем при HTTP/1.1?',
     options: [
@@ -835,6 +899,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-65',
+    difficulty: 'intermediate',
     category: 'network',
     question: 'Какой алгоритм сжатия заголовков используется в спецификации HTTP/2 для оптимизации оверхеда?',
     options: [
@@ -848,6 +913,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-66',
+    difficulty: 'intermediate',
     category: 'network',
     question: 'Как протокол QUIC (HTTP/3) устраняет проблему блокировки начала строки (Head-of-Line Blocking) транспортного уровня?',
     options: [
@@ -861,6 +927,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-67',
+    difficulty: 'advanced',
     category: 'network',
     question: 'Для чего используется заголовок Keep-Alive в HTTP/1.1?',
     options: [
@@ -874,6 +941,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-68',
+    difficulty: 'advanced',
     category: 'network',
     question: 'В чем разница между директивами предзагрузки ресурсов rel="preload" и rel="prefetch"?',
     options: [
@@ -887,6 +955,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-69',
+    difficulty: 'advanced',
     category: 'network',
     question: 'Чем dns-prefetch отличается от preconnect?',
     options: [
@@ -900,6 +969,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-70',
+    difficulty: 'advanced',
     category: 'network',
     question: 'В чем преимущество использования rel="modulepreload" перед обычным rel="preload" для JS-файлов?',
     options: [
@@ -913,6 +983,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-71',
+    difficulty: 'advanced',
     category: 'network',
     question: 'Какую метрику оценивает показатель Interaction to Next Paint (INP), пришедший на смену FID в Core Web Vitals?',
     options: [
@@ -926,6 +997,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-72',
+    difficulty: 'advanced',
     category: 'network',
     question: 'Какие три основные составляющие формируют итоговую метрику TTFB (Time to First Byte)?',
     options: [
@@ -939,6 +1011,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-73',
+    difficulty: 'advanced',
     category: 'network',
     question: 'Каким образом ресурсы CSS влияют на построение веб-страницы (Critical Rendering Path)?',
     options: [
@@ -952,6 +1025,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-74',
+    difficulty: 'advanced',
     category: 'network',
     question: 'В каком порядке выполнятся скрипты, подключенные как <script async src="a.js"> и <script defer src="b.js">?',
     options: [
@@ -965,6 +1039,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-75',
+    difficulty: 'advanced',
     category: 'network',
     question: 'Как работает современный стандарт ленивой загрузки изображений loading="lazy"?',
     options: [
@@ -978,6 +1053,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-76',
+    difficulty: 'advanced',
     category: 'network',
     question: 'В чем преимущество использования современных форматов изображений AVIF и WebP перед JPEG и PNG?',
     options: [
@@ -991,6 +1067,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-77',
+    difficulty: 'advanced',
     category: 'network',
     question: 'Какое поведение демонстрирует свойство font-display со значением swap при загрузке кастомных шрифтов?',
     options: [
@@ -1004,6 +1081,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-78',
+    difficulty: 'advanced',
     category: 'network',
     question: 'В какой момент жизненного цикла страницы происходит выполнение скриптов с атрибутом defer?',
     options: [
@@ -1017,6 +1095,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-79',
+    difficulty: 'advanced',
     category: 'network',
     question: 'Какое поведение по умолчанию имеют JS скрипты, подключенные с типом модуля <script type="module">?',
     options: [
@@ -1030,6 +1109,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-80',
+    difficulty: 'advanced',
     category: 'network',
     question: 'Какое событие в жизненном цикле Service Worker используется для предварительного кэширования статических ресурсов (app shell)?',
     options: [
@@ -1043,6 +1123,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-81',
+    difficulty: 'advanced',
     category: 'network',
     question: 'В каком сценарии наиболее эффективна стратегия кэширования Cache First (Сначала кэш)?',
     options: [
@@ -1056,6 +1137,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-82',
+    difficulty: 'advanced',
     category: 'network',
     question: 'Каков принцип работы стратегии кэширования Network First (Сначала сеть)?',
     options: [
@@ -1069,6 +1151,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-83',
+    difficulty: 'advanced',
     category: 'network',
     question: 'Что делает Background Sync API, доступный в Service Worker?',
     options: [
@@ -1082,6 +1165,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-84',
+    difficulty: 'advanced',
     category: 'network',
     question: 'Для чего используется протокол VAPID (Voluntary Application Server Identification) при работе с Web Push уведомлениями?',
     options: [
@@ -1095,6 +1179,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-85',
+    difficulty: 'advanced',
     category: 'network',
     question: 'В чем основное отличие localStorage от sessionStorage?',
     options: [
@@ -1108,6 +1193,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-86',
+    difficulty: 'advanced',
     category: 'network',
     question: 'Каковы ключевые преимущества IndexedDB перед localStorage для хранения данных в браузере?',
     options: [
@@ -1121,6 +1207,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-87',
+    difficulty: 'advanced',
     category: 'network',
     question: 'Что происходит, когда браузер достигает жесткой квоты на объем хранимых данных (Storage Quota Limit) для домена?',
     options: [
@@ -1134,6 +1221,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-88',
+    difficulty: 'advanced',
     category: 'network',
     question: 'В чем ключевое отличие алгоритма ограничения частоты запросов Token Bucket (Корзина токенов) от Leaky Bucket (Протекающее ведро)?',
     options: [
@@ -1147,6 +1235,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-89',
+    difficulty: 'advanced',
     category: 'network',
     question: 'Почему пагинация на основе курсора (cursor-based pagination) предпочтительнее пагинации на основе смещения (offset-based) для бесконечных лент данных?',
     options: [
@@ -1160,6 +1249,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-90',
+    difficulty: 'advanced',
     category: 'network',
     question: 'Какую основную задачу решает архитектурный паттерн BFF (Backend for Frontend)?',
     options: [
@@ -1173,6 +1263,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-91',
+    difficulty: 'advanced',
     category: 'network',
     question: 'В чем недостаток версионирования API через заголовки запросов (например, Accept: application/vnd.company.v2+json) по сравнению с версионированием в URL path (/api/v2/...)?',
     options: [
@@ -1186,6 +1277,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-92',
+    difficulty: 'advanced',
     category: 'network',
     question: 'Какое ключевое преимущество дает использование спецификации OpenAPI (Swagger) при разработке веб-приложений?',
     options: [
@@ -1199,6 +1291,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-93',
+    difficulty: 'advanced',
     category: 'network',
     question: 'В чем разница в архитектуре взаимодействия между технологиями Webhooks и Polling?',
     options: [
@@ -1212,6 +1305,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-94',
+    difficulty: 'advanced',
     category: 'network',
     question: 'Как заголовок Idempotency-Key помогает обрабатывать сетевые сбои при отправке платежей API?',
     options: [
@@ -1225,6 +1319,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-95',
+    difficulty: 'advanced',
     category: 'network',
     question: 'Как реализуется оптимистичное управление блокировками (Optimistic Concurrency Control) в REST API с помощью HTTP-заголовков?',
     options: [
@@ -1238,6 +1333,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-96',
+    difficulty: 'advanced',
     category: 'network',
     question: 'В каком сценарии наиболее эффективно использовать алгоритм балансировки нагрузки IP Hash?',
     options: [
@@ -1251,6 +1347,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-97',
+    difficulty: 'advanced',
     category: 'network',
     question: 'Какую основную функцию выполняет обратный прокси (Reverse Proxy), например Nginx, перед веб-приложением?',
     options: [
@@ -1264,6 +1361,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-98',
+    difficulty: 'advanced',
     category: 'network',
     question: 'В чем главное преимущество Edge Computing (пограничных вычислений) перед классической облачной инфраструктурой (Cloud VM)?',
     options: [
@@ -1277,6 +1375,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-99',
+    difficulty: 'advanced',
     category: 'network',
     question: 'Каким образом микрофронтенды обычно оптимизируют сетевую нагрузку при загрузке общих библиотек (например, React)?',
     options: [
@@ -1290,6 +1389,7 @@ export const networkQuestions: Question[] = [
   },
   {
     id: 'network-100',
+    difficulty: 'advanced',
     category: 'network',
     question: 'Как работает загрузка удаленных модулей по сети при использовании Webpack Module Federation?',
     options: [

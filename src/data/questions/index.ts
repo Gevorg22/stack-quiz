@@ -1,4 +1,4 @@
-import type { Category, CategoryInfo, Question } from '@/types/quiz';
+import type { Category, CategoryInfo, Difficulty, Question } from '@/types/quiz';
 import { shuffle } from '@/utils/shuffle';
 import { javascriptQuestions } from './javascript';
 import { reactQuestions } from './react';
@@ -29,16 +29,24 @@ export const questionsByCategory: Record<Exclude<Category, 'all'>, Question[]> =
     git: gitQuestions,
   };
 
-export function getQuestions(category: Category): Question[] {
-  if (category === 'all') {
-    return shuffle(allQuestions);
-  }
-  return shuffle(questionsByCategory[category]);
+export function getQuestions(
+  category: Category,
+  difficulty?: Difficulty,
+): Question[] {
+  const pool =
+    category === 'all' ? allQuestions : questionsByCategory[category];
+  const filtered = difficulty ? pool.filter((q) => q.difficulty === difficulty) : pool;
+  return shuffle(filtered);
 }
 
-export function getQuestionCount(category: Category): number {
-  if (category === 'all') return allQuestions.length;
-  return questionsByCategory[category].length;
+export function getQuestionCount(
+  category: Category,
+  difficulty?: Difficulty,
+): number {
+  const pool =
+    category === 'all' ? allQuestions : questionsByCategory[category];
+  if (!difficulty) return pool.length;
+  return pool.filter((q) => q.difficulty === difficulty).length;
 }
 
 export const categories: CategoryInfo[] = [

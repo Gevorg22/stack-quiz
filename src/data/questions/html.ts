@@ -3,6 +3,7 @@ import { Question } from '@/types/quiz';
 export const htmlQuestions: Question[] = [
   {
     id: 'html-1',
+    difficulty: 'beginner',
     category: 'html',
     question: 'Что такое DOCTYPE и зачем он нужен?',
     options: [
@@ -17,6 +18,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-2',
+    difficulty: 'beginner',
     category: 'html',
     question: 'В чём разница между тегами <div> и <span>?',
     options: [
@@ -31,6 +33,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-3',
+    difficulty: 'beginner',
     category: 'html',
     question: 'Для чего используются семантические теги HTML5?',
     options: [
@@ -45,6 +48,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-4',
+    difficulty: 'beginner',
     category: 'html',
     question: 'Что такое атрибут alt у изображений?',
     options: [
@@ -59,6 +63,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-5',
+    difficulty: 'beginner',
     category: 'html',
     question: 'В чём разница между атрибутами id и class?',
     options: [
@@ -73,6 +78,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-6',
+    difficulty: 'beginner',
     category: 'html',
     question: 'Что такое data-атрибуты в HTML?',
     options: [
@@ -87,6 +93,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-7',
+    difficulty: 'beginner',
     category: 'html',
     question: 'Что такое тег <meta> и для чего используется?',
     options: [
@@ -101,6 +108,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-8',
+    difficulty: 'beginner',
     category: 'html',
     question: 'В чём разница между тегами <strong> и <b>?',
     options: [
@@ -115,6 +123,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-9',
+    difficulty: 'beginner',
     category: 'html',
     question: 'Что такое атрибут tabindex?',
     options: [
@@ -129,6 +138,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-10',
+    difficulty: 'beginner',
     category: 'html',
     question: 'Что такое тег <canvas>?',
     options: [
@@ -143,6 +153,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-11',
+    difficulty: 'beginner',
     category: 'html',
     question: 'Что такое атрибут async и defer у тега <script>?',
     options: [
@@ -157,6 +168,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-12',
+    difficulty: 'beginner',
     category: 'html',
     question: 'Для чего используется тег <picture>?',
     options: [
@@ -171,6 +183,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-13',
+    difficulty: 'beginner',
     category: 'html',
     question: 'Что такое ARIA-атрибуты?',
     options: [
@@ -185,6 +198,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-14',
+    difficulty: 'beginner',
     category: 'html',
     question: 'Что делает тег <link rel="preload">?',
     options: [
@@ -199,6 +213,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-15',
+    difficulty: 'beginner',
     category: 'html',
     question: 'Что такое Web Storage API?',
     options: [
@@ -213,6 +228,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-16',
+    difficulty: 'beginner',
     category: 'html',
     question: 'В чём разница между тегами <article> и <section>?',
     options: [
@@ -227,6 +243,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-17',
+    difficulty: 'beginner',
     category: 'html',
     question: 'Что такое атрибут loading="lazy" у изображений?',
     options: [
@@ -241,6 +258,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-18',
+    difficulty: 'beginner',
     category: 'html',
     question: 'Что такое Shadow DOM?',
     options: [
@@ -255,6 +273,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-19',
+    difficulty: 'beginner',
     category: 'html',
     question: 'Для чего используется тег <template> в HTML?',
     options: [
@@ -269,6 +288,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-20',
+    difficulty: 'beginner',
     category: 'html',
     question: 'Что такое атрибут role в HTML?',
     options: [
@@ -283,6 +303,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-21',
+    difficulty: 'beginner',
     category: 'html',
     question: 'Что такое прогрессивное улучшение (Progressive Enhancement) в HTML?',
     options: [
@@ -297,6 +318,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-22',
+    difficulty: 'beginner',
     category: 'html',
     question: 'Что такое атрибут contenteditable?',
     options: [
@@ -311,6 +333,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-23',
+    difficulty: 'beginner',
     category: 'html',
     question: 'Что такое элемент <details> и <summary>?',
     options: [
@@ -325,6 +348,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-24',
+    difficulty: 'beginner',
     category: 'html',
     question: 'Что такое атрибут defer и async у тега <script>?',
     options: [
@@ -339,6 +363,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-25',
+    difficulty: 'beginner',
     category: 'html',
     question: 'Что такое атрибут tabindex и как управлять фокусом?',
     options: [
@@ -353,6 +378,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-26',
+    difficulty: 'beginner',
     category: 'html',
     question: 'Что такое атрибут loading="lazy" у изображений и iframe?',
     options: [
@@ -367,6 +393,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-27',
+    difficulty: 'beginner',
     category: 'html',
     question: 'Что такое элемент <picture> и зачем использовать вместо <img>?',
     options: [
@@ -381,6 +408,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-28',
+    difficulty: 'beginner',
     category: 'html',
     question: 'Что такое Intersection Observer API?',
     options: [
@@ -395,6 +423,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-29',
+    difficulty: 'beginner',
     category: 'html',
     question: 'Что такое Web Workers и когда применять?',
     options: [
@@ -409,6 +438,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-30',
+    difficulty: 'beginner',
     category: 'html',
     question: 'Что такое Mutation Observer API?',
     options: [
@@ -423,6 +453,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-31',
+    difficulty: 'beginner',
     category: 'html',
     question: 'Что такое Performance Observer API?',
     options: [
@@ -437,6 +468,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-32',
+    difficulty: 'beginner',
     category: 'html',
     question: 'Что такое атрибут fetchpriority у изображений и скриптов?',
     options: [
@@ -451,6 +483,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-33',
+    difficulty: 'beginner',
     category: 'html',
     question: 'Что такое IndexedDB и когда использовать вместо localStorage?',
     options: [
@@ -465,6 +498,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-34',
+    difficulty: 'intermediate',
     category: 'html',
     question: 'Что такое атрибуты crossorigin и integrity у тега <script>/<link>?',
     options: [
@@ -479,6 +513,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-35',
+    difficulty: 'intermediate',
     category: 'html',
     question: 'Что такое <link rel="preconnect"> и <link rel="dns-prefetch">?',
     options: [
@@ -493,6 +528,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-36',
+    difficulty: 'intermediate',
     category: 'html',
     question: 'Что такое Content Security Policy (CSP)?',
     options: [
@@ -507,6 +543,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-37',
+    difficulty: 'intermediate',
     category: 'html',
     question: 'Что такое Progressive Web App (PWA) и её ключевые технологии?',
     options: [
@@ -521,6 +558,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-38',
+    difficulty: 'intermediate',
     category: 'html',
     question: 'Что такое Web Components и их основные технологии?',
     options: [
@@ -535,6 +573,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-39',
+    difficulty: 'intermediate',
     category: 'html',
     question: 'Что такое атрибут autocomplete у форм?',
     options: [
@@ -549,6 +588,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-40',
+    difficulty: 'intermediate',
     category: 'html',
     question: 'Что такое HTML Drag and Drop API?',
     options: [
@@ -563,6 +603,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-41',
+    difficulty: 'intermediate',
     category: 'html',
     question: 'Что такое атрибуты aria-label, aria-labelledby, aria-describedby?',
     options: [
@@ -577,6 +618,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-42',
+    difficulty: 'intermediate',
     category: 'html',
     question: 'Что такое Beacon API?',
     options: [
@@ -591,6 +633,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-43',
+    difficulty: 'intermediate',
     category: 'html',
     question: 'Что такое атрибут rel у тега <a> и зачем rel="noopener noreferrer"?',
     options: [
@@ -605,6 +648,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-44',
+    difficulty: 'intermediate',
     category: 'html',
     question: 'Что такое Resize Observer API?',
     options: [
@@ -619,6 +663,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-45',
+    difficulty: 'intermediate',
     category: 'html',
     question: 'Что такое атрибут translate у HTML-элементов?',
     options: [
@@ -633,6 +678,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-46',
+    difficulty: 'intermediate',
     category: 'html',
     question: 'Что такое Cache API и как использовать с Service Worker?',
     options: [
@@ -647,6 +693,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-47',
+    difficulty: 'intermediate',
     category: 'html',
     question: 'Что такое атрибут spellcheck и lang в HTML?',
     options: [
@@ -661,6 +708,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-48',
+    difficulty: 'intermediate',
     category: 'html',
     question: 'Что такое Picture-in-Picture API и fullscreen API?',
     options: [
@@ -675,6 +723,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-49',
+    difficulty: 'intermediate',
     category: 'html',
     question: 'Что такое Open Graph и Twitter Card мета-теги?',
     options: [
@@ -689,6 +738,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-50',
+    difficulty: 'intermediate',
     category: 'html',
     question: 'Что такое атрибут inputmode у input-элементов?',
     options: [
@@ -703,6 +753,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-51',
+    difficulty: 'intermediate',
     category: 'html',
     question: 'В чём разница между использованием `document.importNode(template.content, true)` и `template.content.cloneNode(true)` при клонировании содержимого тега `<template>`?',
     options: [
@@ -717,6 +768,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-52',
+    difficulty: 'intermediate',
     category: 'html',
     question: 'Какой метод используется для получения списка DOM-узлов, которые были распределены и вставлены в конкретный `<slot>` в Shadow DOM?',
     options: [
@@ -731,6 +783,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-53',
+    difficulty: 'intermediate',
     category: 'html',
     question: 'Какое утверждение о жизненном цикле Custom Elements является верным в отношении вызова `connectedCallback`?',
     options: [
@@ -745,6 +798,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-54',
+    difficulty: 'intermediate',
     category: 'html',
     question: 'Что необходимо объявить в классе кастомного элемента, чтобы метод `attributeChangedCallback` вызывался при изменении атрибутов?',
     options: [
@@ -759,6 +813,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-55',
+    difficulty: 'intermediate',
     category: 'html',
     question: 'В каком случае вызывается callback-метод `adoptedCallback` в жизненном цикле Custom Elements?',
     options: [
@@ -773,6 +828,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-56',
+    difficulty: 'intermediate',
     category: 'html',
     question: 'Какое преимущество дает использование `adoptedStyleSheets` по сравнению со вставкой тегов `<style>` внутрь Shadow DOM?',
     options: [
@@ -787,6 +843,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-57',
+    difficulty: 'intermediate',
     category: 'html',
     question: 'Как правильно объявить декларативный Shadow DOM (Declarative Shadow DOM) прямо в HTML-разметке без использования JavaScript?',
     options: [
@@ -801,6 +858,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-58',
+    difficulty: 'intermediate',
     category: 'html',
     question: 'Какую основную проблему решает новый Navigation API по сравнению с классическим History API (window.history)?',
     options: [
@@ -815,6 +873,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-59',
+    difficulty: 'intermediate',
     category: 'html',
     question: 'Какой метод используется для запуска анимации перехода между состояниями интерфейса с помощью View Transitions API?',
     options: [
@@ -829,6 +888,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-60',
+    difficulty: 'intermediate',
     category: 'html',
     question: 'Как объявляются правила для Speculation Rules API, позволяющего браузеру превентивно загружать (prefetch) или рендерить в фоне (prerender) будущие страницы?',
     options: [
@@ -843,6 +903,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-61',
+    difficulty: 'intermediate',
     category: 'html',
     question: 'Какие классы предоставляет Compression Streams API для сжатия и декомпрессии данных на стороне клиента в браузере?',
     options: [
@@ -857,6 +918,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-62',
+    difficulty: 'intermediate',
     category: 'html',
     question: 'С помощью какого метода File System Access API можно открыть диалоговое окно для выбора и последующего чтения локального файла пользователем?',
     options: [
@@ -871,6 +933,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-63',
+    difficulty: 'intermediate',
     category: 'html',
     question: 'Что возвращает успешный вызов метода `open()` у объекта `EyeDropper` при выборе цвета пользователем?',
     options: [
@@ -885,6 +948,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-64',
+    difficulty: 'intermediate',
     category: 'html',
     question: 'Какое поведение по умолчанию демонстрирует элемент с атрибутом `popover="auto"`?',
     options: [
@@ -899,6 +963,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-65',
+    difficulty: 'intermediate',
     category: 'html',
     question: 'В чём разница между методами `show()` и `showModal()` у элемента `<dialog>`?',
     options: [
@@ -913,6 +978,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-66',
+    difficulty: 'intermediate',
     category: 'html',
     question: 'Какое новое стандартное CSS-псевдосостояние или псевдоэлемент позволяет анимировать плавное открытие содержимого тега `<details>` без костылей на JS?',
     options: [
@@ -927,6 +993,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-67',
+    difficulty: 'advanced',
     category: 'html',
     question: 'В чём заключается семантическое различие между элементами `<meter>` и `<progress>`?',
     options: [
@@ -941,6 +1008,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-68',
+    difficulty: 'advanced',
     category: 'html',
     question: 'Для чего семантически предназначен элемент `<output>` в HTML5?',
     options: [
@@ -955,6 +1023,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-69',
+    difficulty: 'advanced',
     category: 'html',
     question: 'Как связать текстовое поле ввода `<input type="text">` с набором предустановленных вариантов из элемента `<datalist>`?',
     options: [
@@ -969,6 +1038,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-70',
+    difficulty: 'advanced',
     category: 'html',
     question: 'Почему связка элементов `<fieldset>` и `<legend>` критически важна для доступности (A11y) сложных веб-форм?',
     options: [
@@ -983,6 +1053,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-71',
+    difficulty: 'advanced',
     category: 'html',
     question: 'Какая разница между вызовами методов `checkValidity()` и `reportValidity()` у HTML-формы?',
     options: [
@@ -997,6 +1068,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-72',
+    difficulty: 'advanced',
     category: 'html',
     question: 'Что происходит, если добавить атрибут `novalidate` к элементу `<form>`?',
     options: [
@@ -1011,6 +1083,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-73',
+    difficulty: 'advanced',
     category: 'html',
     question: 'Какое свойство объекта `element.validity` (Constraint Validation API) принимает значение `true`, если введенное значение в поле `<input type="email">` не соответствует регулярному выражению в атрибуте `pattern`?',
     options: [
@@ -1025,6 +1098,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-74',
+    difficulty: 'advanced',
     category: 'html',
     question: 'В чём разница между использованием `<input type="number">` и `<input inputmode="numeric">`?',
     options: [
@@ -1039,6 +1113,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-75',
+    difficulty: 'advanced',
     category: 'html',
     question: 'Для чего предназначен глобальный HTML-атрибут `enterkeyhint`?',
     options: [
@@ -1053,6 +1128,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-76',
+    difficulty: 'advanced',
     category: 'html',
     question: 'Как с помощью атрибута `autocapitalize` настроить поле ввода так, чтобы на мобильных устройствах каждое новое слово автоматически начиналось с заглавной буквы?',
     options: [
@@ -1067,6 +1143,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-77',
+    difficulty: 'advanced',
     category: 'html',
     question: 'Как ведет себя атрибут `spellcheck` при наследовании в HTML?',
     options: [
@@ -1081,6 +1158,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-78',
+    difficulty: 'advanced',
     category: 'html',
     question: 'В чём разница между классическим `<div hidden>` и новой спецификацией `<div hidden="until-found">`?',
     options: [
@@ -1095,6 +1173,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-79',
+    difficulty: 'advanced',
     category: 'html',
     question: 'Что происходит с HTML-элементом и его потомками при добавлении логического атрибута `inert`?',
     options: [
@@ -1109,6 +1188,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-80',
+    difficulty: 'advanced',
     category: 'html',
     question: 'Для чего используется атрибут `blocking="render"` на тегах `<link>` или `<script>`?',
     options: [
@@ -1123,6 +1203,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-81',
+    difficulty: 'advanced',
     category: 'html',
     question: 'Какой приоритет загрузки назначит браузер по умолчанию для изображения, находящегося в верхней части экрана (LCP-кандидат), если на нём явно указать атрибут `fetchpriority="high"`?',
     options: [
@@ -1137,6 +1218,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-82',
+    difficulty: 'advanced',
     category: 'html',
     question: 'В чём главное преимущество `<link rel="modulepreload">` перед стандартным `<link rel="preload" as="script">` при предзагрузке ES-модулей?',
     options: [
@@ -1151,6 +1233,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-83',
+    difficulty: 'advanced',
     category: 'html',
     question: 'На каких HTML-элементах допускается использование атрибута `fetchpriority` согласно спецификации?',
     options: [
@@ -1165,6 +1248,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-84',
+    difficulty: 'advanced',
     category: 'html',
     question: 'Какую основную задачу решает новый встроенный HTML Sanitizer API?',
     options: [
@@ -1179,6 +1263,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-85',
+    difficulty: 'advanced',
     category: 'html',
     question: 'Каким образом Trusted Types API помогает бороться с DOM-based XSS (Cross-Site Scripting)?',
     options: [
@@ -1193,6 +1278,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-86',
+    difficulty: 'advanced',
     category: 'html',
     question: 'В чём ключевое отличие Document Picture-in-Picture API от стандартного Picture-in-Picture API?',
     options: [
@@ -1207,6 +1293,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-87',
+    difficulty: 'advanced',
     category: 'html',
     question: 'Какая комбинация значений атрибута `sandbox` у `<iframe>` позволит загруженному стороннему документу выполнять скрипты, но предотвратит его доступ к файлам cookie основного (родительского) домена, даже если они находятся на одном origin?',
     options: [
@@ -1221,6 +1308,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-88',
+    difficulty: 'advanced',
     category: 'html',
     question: 'Для чего используется атрибут `credentialless` на теге `<iframe>`?',
     options: [
@@ -1235,6 +1323,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-89',
+    difficulty: 'advanced',
     category: 'html',
     question: 'Какие именно HTTP-заголовки необходимо установить на сервере, чтобы перевести страницу в режим Cross-Origin Isolation, позволяющий использовать высокоточные таймеры и `SharedArrayBuffer`?',
     options: [
@@ -1249,6 +1338,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-90',
+    difficulty: 'advanced',
     category: 'html',
     question: 'Как с помощью атрибута `allow` у тега `<iframe>` разрешить стороннему сайту использовать геолокацию и камеру пользователя?',
     options: [
@@ -1263,6 +1353,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-91',
+    difficulty: 'advanced',
     category: 'html',
     question: 'Для чего в современной веб-разработке используется Reporting API?',
     options: [
@@ -1277,6 +1368,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-92',
+    difficulty: 'advanced',
     category: 'html',
     question: 'Какой метод Performance Timeline API вернет все собранные браузером метрики производительности, связанные с загрузкой внешних ресурсов?',
     options: [
@@ -1291,6 +1383,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-93',
+    difficulty: 'advanced',
     category: 'html',
     question: 'Какая задача в браузере считается "долгой" (Long Task) согласно спецификации Long Tasks API?',
     options: [
@@ -1305,6 +1398,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-94',
+    difficulty: 'advanced',
     category: 'html',
     question: 'Каким образом Layout Instability API позволяет измерить сдвиги макета (Cumulative Layout Shift) на странице?',
     options: [
@@ -1319,6 +1413,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-95',
+    difficulty: 'advanced',
     category: 'html',
     question: 'Что необходимо добавить в HTML-разметку элемента (например, `<img>`), чтобы отследить точное время его отрисовки с помощью Element Timing API?',
     options: [
@@ -1333,6 +1428,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-96',
+    difficulty: 'advanced',
     category: 'html',
     question: 'Какое событие или запись ищет PerformanceObserver при измерении метрики Largest Contentful Paint (LCP)?',
     options: [
@@ -1347,6 +1443,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-97',
+    difficulty: 'advanced',
     category: 'html',
     question: 'Какая метрика Web Vitals официально заменила FID (First Input Delay) в марте 2024 года в качестве основного показателя отзывчивости интерфейса?',
     options: [
@@ -1361,6 +1458,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-98',
+    difficulty: 'advanced',
     category: 'html',
     question: 'Как с помощью User Timing API измерить точное время выполнения функции и получить результат разницы между двумя метками?',
     options: [
@@ -1375,6 +1473,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-99',
+    difficulty: 'advanced',
     category: 'html',
     question: 'Какое свойство объекта `PerformanceResourceTiming` позволяет узнать реальный объем данных в байтах, переданный по сети при загрузке скрипта, включая сжатие и заголовки?',
     options: [
@@ -1389,6 +1488,7 @@ export const htmlQuestions: Question[] = [
   },
   {
     id: 'html-100',
+    difficulty: 'advanced',
     category: 'html',
     question: 'В чём ключевое технологическое преимущество WebTransport API перед WebSockets и Server-Sent Events (SSE)?',
     options: [

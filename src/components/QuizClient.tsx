@@ -1,7 +1,7 @@
 'use client';
 
 import { useCallback, useState } from 'react';
-import { Category, QuizCount, QuizResult, Question } from '@/types/quiz';
+import { Category, Difficulty, QuizCount, QuizResult, Question } from '@/types/quiz';
 import { categories, getQuestions, getQuestionCount } from '@/data/questions';
 import { allQuestions } from '@/data/questions';
 import { shuffle } from '@/utils/shuffle';
@@ -34,10 +34,9 @@ export function QuizClient() {
   };
 
   const handleStartQuiz = useCallback(
-    (count: QuizCount) => {
-      const questions = getQuestions(selectedCategory);
-      const sliced =
-        count === 'all' ? questions : questions.slice(0, count);
+    (count: QuizCount, difficulty?: Difficulty) => {
+      const questions = getQuestions(selectedCategory, difficulty);
+      const sliced = count === 'all' ? questions : questions.slice(0, count);
       setActiveQuestions(sliced);
       setQuizKey((k) => k + 1);
       setView('quiz');
@@ -109,7 +108,12 @@ export function QuizClient() {
           categories.find((c) => c.id === selectedCategory)?.label ??
           selectedCategory
         }
-        maxQuestions={getQuestionCount(selectedCategory)}
+        totalCount={getQuestionCount(selectedCategory)}
+        countByDifficulty={{
+          beginner:     getQuestionCount(selectedCategory, 'beginner'),
+          intermediate: getQuestionCount(selectedCategory, 'intermediate'),
+          advanced:     getQuestionCount(selectedCategory, 'advanced'),
+        }}
         isDark={isDark}
         onToggleDark={toggleDark}
         onStart={handleStartQuiz}

@@ -1,3 +1,5 @@
+export type Difficulty = 'beginner' | 'intermediate' | 'advanced';
+
 export type Category =
   | 'javascript'
   | 'react'
@@ -13,6 +15,7 @@ export type QuizCount = 10 | 25 | 50 | 'all';
 export interface Question {
   id: string;
   category: Exclude<Category, 'all'>;
+  difficulty: Difficulty;
   question: string;
   options: string[];
   correctAnswer: number;

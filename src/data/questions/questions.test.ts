@@ -1,15 +1,18 @@
 import { describe, it, expect } from 'vitest';
 import { allQuestions, questionsByCategory, getQuestions, getQuestionCount, categories } from './index';
-import { Question, Category } from '@/types/quiz';
+import { Question, Category, Difficulty } from '@/types/quiz';
 
 const REQUIRED_KEYS: (keyof Question)[] = [
   'id',
   'category',
+  'difficulty',
   'question',
   'options',
   'correctAnswer',
   'explanation',
 ];
+
+const VALID_DIFFICULTIES: Difficulty[] = ['beginner', 'intermediate', 'advanced'];
 
 const VALID_CATEGORIES: Exclude<Category, 'all'>[] = [
   'javascript',
@@ -87,6 +90,22 @@ describe('question banks', () => {
     }
   });
 
+  it('all question difficulties are valid', () => {
+    for (const q of allQuestions) {
+      expect(
+        VALID_DIFFICULTIES,
+        `Question ${q.id} has invalid difficulty "${q.difficulty}"`,
+      ).toContain(q.difficulty);
+    }
+  });
+
+  it('every difficulty level is represented across all questions', () => {
+    const difficulties = new Set(allQuestions.map((q) => q.difficulty));
+    for (const d of VALID_DIFFICULTIES) {
+      expect(difficulties).toContain(d);
+    }
+  });
+
   it('all options are non-empty strings', () => {
     for (const q of allQuestions) {
       for (const opt of q.options) {
@@ -138,6 +157,17 @@ describe('getQuestions', () => {
     expect(result).not.toBe(questionsByCategory['react']);
   });
 
+  it('filters by difficulty when difficulty arg is provided', () => {
+    const result = getQuestions('javascript', 'beginner');
+    expect(result.every((q) => q.difficulty === 'beginner')).toBe(true);
+  });
+
+  it('returns fewer questions when a difficulty filter is applied', () => {
+    const all = getQuestions('javascript');
+    const filtered = getQuestions('javascript', 'advanced');
+    expect(filtered.length).toBeLessThan(all.length);
+  });
+
   it('produces different orderings across calls (probabilistic)', () => {
     const orders = new Set(
       Array.from({ length: 10 }, () =>
@@ -160,6 +190,24 @@ describe('getQuestionCount', () => {
 
   it('returns allQuestions.length for "all"', () => {
     expect(getQuestionCount('all')).toBe(allQuestions.length);
+  });
+
+  it('returns a filtered count when difficulty is provided', () => {
+    const beginnerCount = getQuestionCount('javascript', 'beginner');
+    const total = getQuestionCount('javascript');
+    expect(beginnerCount).toBeGreaterThan(0);
+    expect(beginnerCount).toBeLessThan(total);
+  });
+
+  it('difficulty counts sum to total for each category', () => {
+    for (const cat of VALID_CATEGORIES) {
+      const total = getQuestionCount(cat);
+      const sum = VALID_DIFFICULTIES.reduce(
+        (acc, d) => acc + getQuestionCount(cat, d),
+        0,
+      );
+      expect(sum).toBe(total);
+    }
   });
 });
 

@@ -3,6 +3,7 @@ import type { Question } from '@/types/quiz';
 export const gitQuestions: Question[] = [
   {
     id: 'git-1',
+    difficulty: 'beginner',
     category: 'git',
     question: 'Что в действительности создает команда `git init` под капотом в локальной директории?',
     options: [
@@ -16,6 +17,7 @@ export const gitQuestions: Question[] = [
   },
   {
     id: 'git-2',
+    difficulty: 'beginner',
     category: 'git',
     question: 'Что произойдет, если попытаться выполнить команду `git clone <url> .` в директории, которая уже содержит какие-то файлы?',
     options: [
@@ -29,6 +31,7 @@ export const gitQuestions: Question[] = [
   },
   {
     id: 'git-3',
+    difficulty: 'beginner',
     category: 'git',
     question: 'В чем основное отличие команды `git add -p` от команды `git add .`?',
     options: [
@@ -42,6 +45,7 @@ export const gitQuestions: Question[] = [
   },
   {
     id: 'git-4',
+    difficulty: 'beginner',
     category: 'git',
     question: 'Из каких основных компонентов состоит создаваемый Git объект коммита (commit object)?',
     options: [
@@ -55,6 +59,7 @@ export const gitQuestions: Question[] = [
   },
   {
     id: 'git-5',
+    difficulty: 'beginner',
     category: 'git',
     question: 'Как Git отслеживает права доступа к файлам (file permissions) в своей базе данных?',
     options: [
@@ -68,6 +73,7 @@ export const gitQuestions: Question[] = [
   },
   {
     id: 'git-6',
+    difficulty: 'beginner',
     category: 'git',
     question: 'Какая комбинация флагов команды `git log` выведет компактную историю в виде текстового графа ветвлений с сокращенными хэшами коммитов?',
     options: [
@@ -81,6 +87,7 @@ export const gitQuestions: Question[] = [
   },
   {
     id: 'git-7',
+    difficulty: 'beginner',
     category: 'git',
     question: 'Какая команда покажет разницу между изменениями, уже добавленными в индекс (staged), и последним коммитом?',
     options: [
@@ -94,6 +101,7 @@ export const gitQuestions: Question[] = [
   },
   {
     id: 'git-8',
+    difficulty: 'beginner',
     category: 'git',
     question: 'Вы хотите переименовать локальную ветку `feature-old` в `feature-new` и обновить ее на удаленном сервере. Какая последовательность команд является наиболее корректной?',
     options: [
@@ -107,6 +115,7 @@ export const gitQuestions: Question[] = [
   },
   {
     id: 'git-9',
+    difficulty: 'beginner',
     category: 'git',
     question: 'В чем заключается разница между новыми командами `git switch` и `git restore`, введенными в Git 2.23, по сравнению со старой `git checkout`?',
     options: [
@@ -120,6 +129,7 @@ export const gitQuestions: Question[] = [
   },
   {
     id: 'git-10',
+    difficulty: 'beginner',
     category: 'git',
     question: 'Что означает состояние detached HEAD в Git и каков наиболее безопасный способ сохранить изменения, сделанные в этом состоянии?',
     options: [
@@ -133,6 +143,7 @@ export const gitQuestions: Question[] = [
   },
   {
     id: 'git-11',
+    difficulty: 'beginner',
     category: 'git',
     question: 'В каком случае Git выполняет Fast-forward слияние (merge) по умолчанию?',
     options: [
@@ -146,6 +157,7 @@ export const gitQuestions: Question[] = [
   },
   {
     id: 'git-12',
+    difficulty: 'beginner',
     category: 'git',
     question: 'Какое из утверждений точнее всего описывает разницу между `git merge` и `git rebase`?',
     options: [
@@ -159,6 +171,7 @@ export const gitQuestions: Question[] = [
   },
   {
     id: 'git-13',
+    difficulty: 'beginner',
     category: 'git',
     question: 'При интерактивном ребейзе (`git rebase -i`), в чем заключается разница между действиями `squash` и `fixup`?',
     options: [
@@ -172,6 +185,7 @@ export const gitQuestions: Question[] = [
   },
   {
     id: 'git-14',
+    difficulty: 'beginner',
     category: 'git',
     question: 'Что произойдет, если в списке инструкций интерактивного ребейза (`git rebase -i`) заменить команду `pick` перед коммитом на `edit`?',
     options: [
@@ -185,6 +199,7 @@ export const gitQuestions: Question[] = [
   },
   {
     id: 'git-15',
+    difficulty: 'beginner',
     category: 'git',
     question: 'Для чего используется команда `git cherry-pick` и как работает ее опция `-n` (или `--no-commit`)?',
     options: [
@@ -198,6 +213,7 @@ export const gitQuestions: Question[] = [
   },
   {
     id: 'git-16',
+    difficulty: 'beginner',
     category: 'git',
     question: 'В чем разница между командами `git stash pop` и `git stash apply`?',
     options: [
@@ -211,6 +227,7 @@ export const gitQuestions: Question[] = [
   },
   {
     id: 'git-17',
+    difficulty: 'intermediate',
     category: 'git',
     question: 'Как сохранить в stash не только измененные файлы, находящиеся под отслеживанием Git, но также и абсолютно новые, неотслеживаемые файлы (untracked files)?',
     options: [
@@ -224,6 +241,7 @@ export const gitQuestions: Question[] = [
   },
   {
     id: 'git-18',
+    difficulty: 'intermediate',
     category: 'git',
     question: 'Как изменятся рабочая область (working directory), индекс (index/staging) и указатель ветки (HEAD) после выполнения команды `git reset --mixed HEAD~1`?',
     options: [
@@ -237,6 +255,7 @@ export const gitQuestions: Question[] = [
   },
   {
     id: 'git-19',
+    difficulty: 'intermediate',
     category: 'git',
     question: 'В каких случаях предпочтительно использовать `git revert`, а не `git reset`, и в чем ключевое отличие revert от reset?',
     options: [
@@ -250,6 +269,7 @@ export const gitQuestions: Question[] = [
   },
   {
     id: 'git-20',
+    difficulty: 'intermediate',
     category: 'git',
     question: 'Что такое `git reflog` и как с его помощью восстановить ветку, которая была удалена локально через `git branch -D`?',
     options: [
@@ -263,6 +283,7 @@ export const gitQuestions: Question[] = [
   },
   {
     id: 'git-21',
+    difficulty: 'intermediate',
     category: 'git',
     question: 'Что в действительности делает команда `git pull` по умолчанию под капотом?',
     options: [
@@ -276,6 +297,7 @@ export const gitQuestions: Question[] = [
   },
   {
     id: 'git-22',
+    difficulty: 'intermediate',
     category: 'git',
     question: 'Почему в больших командах часто рекомендуется использовать `git pull --rebase` вместо стандартного `git pull`?',
     options: [
@@ -289,6 +311,7 @@ export const gitQuestions: Question[] = [
   },
   {
     id: 'git-23',
+    difficulty: 'intermediate',
     category: 'git',
     question: 'В чем заключается разница в безопасности между командами `git push --force` и `git push --force-with-lease`?',
     options: [
@@ -302,6 +325,7 @@ export const gitQuestions: Question[] = [
   },
   {
     id: 'git-24',
+    difficulty: 'intermediate',
     category: 'git',
     question: 'Как установить связь локальной ветки с удаленной веткой на сервере (set upstream) при первой отправке коммитов?',
     options: [
@@ -315,6 +339,7 @@ export const gitQuestions: Question[] = [
   },
   {
     id: 'git-25',
+    difficulty: 'intermediate',
     category: 'git',
     question: 'Что означают маркеры конфликта `<<<<<<< HEAD`, `=======` и `>>>>>>> <branch-name>` в файле при возникновении конфликта слияния?',
     options: [
@@ -328,6 +353,7 @@ export const gitQuestions: Question[] = [
   },
   {
     id: 'git-26',
+    difficulty: 'intermediate',
     category: 'git',
     question: 'Как заставить Git игнорировать файл, который уже был закоммичен и находится под версионным контролем, добавив его в `.gitignore`?',
     options: [
@@ -341,6 +367,7 @@ export const gitQuestions: Question[] = [
   },
   {
     id: 'git-27',
+    difficulty: 'intermediate',
     category: 'git',
     question: 'Где физически хранятся Git hooks (хуки) в локальном репозитории и как временно обойти их выполнение (например, pre-commit)?',
     options: [
@@ -354,6 +381,7 @@ export const gitQuestions: Question[] = [
   },
   {
     id: 'git-28',
+    difficulty: 'intermediate',
     category: 'git',
     question: 'В чем основное отличие методологии Trunk-Based Development от классического Git Flow?',
     options: [
@@ -367,6 +395,7 @@ export const gitQuestions: Question[] = [
   },
   {
     id: 'git-29',
+    difficulty: 'intermediate',
     category: 'git',
     question: 'Какие типы коммитов согласно спецификации Conventional Commits указывают на изменения, которые будут зафиксированы в Semantic Versioning как MINOR и PATCH релизы соответственно?',
     options: [
@@ -380,6 +409,7 @@ export const gitQuestions: Question[] = [
   },
   {
     id: 'git-30',
+    difficulty: 'intermediate',
     category: 'git',
     question: 'В чем ключевое отличие между легковесными (lightweight) и аннотированными (annotated) тегами в Git?',
     options: [
@@ -393,6 +423,7 @@ export const gitQuestions: Question[] = [
   },
   {
     id: 'git-31',
+    difficulty: 'intermediate',
     category: 'git',
     question: 'Как использовать команду `git bisect` для автоматического поиска коммита, который сломал сборку, если у вас есть скрипт тестирования `npm run test`?',
     options: [
@@ -406,6 +437,7 @@ export const gitQuestions: Question[] = [
   },
   {
     id: 'git-32',
+    difficulty: 'intermediate',
     category: 'git',
     question: 'Какая опция команды `git blame` позволяет игнорировать изменения пробелов и переносов строк при поиске автора изменения конкретной строки кода?',
     options: [
@@ -419,6 +451,7 @@ export const gitQuestions: Question[] = [
   },
   {
     id: 'git-33',
+    difficulty: 'intermediate',
     category: 'git',
     question: 'Для чего используется команда `git shortlog`?',
     options: [
@@ -432,6 +465,7 @@ export const gitQuestions: Question[] = [
   },
   {
     id: 'git-34',
+    difficulty: 'advanced',
     category: 'git',
     question: 'Что такое Shallow clone (`git clone --depth <N>`) и каково его основное ограничение?',
     options: [
@@ -445,6 +479,7 @@ export const gitQuestions: Question[] = [
   },
   {
     id: 'git-35',
+    difficulty: 'advanced',
     category: 'git',
     question: 'Что такое Sparse checkout в Git и когда его целесообразно использовать?',
     options: [
@@ -458,6 +493,7 @@ export const gitQuestions: Question[] = [
   },
   {
     id: 'git-36',
+    difficulty: 'advanced',
     category: 'git',
     question: 'Что представляет собой Git Submodule (подмодуль) под капотом родительского репозитория?',
     options: [
@@ -471,6 +507,7 @@ export const gitQuestions: Question[] = [
   },
   {
     id: 'git-37',
+    difficulty: 'advanced',
     category: 'git',
     question: 'Для чего используется команда `git worktree`?',
     options: [
@@ -484,6 +521,7 @@ export const gitQuestions: Question[] = [
   },
   {
     id: 'git-38',
+    difficulty: 'advanced',
     category: 'git',
     question: 'Какое решение является наиболее эффективным для масштабирования производительности Git в гигантских монорепозиториях (сотни гигабайт кода)?',
     options: [
@@ -497,6 +535,7 @@ export const gitQuestions: Question[] = [
   },
   {
     id: 'git-39',
+    difficulty: 'advanced',
     category: 'git',
     question: 'Что происходит при включении политики Branch Protection (защита веток) для ветки `main` на GitHub/GitLab?',
     options: [
@@ -510,6 +549,7 @@ export const gitQuestions: Question[] = [
   },
   {
     id: 'git-40',
+    difficulty: 'advanced',
     category: 'git',
     question: 'Зачем разработчики настраивают подписание коммитов с помощью GPG или SSH ключей?',
     options: [
@@ -523,6 +563,7 @@ export const gitQuestions: Question[] = [
   },
   {
     id: 'git-41',
+    difficulty: 'advanced',
     category: 'git',
     question: 'В чем разница между стратегиями слияния Pull Request: "Rebase and Merge" и "Squash and Merge" на GitHub?',
     options: [
@@ -536,6 +577,7 @@ export const gitQuestions: Question[] = [
   },
   {
     id: 'git-42',
+    difficulty: 'advanced',
     category: 'git',
     question: 'В каком приоритете Git применяет конфигурационные настройки из файлов `system`, `global` и `local` (от наивысшего приоритета к наинизшему)?',
     options: [
@@ -549,6 +591,7 @@ export const gitQuestions: Question[] = [
   },
   {
     id: 'git-43',
+    difficulty: 'advanced',
     category: 'git',
     question: 'Что означает концепция "атомарных коммитов" (Atomic Commits) в методологии работы с Git?',
     options: [
@@ -562,6 +605,7 @@ export const gitQuestions: Question[] = [
   },
   {
     id: 'git-44',
+    difficulty: 'advanced',
     category: 'git',
     question: 'Какие четыре типа объектов составляют основу объектной базы данных (object database) Git?',
     options: [
@@ -575,6 +619,7 @@ export const gitQuestions: Question[] = [
   },
   {
     id: 'git-45',
+    difficulty: 'advanced',
     category: 'git',
     question: 'Как вычисляется хэш SHA-1 (или SHA-256) коммита в Git и почему он гарантирует целостность истории?',
     options: [
@@ -588,6 +633,7 @@ export const gitQuestions: Question[] = [
   },
   {
     id: 'git-46',
+    difficulty: 'advanced',
     category: 'git',
     question: 'Для чего используются команды `git gc` и `git prune` в Git?',
     options: [
@@ -601,6 +647,7 @@ export const gitQuestions: Question[] = [
   },
   {
     id: 'git-47',
+    difficulty: 'advanced',
     category: 'git',
     question: 'Какая команда удалит локальные ветки отслеживания удаленного репозитория (remote-tracking branches), которые уже были удалены на самом сервере?',
     options: [
@@ -614,6 +661,7 @@ export const gitQuestions: Question[] = [
   },
   {
     id: 'git-48',
+    difficulty: 'advanced',
     category: 'git',
     question: 'Какая команда позволяет объединить последние 3 коммита в один перед отправкой изменений в Pull Request?',
     options: [
@@ -627,6 +675,7 @@ export const gitQuestions: Question[] = [
   },
   {
     id: 'git-49',
+    difficulty: 'advanced',
     category: 'git',
     question: 'Как работает технология Git LFS (Large File Storage) при коммите тяжелых бинарных файлов (например, видео или 3D-моделей)?',
     options: [
@@ -640,6 +689,7 @@ export const gitQuestions: Question[] = [
   },
   {
     id: 'git-50',
+    difficulty: 'advanced',
     category: 'git',
     question: 'Для чего предназначена опция `rerere` (reuse recorded resolution) в Git и как ее активировать?',
     options: [

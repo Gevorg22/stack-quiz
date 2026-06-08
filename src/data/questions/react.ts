@@ -3,6 +3,7 @@ import { Question } from '@/types/quiz';
 export const reactQuestions: Question[] = [
   {
     id: 'react-1',
+    difficulty: 'beginner',
     category: 'react',
     question: 'Что такое React и для чего он используется?',
     options: [
@@ -17,6 +18,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-2',
+    difficulty: 'beginner',
     category: 'react',
     question: 'Что такое Virtual DOM в React?',
     options: [
@@ -31,6 +33,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-3',
+    difficulty: 'beginner',
     category: 'react',
     question: 'Что такое JSX?',
     options: [
@@ -45,6 +48,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-4',
+    difficulty: 'beginner',
     category: 'react',
     question: 'Для чего используется хук useState?',
     options: [
@@ -59,6 +63,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-5',
+    difficulty: 'beginner',
     category: 'react',
     question: 'Для чего используется хук useEffect?',
     options: [
@@ -73,6 +78,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-6',
+    difficulty: 'beginner',
     category: 'react',
     question: 'В чём разница между props и state?',
     options: [
@@ -87,6 +93,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-7',
+    difficulty: 'beginner',
     category: 'react',
     question: 'Что такое хук useMemo и когда его использовать?',
     options: [
@@ -101,6 +108,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-8',
+    difficulty: 'beginner',
     category: 'react',
     question: 'Что такое хук useCallback?',
     options: [
@@ -115,6 +123,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-9',
+    difficulty: 'beginner',
     category: 'react',
     question: 'Что такое Context API в React?',
     options: [
@@ -129,6 +138,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-10',
+    difficulty: 'beginner',
     category: 'react',
     question: 'Что такое React.memo?',
     options: [
@@ -143,6 +153,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-11',
+    difficulty: 'beginner',
     category: 'react',
     question: 'Что такое HOC (Higher-Order Component)?',
     options: [
@@ -157,6 +168,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-12',
+    difficulty: 'beginner',
     category: 'react',
     question: 'Что такое хук useRef?',
     options: [
@@ -171,6 +183,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-13',
+    difficulty: 'beginner',
     category: 'react',
     question: 'Что такое Error Boundary в React?',
     options: [
@@ -185,6 +198,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-14',
+    difficulty: 'beginner',
     category: 'react',
     question: 'Что такое React Portals?',
     options: [
@@ -199,6 +213,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-15',
+    difficulty: 'beginner',
     category: 'react',
     question: 'Что такое reconciliation в React?',
     options: [
@@ -213,6 +228,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-16',
+    difficulty: 'beginner',
     category: 'react',
     question: 'Для чего нужен атрибут key в списках React?',
     options: [
@@ -227,6 +243,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-17',
+    difficulty: 'beginner',
     category: 'react',
     question: 'Что такое Suspense в React?',
     options: [
@@ -241,6 +258,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-18',
+    difficulty: 'beginner',
     category: 'react',
     question: 'Что такое React.lazy()?',
     options: [
@@ -255,6 +273,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-19',
+    difficulty: 'beginner',
     category: 'react',
     question: 'Что такое controlled компонент (управляемый компонент)?',
     options: [
@@ -269,6 +288,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-20',
+    difficulty: 'beginner',
     category: 'react',
     question: 'Что делает хук useReducer?',
     options: [
@@ -283,6 +303,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-21',
+    difficulty: 'beginner',
     category: 'react',
     question: 'Что такое prop drilling и как его избежать?',
     options: [
@@ -297,6 +318,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-22',
+    difficulty: 'beginner',
     category: 'react',
     question: 'Чем отличается useEffect от useLayoutEffect?',
     options: [
@@ -311,6 +333,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-23',
+    difficulty: 'beginner',
     category: 'react',
     question: 'Что такое render props паттерн?',
     options: [
@@ -325,6 +348,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-24',
+    difficulty: 'beginner',
     category: 'react',
     question: 'Что такое подъём состояния (lifting state up)?',
     options: [
@@ -339,6 +363,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-25',
+    difficulty: 'beginner',
     category: 'react',
     question: 'Что такое React Server Components (RSC)?',
     options: [
@@ -353,6 +378,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-26',
+    difficulty: 'beginner',
     category: 'react',
     question: 'Что такое React Concurrent Mode и Concurrent Features?',
     options: [
@@ -367,6 +393,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-27',
+    difficulty: 'beginner',
     category: 'react',
     question: 'Для чего используется хук useId()?',
     options: [
@@ -381,6 +408,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-28',
+    difficulty: 'beginner',
     category: 'react',
     question: 'Что такое хук useSyncExternalStore?',
     options: [
@@ -395,6 +423,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-29',
+    difficulty: 'beginner',
     category: 'react',
     question: 'Что такое forwardRef и useImperativeHandle?',
     options: [
@@ -409,6 +438,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-30',
+    difficulty: 'beginner',
     category: 'react',
     question: 'Как работает хук useTransition?',
     options: [
@@ -423,6 +453,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-31',
+    difficulty: 'beginner',
     category: 'react',
     question: 'Что такое React.memo и в чём его отличие от useMemo?',
     options: [
@@ -437,6 +468,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-32',
+    difficulty: 'beginner',
     category: 'react',
     question: 'Что такое Suspense и как он работает с data fetching?',
     options: [
@@ -451,6 +483,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-33',
+    difficulty: 'beginner',
     category: 'react',
     question: 'Что такое React Fiber?',
     options: [
@@ -465,6 +498,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-34',
+    difficulty: 'beginner',
     category: 'react',
     question: 'Как правильно типизировать props с TypeScript в React?',
     options: [
@@ -479,6 +513,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-35',
+    difficulty: 'beginner',
     category: 'react',
     question: 'Что такое паттерн Compound Components в React?',
     options: [
@@ -493,6 +528,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-36',
+    difficulty: 'beginner',
     category: 'react',
     question: 'Что такое паттерн Render Props?',
     options: [
@@ -507,6 +543,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-37',
+    difficulty: 'beginner',
     category: 'react',
     question: 'Что такое key prop в React и почему нельзя использовать индекс массива?',
     options: [
@@ -521,6 +558,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-38',
+    difficulty: 'beginner',
     category: 'react',
     question: 'Что такое batch updates в React 18?',
     options: [
@@ -535,6 +573,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-39',
+    difficulty: 'beginner',
     category: 'react',
     question: 'Как работает createPortal в React?',
     options: [
@@ -549,6 +588,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-40',
+    difficulty: 'beginner',
     category: 'react',
     question: 'Что такое React DevTools Profiler и как им пользоваться?',
     options: [
@@ -563,6 +603,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-41',
+    difficulty: 'beginner',
     category: 'react',
     question: 'Что такое Controlled vs Uncontrolled компоненты?',
     options: [
@@ -577,6 +618,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-42',
+    difficulty: 'beginner',
     category: 'react',
     question: 'Что такое хук useLayoutEffect и когда использовать вместо useEffect?',
     options: [
@@ -591,6 +633,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-43',
+    difficulty: 'beginner',
     category: 'react',
     question: 'Как реализовать оптимистичные обновления (Optimistic Updates) в React?',
     options: [
@@ -605,6 +648,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-44',
+    difficulty: 'beginner',
     category: 'react',
     question: 'Что такое React 19 и какие ключевые изменения он вносит?',
     options: [
@@ -619,6 +663,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-45',
+    difficulty: 'beginner',
     category: 'react',
     question: 'Что такое паттерн "Container/Presentational" (умные/глупые компоненты)?',
     options: [
@@ -633,6 +678,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-46',
+    difficulty: 'beginner',
     category: 'react',
     question: 'Как работает алгоритм Reconciliation в React?',
     options: [
@@ -647,6 +693,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-47',
+    difficulty: 'beginner',
     category: 'react',
     question: 'Что такое Zustand и чем отличается от Redux?',
     options: [
@@ -661,6 +708,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-48',
+    difficulty: 'beginner',
     category: 'react',
     question: 'Что такое React Query (TanStack Query) и для чего используется?',
     options: [
@@ -675,6 +723,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-49',
+    difficulty: 'beginner',
     category: 'react',
     question: 'Как работает React Testing Library и каков её подход?',
     options: [
@@ -689,6 +738,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-50',
+    difficulty: 'beginner',
     category: 'react',
     question: 'Что такое Server Actions в Next.js App Router?',
     options: [
@@ -703,6 +753,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-51',
+    difficulty: 'intermediate',
     category: 'react',
     question: 'Что такое паттерн "Custom Hook" и каковы правила его создания?',
     options: [
@@ -717,6 +768,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-52',
+    difficulty: 'intermediate',
     category: 'react',
     question: 'Что такое Streaming SSR в Next.js и как работает с Suspense?',
     options: [
@@ -731,6 +783,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-53',
+    difficulty: 'intermediate',
     category: 'react',
     question: 'Как работает хук useReducer и когда предпочесть useState?',
     options: [
@@ -745,6 +798,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-54',
+    difficulty: 'intermediate',
     category: 'react',
     question: 'Что такое React.lazy() и dynamic import в Next.js?',
     options: [
@@ -759,6 +813,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-55',
+    difficulty: 'intermediate',
     category: 'react',
     question: 'Что такое паттерн "Provider Pattern" в React?',
     options: [
@@ -773,6 +828,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-56',
+    difficulty: 'intermediate',
     category: 'react',
     question: 'Как избежать prop drilling в React?',
     options: [
@@ -787,6 +843,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-57',
+    difficulty: 'intermediate',
     category: 'react',
     question: 'Что такое Hydration в React и проблема гидрации?',
     options: [
@@ -801,6 +858,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-58',
+    difficulty: 'intermediate',
     category: 'react',
     question: 'Что такое паттерн "State Machine" в React и когда применять?',
     options: [
@@ -815,6 +873,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-59',
+    difficulty: 'intermediate',
     category: 'react',
     question: 'Как работает React.StrictMode?',
     options: [
@@ -829,6 +888,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-60',
+    difficulty: 'intermediate',
     category: 'react',
     question: 'Что такое React use() хук (React 19)?',
     options: [
@@ -843,6 +903,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-61',
+    difficulty: 'intermediate',
     category: 'react',
     question: 'Что такое "правила хуков" (Rules of Hooks) и почему они существуют?',
     options: [
@@ -857,6 +918,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-62',
+    difficulty: 'intermediate',
     category: 'react',
     question: 'Как оптимизировать Context API для предотвращения лишних ре-рендеров?',
     options: [
@@ -871,6 +933,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-63',
+    difficulty: 'intermediate',
     category: 'react',
     question: 'Что такое паттерн "Hooks Composition" и как он заменяет HOC?',
     options: [
@@ -885,6 +948,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-64',
+    difficulty: 'intermediate',
     category: 'react',
     question: 'Что такое React Compiler (бывший React Forget)?',
     options: [
@@ -899,6 +963,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-65',
+    difficulty: 'intermediate',
     category: 'react',
     question: 'Как работает Server-Side Rendering (SSR) в React и Next.js?',
     options: [
@@ -913,6 +978,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-66',
+    difficulty: 'intermediate',
     category: 'react',
     question: 'Что такое Jotai и чем отличается от Zustand и Redux?',
     options: [
@@ -927,6 +993,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-67',
+    difficulty: 'intermediate',
     category: 'react',
     question: 'Что такое React DevTools и какие возможности предоставляет?',
     options: [
@@ -941,6 +1008,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-68',
+    difficulty: 'intermediate',
     category: 'react',
     question: 'Что такое паттерн "Headless Components" или Headless UI?',
     options: [
@@ -955,6 +1023,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-69',
+    difficulty: 'intermediate',
     category: 'react',
     question: 'Как работает Next.js Image компонент и какие оптимизации даёт?',
     options: [
@@ -969,6 +1038,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-70',
+    difficulty: 'intermediate',
     category: 'react',
     question: 'Что такое React Suspense для гидрации и Selective Hydration?',
     options: [
@@ -983,6 +1053,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-71',
+    difficulty: 'intermediate',
     category: 'react',
     question: 'Что такое ISR (Incremental Static Regeneration) в Next.js?',
     options: [
@@ -997,6 +1068,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-72',
+    difficulty: 'intermediate',
     category: 'react',
     question: 'Что такое паттерн "Polymorphic Component" в React?',
     options: [
@@ -1011,6 +1083,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-73',
+    difficulty: 'intermediate',
     category: 'react',
     question: 'Как работает оптимизация с помощью virtualisation (виртуализации) списков?',
     options: [
@@ -1025,6 +1098,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-74',
+    difficulty: 'intermediate',
     category: 'react',
     question: 'Что такое паттерн "Atomic Design" применительно к React?',
     options: [
@@ -1039,6 +1113,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-75',
+    difficulty: 'intermediate',
     category: 'react',
     question: 'Что такое Storybook и как он используется в React-разработке?',
     options: [
@@ -1053,6 +1128,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-76',
+    difficulty: 'intermediate',
     category: 'react',
     question: 'В чём заключается фундаментальное отличие React Server Components (RSC) от Client Components?',
     options: [
@@ -1067,6 +1143,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-77',
+    difficulty: 'intermediate',
     category: 'react',
     question: 'Какое ограничение накладывается на передачу данных от Server Components к Client Components через props?',
     options: [
@@ -1081,6 +1158,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-78',
+    difficulty: 'intermediate',
     category: 'react',
     question: 'Что делает директива "use server" в React 19 / Next.js?',
     options: [
@@ -1095,6 +1173,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-79',
+    difficulty: 'intermediate',
     category: 'react',
     question: 'Как работает новый хук use() в React 19 при чтении Promise, и как он взаимодействует с Suspense?',
     options: [
@@ -1109,6 +1188,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-80',
+    difficulty: 'intermediate',
     category: 'react',
     question: 'В чём ключевое отличие хука use(Context) от стандартного useContext(Context) в React 19?',
     options: [
@@ -1123,6 +1203,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-81',
+    difficulty: 'intermediate',
     category: 'react',
     question: 'Для чего предназначен React Compiler (React Forget), разрабатываемый командой React?',
     options: [
@@ -1137,6 +1218,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-82',
+    difficulty: 'intermediate',
     category: 'react',
     question: 'Каким образом хук useOptimistic в React 19 помогает улучшить UX приложения?',
     options: [
@@ -1151,6 +1233,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-83',
+    difficulty: 'intermediate',
     category: 'react',
     question: 'В чём разница между хуками useActionState (useFormState) и useFormStatus в React 19?',
     options: [
@@ -1165,6 +1248,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-84',
+    difficulty: 'intermediate',
     category: 'react',
     question: 'Почему нельзя вызывать хук useFormStatus в том же компоненте, который рендерит сам тег `<form>`?',
     options: [
@@ -1179,6 +1263,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-85',
+    difficulty: 'intermediate',
     category: 'react',
     question: 'Что представляет собой технология Partial Prerendering (PPR) в Next.js?',
     options: [
@@ -1193,6 +1278,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-86',
+    difficulty: 'intermediate',
     category: 'react',
     question: 'В чём суть архитектуры "Islands Architecture" (архитектуры островов), используемой в Astro?',
     options: [
@@ -1207,6 +1293,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-87',
+    difficulty: 'intermediate',
     category: 'react',
     question: 'Какая из перечисленных ситуаций чаще всего приводит к ошибке Hydration Mismatch при SSR/SSG?',
     options: [
@@ -1221,6 +1308,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-88',
+    difficulty: 'intermediate',
     category: 'react',
     question: 'Как в React Server Components (RSC) реализуется работа с асинхронными источниками данных (базы данных, API)?',
     options: [
@@ -1235,6 +1323,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-89',
+    difficulty: 'intermediate',
     category: 'react',
     question: 'Как атрибут action у элемента `<form>` расширяется в React 19?',
     options: [
@@ -1249,6 +1338,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-90',
+    difficulty: 'intermediate',
     category: 'react',
     question: 'В чём заключается ключевое преимущество безопасности Server Actions перед обычными REST API роутами?',
     options: [
@@ -1263,6 +1353,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-91',
+    difficulty: 'intermediate',
     category: 'react',
     question: 'В чём разница в сценариях использования хуков useTransition и useDeferredValue?',
     options: [
@@ -1277,6 +1368,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-92',
+    difficulty: 'intermediate',
     category: 'react',
     question: 'Как Automatic Batching (автоматическое пакетирование) в React 18 обрабатывает обновления стейта внутри setTimeout, асинхронных Promises и нативных обработчиков событий?',
     options: [
@@ -1291,6 +1383,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-93',
+    difficulty: 'intermediate',
     category: 'react',
     question: 'Каким образом можно принудительно отключить Automatic Batching в React 18, когда необходимо синхронно прочитать изменённый DOM сразу после обновления стейта?',
     options: [
@@ -1305,6 +1398,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-94',
+    difficulty: 'intermediate',
     category: 'react',
     question: 'Какое главное концептуальное изменение привносит метод createRoot в сравнении с устаревшим ReactDOM.render при миграции на React 18?',
     options: [
@@ -1319,6 +1413,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-95',
+    difficulty: 'intermediate',
     category: 'react',
     question: 'Что представляют собой "Lanes" (дорожки) в архитектуре React Fiber?',
     options: [
@@ -1333,6 +1428,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-96',
+    difficulty: 'intermediate',
     category: 'react',
     question: 'Как "work loop" (цикл выполнения задач) в архитектуре Fiber предотвращает зависание интерфейса при рендере тяжёлых деревьев?',
     options: [
@@ -1347,6 +1443,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-97',
+    difficulty: 'intermediate',
     category: 'react',
     question: 'Из каких двух основных фаз состоит цикл рендеринга React Fiber, и какая из них должна быть абсолютно чистой (без сайд-эффектов)?',
     options: [
@@ -1361,6 +1458,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-98',
+    difficulty: 'intermediate',
     category: 'react',
     question: 'За счёт каких эвристических допущений алгоритм примирения (Reconciliation) React достигает сложности O(n) вместо O(n³) общего алгоритма сравнения деревьев?',
     options: [
@@ -1375,6 +1473,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-99',
+    difficulty: 'intermediate',
     category: 'react',
     question: 'В каком случае обёртка компонента в `React.memo` окажется абсолютно бесполезной и только добавит накладных расходов?',
     options: [
@@ -1389,6 +1488,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-100',
+    difficulty: 'intermediate',
     category: 'react',
     question: 'Как правильно комбинировать компоненты Suspense и ErrorBoundary для декларативной обработки загрузки и ошибок?',
     options: [
@@ -1403,6 +1503,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-101',
+    difficulty: 'advanced',
     category: 'react',
     question: 'Что такое Streaming SSR с использованием Suspense, и как это влияет на показатели TTFB и LCP?',
     options: [
@@ -1417,6 +1518,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-102',
+    difficulty: 'advanced',
     category: 'react',
     question: 'Каку роль выполняет пакет scheduler (планировщик) в экосистеме Concurrent React?',
     options: [
@@ -1431,6 +1533,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-103',
+    difficulty: 'advanced',
     category: 'react',
     question: 'Что происходит под капотом useDeferredValue при изменении входного значения?',
     options: [
@@ -1445,6 +1548,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-104',
+    difficulty: 'advanced',
     category: 'react',
     question: 'Как с помощью React DevTools Profiler определить, почему перерендерился конкретный компонент?',
     options: [
@@ -1459,6 +1563,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-105',
+    difficulty: 'advanced',
     category: 'react',
     question: 'Что происходит с компонентом в процессе примирения (Reconciliation), если его key изменяется на совершенно новый?',
     options: [
@@ -1473,6 +1578,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-106',
+    difficulty: 'advanced',
     category: 'react',
     question: 'Каким образом использование селекторов в Zustand защищает компоненты от лишних ре-рендеров?',
     options: [
@@ -1487,6 +1593,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-107',
+    difficulty: 'advanced',
     category: 'react',
     question: 'Что представляет собой концепция "derived atom" (производного атома) в библиотеке Jotai?',
     options: [
@@ -1501,6 +1608,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-108',
+    difficulty: 'advanced',
     category: 'react',
     question: 'Какую задачу решает функция atomFamily в библиотеке Jotai?',
     options: [
@@ -1515,6 +1623,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-109',
+    difficulty: 'advanced',
     category: 'react',
     question: 'Какое главное преимущество даёт использование функции createSlice из Redux Toolkit в сравнении с классическим подходом в Redux?',
     options: [
@@ -1529,6 +1638,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-110',
+    difficulty: 'advanced',
     category: 'react',
     question: 'В чём заключается фундаментальная разница между параметрами staleTime и gcTime (ранее cacheTime) в TanStack Query (React Query)?',
     options: [
@@ -1543,6 +1653,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-111',
+    difficulty: 'advanced',
     category: 'react',
     question: 'Каков алгоритм реализации Optimistic Updates (оптимистичных обновлений) при мутациях в TanStack Query?',
     options: [
@@ -1557,6 +1668,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-112',
+    difficulty: 'advanced',
     category: 'react',
     question: 'В чём заключаются основные различия между библиотеками SWR (от Vercel) и TanStack Query?',
     options: [
@@ -1571,6 +1683,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-113',
+    difficulty: 'advanced',
     category: 'react',
     question: 'За счёт чего React Hook Form (RHF) обеспечивает существенно лучшую производительность в больших формах по сравнению с Formik?',
     options: [
@@ -1585,6 +1698,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-114',
+    difficulty: 'advanced',
     category: 'react',
     question: 'Как интеграция библиотеки Zod с React Hook Form через резолверы улучшает типизацию и валидацию данных?',
     options: [
@@ -1599,6 +1713,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-115',
+    difficulty: 'advanced',
     category: 'react',
     question: 'В какой ситуации настоятельно рекомендуется использовать Zustand вместо стандартного React Context API?',
     options: [
@@ -1613,6 +1728,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-116',
+    difficulty: 'advanced',
     category: 'react',
     question: 'Как RTK Query (из Redux Toolkit) реализует кэширование и дедупликацию сетевых запросов?',
     options: [
@@ -1627,6 +1743,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-117',
+    difficulty: 'advanced',
     category: 'react',
     question: 'Что такое "Context Selector Pattern" в React и как он повышает производительность?',
     options: [
@@ -1641,6 +1758,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-118',
+    difficulty: 'advanced',
     category: 'react',
     question: 'Как в Zustand настроить middleware persist для сохранения состояния в sessionStorage вместо localStorage?',
     options: [
@@ -1655,6 +1773,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-119',
+    difficulty: 'advanced',
     category: 'react',
     question: 'Какое архитектурное удобство даёт вычисляемое состояние (derived state) в Zustand по сравнению с Redux?',
     options: [
@@ -1669,6 +1788,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-120',
+    difficulty: 'advanced',
     category: 'react',
     question: 'Какую функцию выполняет утилита atomWithStorage в библиотеке Jotai?',
     options: [
@@ -1683,6 +1803,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-121',
+    difficulty: 'advanced',
     category: 'react',
     question: 'Как задать собственное имя чанка для динамически импортируемого компонента в React (Code Splitting)?',
     options: [
@@ -1697,6 +1818,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-122',
+    difficulty: 'advanced',
     category: 'react',
     question: 'Какую роль в виртуализации длинных списков играет параметр overscan (например, в TanStack Virtual)?',
     options: [
@@ -1711,6 +1833,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-123',
+    difficulty: 'advanced',
     category: 'react',
     question: 'В каком случае применение React.memo или ручной мемоизации является антипаттерном?',
     options: [
@@ -1725,6 +1848,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-124',
+    difficulty: 'advanced',
     category: 'react',
     question: 'Каким образом поле sideEffects в package.json помогает сборщикам в процессе Tree Shaking?',
     options: [
@@ -1739,6 +1863,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-125',
+    difficulty: 'advanced',
     category: 'react',
     question: 'Что такое Webpack Module Federation и как он помогает в разработке микрофронтендов на React?',
     options: [
@@ -1753,6 +1878,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-126',
+    difficulty: 'advanced',
     category: 'react',
     question: 'Как работает технология "Remote Caching" (удалённого кэширования) в монорепозиториях (например, Turborepo)?',
     options: [
@@ -1767,6 +1893,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-127',
+    difficulty: 'advanced',
     category: 'react',
     question: 'В чём заключается главное концептуальное отличие Unit-теста от Integration-теста в контексте React?',
     options: [
@@ -1781,6 +1908,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-128',
+    difficulty: 'advanced',
     category: 'react',
     question: 'Почему при симуляции действий пользователя в React Testing Library рекомендуется использовать объект `userEvent`, а не `fireEvent`?',
     options: [
@@ -1795,6 +1923,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-129',
+    difficulty: 'advanced',
     category: 'react',
     question: 'Каково назначение функции `act()` в утилитах тестирования React, и в каком случае её нужно вызывать вручную?',
     options: [
@@ -1809,6 +1938,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-130',
+    difficulty: 'advanced',
     category: 'react',
     question: 'Как библиотека Mock Service Worker (MSW) перехватывает сетевые запросы в тестах React, и почему это удобнее обычного моканья fetch?',
     options: [
@@ -1823,6 +1953,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-131',
+    difficulty: 'advanced',
     category: 'react',
     question: 'В чём заключается ключевое архитектурное отличие Playwright от Cypress при проведении E2E-тестирования React-приложений?',
     options: [
@@ -1837,6 +1968,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-132',
+    difficulty: 'advanced',
     category: 'react',
     question: 'Что делает Vitest привлекательной альтернативой Jest для юнит-тестирования React-приложений, собранных на Vite?',
     options: [
@@ -1851,6 +1983,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-133',
+    difficulty: 'advanced',
     category: 'react',
     question: 'Как устроено "Interaction Testing" (тестирование взаимодействий) в Storybook?',
     options: [
@@ -1865,6 +1998,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-134',
+    difficulty: 'advanced',
     category: 'react',
     question: 'По какому принципу следует выбирать методы поиска элементов (queries) в React Testing Library для соответствия стандартам доступности (a11y)?',
     options: [
@@ -1879,6 +2013,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-135',
+    difficulty: 'advanced',
     category: 'react',
     question: 'В чём кроется первопричина появления предупреждения "An update to Component inside a test was not wrapped in act(...)" в тестах React и как её устранить?',
     options: [
@@ -1893,6 +2028,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-136',
+    difficulty: 'advanced',
     category: 'react',
     question: 'Как обеспечить доступность (a11y) при управлении фокусом в модальном окне на React?',
     options: [
@@ -1907,6 +2043,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-137',
+    difficulty: 'advanced',
     category: 'react',
     question: 'В чём разница в производительности между runtime-библиотеками CSS-in-JS (styled-components/Emotion) и compile-time решениями (vanilla-extract)?',
     options: [
@@ -1921,6 +2058,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-138',
+    difficulty: 'advanced',
     category: 'react',
     question: 'Какую проблему решает комбинация утилит clsx (или classnames) и tailwind-merge (обычно экспортируемая как функция cn)?',
     options: [
@@ -1935,6 +2073,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-139',
+    difficulty: 'advanced',
     category: 'react',
     question: 'Каково назначение компонента `<AnimatePresence>` в библиотеке Framer Motion?',
     options: [
@@ -1949,6 +2088,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-140',
+    difficulty: 'advanced',
     category: 'react',
     question: 'По какой причине библиотека dnd-kit часто предпочтительнее react-dnd для реализации Drag and Drop?',
     options: [
@@ -1963,6 +2103,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-141',
+    difficulty: 'advanced',
     category: 'react',
     question: 'Что представляет собой Metro Bundler в экосистеме React Native?',
     options: [
@@ -1977,6 +2118,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-142',
+    difficulty: 'advanced',
     category: 'react',
     question: 'В чём заключается ключевое отличие Nested Layouts (вложенных макетов) в Next.js App Router от Pages Router?',
     options: [
@@ -1991,6 +2133,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-143',
+    difficulty: 'advanced',
     category: 'react',
     question: 'Как работает Next.js Middleware и каков типичный сценарий его использования?',
     options: [
@@ -2005,6 +2148,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-144',
+    difficulty: 'advanced',
     category: 'react',
     question: 'Что такое Route Handlers в Next.js App Router и что они заменили?',
     options: [
@@ -2019,6 +2163,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-145',
+    difficulty: 'advanced',
     category: 'react',
     question: 'Каким образом пакеты next/font и next/image помогают улучшать показатели Core Web Vitals?',
     options: [
@@ -2033,6 +2178,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-146',
+    difficulty: 'advanced',
     category: 'react',
     question: 'В чём состоит ключевое концептуальное отличие фреймворка Remix от Next.js в вопросах мутации данных?',
     options: [
@@ -2047,6 +2193,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-147',
+    difficulty: 'advanced',
     category: 'react',
     question: 'Как Astro интегрирует React-компоненты с помощью директив гидрации (например, client:visible)?',
     options: [
@@ -2061,6 +2208,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-148',
+    difficulty: 'advanced',
     category: 'react',
     question: 'Что собой представляет паттерн "Compound Components" (составные компоненты) в React?',
     options: [
@@ -2075,6 +2223,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-149',
+    difficulty: 'advanced',
     category: 'react',
     question: 'Как объявить "Generic Component" (обобщённый компонент) на TypeScript в React для типизации динамических пропсов?',
     options: [
@@ -2089,6 +2238,7 @@ export const reactQuestions: Question[] = [
   },
   {
     id: 'react-150',
+    difficulty: 'advanced',
     category: 'react',
     question: 'В чём суть паттерна "Render Props" в React, и почему его популярность сошла на нет с появлением хуков?',
     options: [

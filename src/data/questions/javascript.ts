@@ -3,6 +3,7 @@ import { Question } from '@/types/quiz';
 export const javascriptQuestions: Question[] = [
   {
     id: 'js-1',
+    difficulty: 'beginner',
     category: 'javascript',
     question: 'Что такое замыкание (closure) в JavaScript?',
     options: [
@@ -17,6 +18,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-2',
+    difficulty: 'beginner',
     category: 'javascript',
     question: 'В чём разница между == и === в JavaScript?',
     options: [
@@ -31,6 +33,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-3',
+    difficulty: 'beginner',
     category: 'javascript',
     question: 'Что такое хойстинг (hoisting) в JavaScript?',
     options: [
@@ -45,6 +48,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-4',
+    difficulty: 'beginner',
     category: 'javascript',
     question: 'Что такое Promise в JavaScript?',
     options: [
@@ -59,6 +63,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-5',
+    difficulty: 'beginner',
     category: 'javascript',
     question: 'Какова разница между let, const и var?',
     options: [
@@ -73,6 +78,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-6',
+    difficulty: 'beginner',
     category: 'javascript',
     question: 'Что делает метод Array.prototype.reduce()?',
     options: [
@@ -87,6 +93,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-7',
+    difficulty: 'beginner',
     category: 'javascript',
     question: 'Что такое Event Loop в JavaScript?',
     options: [
@@ -101,6 +108,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-8',
+    difficulty: 'beginner',
     category: 'javascript',
     question: 'Что такое IIFE (Immediately Invoked Function Expression)?',
     options: [
@@ -115,6 +123,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-9',
+    difficulty: 'beginner',
     category: 'javascript',
     question: 'Как работает прототипное наследование в JavaScript?',
     options: [
@@ -129,6 +138,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-10',
+    difficulty: 'beginner',
     category: 'javascript',
     question: 'Что возвращает typeof null?',
     options: ['"null"', '"undefined"', '"object"', '"empty"'],
@@ -138,6 +148,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-11',
+    difficulty: 'beginner',
     category: 'javascript',
     question: 'Что такое каррирование (currying) в JavaScript?',
     options: [
@@ -152,6 +163,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-12',
+    difficulty: 'beginner',
     category: 'javascript',
     question: 'В чём разница между call(), apply() и bind()?',
     options: [
@@ -166,6 +178,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-13',
+    difficulty: 'beginner',
     category: 'javascript',
     question: 'Что такое деструктуризация в JavaScript?',
     options: [
@@ -180,6 +193,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-14',
+    difficulty: 'beginner',
     category: 'javascript',
     question: 'Что такое Temporal Dead Zone (TDZ)?',
     options: [
@@ -194,6 +208,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-15',
+    difficulty: 'beginner',
     category: 'javascript',
     question: 'Что такое async/await?',
     options: [
@@ -208,6 +223,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-16',
+    difficulty: 'beginner',
     category: 'javascript',
     question: 'Что делает метод Array.prototype.map()?',
     options: [
@@ -222,6 +238,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-17',
+    difficulty: 'beginner',
     category: 'javascript',
     question: 'Что такое spread оператор (...) в JavaScript?',
     options: [
@@ -236,6 +253,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-18',
+    difficulty: 'beginner',
     category: 'javascript',
     question: 'В чём разница между null и undefined?',
     options: [
@@ -250,6 +268,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-19',
+    difficulty: 'beginner',
     category: 'javascript',
     question: 'Что такое мемоизация (memoization)?',
     options: [
@@ -264,6 +283,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-20',
+    difficulty: 'beginner',
     category: 'javascript',
     question: 'Что такое генератор (Generator) в JavaScript?',
     options: [
@@ -278,6 +298,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-21',
+    difficulty: 'beginner',
     category: 'javascript',
     question: 'Что такое WeakMap и чем он отличается от Map?',
     options: [
@@ -292,6 +313,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-22',
+    difficulty: 'beginner',
     category: 'javascript',
     question: 'Как работает метод Promise.all()?',
     options: [
@@ -306,6 +328,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-23',
+    difficulty: 'beginner',
     category: 'javascript',
     question: 'Что такое Symbol в JavaScript?',
     options: [
@@ -320,6 +343,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-24',
+    difficulty: 'beginner',
     category: 'javascript',
     question: 'Что такое event bubbling (всплытие событий)?',
     options: [
@@ -334,6 +358,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-25',
+    difficulty: 'beginner',
     category: 'javascript',
     question: 'Что такое чистая функция (pure function)?',
     options: [
@@ -348,6 +373,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-26',
+    difficulty: 'beginner',
     category: 'javascript',
     question: 'Что такое делегирование событий (event delegation)?',
     options: [
@@ -362,6 +388,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-27',
+    difficulty: 'beginner',
     category: 'javascript',
     question: 'Что такое Proxy в JavaScript?',
     options: [
@@ -376,6 +403,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-28',
+    difficulty: 'beginner',
     category: 'javascript',
     question: 'В чём разница между поверхностной (shallow) и глубокой (deep) копией?',
     options: [
@@ -390,6 +418,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-29',
+    difficulty: 'beginner',
     category: 'javascript',
     question: 'Что такое Set в JavaScript и чем отличается от Array?',
     options: [
@@ -404,6 +433,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-30',
+    difficulty: 'beginner',
     category: 'javascript',
     question: 'Что такое Optional Chaining (?.) и Nullish Coalescing (??)?',
     options: [
@@ -418,6 +448,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-31',
+    difficulty: 'beginner',
     category: 'javascript',
     question: 'Как работает цикл for...of и чем отличается от for...in?',
     options: [
@@ -432,6 +463,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-32',
+    difficulty: 'beginner',
     category: 'javascript',
     question: 'Что такое WeakRef и FinalizationRegistry?',
     options: [
@@ -446,6 +478,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-33',
+    difficulty: 'beginner',
     category: 'javascript',
     question: 'Что такое Tagged Template Literals?',
     options: [
@@ -460,6 +493,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-34',
+    difficulty: 'beginner',
     category: 'javascript',
     question: 'Что такое дескрипторы свойств объекта (Property Descriptors)?',
     options: [
@@ -474,6 +508,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-35',
+    difficulty: 'beginner',
     category: 'javascript',
     question: 'Как работает async iterator и for await...of?',
     options: [
@@ -488,6 +523,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-36',
+    difficulty: 'beginner',
     category: 'javascript',
     question: 'Что такое микрозадачи (microtasks) и макрозадачи (macrotasks)?',
     options: [
@@ -502,6 +538,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-37',
+    difficulty: 'beginner',
     category: 'javascript',
     question: 'Что такое Object.create(null) и зачем использовать?',
     options: [
@@ -516,6 +553,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-38',
+    difficulty: 'beginner',
     category: 'javascript',
     question: 'Что делает метод Array.prototype.flat() и flatMap()?',
     options: [
@@ -530,6 +568,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-39',
+    difficulty: 'beginner',
     category: 'javascript',
     question: 'Как работает оператор логического присваивания (&&=, ||=, ??=)?',
     options: [
@@ -544,6 +583,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-40',
+    difficulty: 'beginner',
     category: 'javascript',
     question: 'Что такое AbortController в JavaScript?',
     options: [
@@ -558,6 +598,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-41',
+    difficulty: 'beginner',
     category: 'javascript',
     question: 'Что такое структурированное клонирование (structuredClone)?',
     options: [
@@ -572,6 +613,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-42',
+    difficulty: 'beginner',
     category: 'javascript',
     question: 'Как работает паттерн "Observer" (наблюдатель) в JavaScript?',
     options: [
@@ -586,6 +628,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-43',
+    difficulty: 'beginner',
     category: 'javascript',
     question: 'Что такое Reflect API в JavaScript?',
     options: [
@@ -600,6 +643,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-44',
+    difficulty: 'beginner',
     category: 'javascript',
     question: 'Что такое "утечка памяти" (memory leak) и как её предотвратить?',
     options: [
@@ -614,6 +658,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-45',
+    difficulty: 'beginner',
     category: 'javascript',
     question: 'Что такое debounce и throttle?',
     options: [
@@ -628,6 +673,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-46',
+    difficulty: 'beginner',
     category: 'javascript',
     question: 'Как работает метод Object.freeze() и в чём его ограничения?',
     options: [
@@ -642,6 +688,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-47',
+    difficulty: 'beginner',
     category: 'javascript',
     question: 'Что такое Promise.allSettled() и когда использовать?',
     options: [
@@ -656,6 +703,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-48',
+    difficulty: 'beginner',
     category: 'javascript',
     question: 'Что такое Iterator Protocol в JavaScript?',
     options: [
@@ -670,6 +718,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-49',
+    difficulty: 'beginner',
     category: 'javascript',
     question: 'Что такое tail call optimization (TCO)?',
     options: [
@@ -684,6 +733,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-50',
+    difficulty: 'beginner',
     category: 'javascript',
     question: 'Что такое SharedArrayBuffer и Atomics?',
     options: [
@@ -698,6 +748,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-51',
+    difficulty: 'beginner',
     category: 'javascript',
     question: 'Как работает метод Array.from()?',
     options: [
@@ -712,6 +763,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-52',
+    difficulty: 'beginner',
     category: 'javascript',
     question: 'Что такое Symbol.iterator и как реализовать свой итерируемый объект?',
     options: [
@@ -726,6 +778,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-53',
+    difficulty: 'beginner',
     category: 'javascript',
     question: 'Что такое "принцип наименьшего удивления" в контексте JavaScript?',
     options: [
@@ -740,6 +793,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-54',
+    difficulty: 'beginner',
     category: 'javascript',
     question: 'Как работает toString() и valueOf() при приведении типов?',
     options: [
@@ -754,6 +808,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-55',
+    difficulty: 'beginner',
     category: 'javascript',
     question: 'Что такое паттерн "Модуль" (Module Pattern) в JavaScript?',
     options: [
@@ -768,6 +823,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-56',
+    difficulty: 'beginner',
     category: 'javascript',
     question: 'Что такое коерция типов (type coercion) в JavaScript?',
     options: [
@@ -782,6 +838,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-57',
+    difficulty: 'beginner',
     category: 'javascript',
     question: 'Как работает деструктуризация с дефолтными значениями и переименованием?',
     options: [
@@ -796,6 +853,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-58',
+    difficulty: 'beginner',
     category: 'javascript',
     question: 'Что такое BigInt в JavaScript?',
     options: [
@@ -810,6 +868,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-59',
+    difficulty: 'beginner',
     category: 'javascript',
     question: 'Что такое паттерн "Фасад" (Facade) применительно к JavaScript?',
     options: [
@@ -824,6 +883,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-60',
+    difficulty: 'beginner',
     category: 'javascript',
     question: 'Как работает Object.assign() и что нужно знать о его поведении?',
     options: [
@@ -838,6 +898,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-61',
+    difficulty: 'intermediate',
     category: 'javascript',
     question: 'Что такое "стрела функции" (arrow function) и чём её this отличается?',
     options: [
@@ -852,6 +913,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-62',
+    difficulty: 'intermediate',
     category: 'javascript',
     question: 'Что такое Promise.race() и Promise.any()?',
     options: [
@@ -866,6 +928,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-63',
+    difficulty: 'intermediate',
     category: 'javascript',
     question: 'Что такое функциональное программирование (FP) и его принципы в JavaScript?',
     options: [
@@ -880,6 +943,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-64',
+    difficulty: 'intermediate',
     category: 'javascript',
     question: 'Как работает метод Array.prototype.find() и findIndex()?',
     options: [
@@ -894,6 +958,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-65',
+    difficulty: 'intermediate',
     category: 'javascript',
     question: 'Что такое AggregateError в JavaScript?',
     options: [
@@ -908,6 +973,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-66',
+    difficulty: 'intermediate',
     category: 'javascript',
     question: 'Что такое Object.entries() и Object.fromEntries()?',
     options: [
@@ -922,6 +988,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-67',
+    difficulty: 'intermediate',
     category: 'javascript',
     question: 'Что такое паттерн "Наблюдаемое" (Observable) и RxJS?',
     options: [
@@ -936,6 +1003,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-68',
+    difficulty: 'intermediate',
     category: 'javascript',
     question: 'Как работает оператор in в JavaScript?',
     options: [
@@ -950,6 +1018,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-69',
+    difficulty: 'intermediate',
     category: 'javascript',
     question: 'Что такое деструктуризация параметров функции с дефолтным объектом?',
     options: [
@@ -964,6 +1033,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-70',
+    difficulty: 'intermediate',
     category: 'javascript',
     question: 'Что такое globalThis в JavaScript?',
     options: [
@@ -978,6 +1048,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-71',
+    difficulty: 'intermediate',
     category: 'javascript',
     question: 'Что такое паттерн "Стратегия" (Strategy) в JavaScript?',
     options: [
@@ -992,6 +1063,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-72',
+    difficulty: 'intermediate',
     category: 'javascript',
     question: 'Как работает queueMicrotask()?',
     options: [
@@ -1006,6 +1078,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-73',
+    difficulty: 'intermediate',
     category: 'javascript',
     question: 'Что такое Error.cause в JavaScript?',
     options: [
@@ -1020,6 +1093,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-74',
+    difficulty: 'intermediate',
     category: 'javascript',
     question: 'Что такое Array.prototype.at() и Object.hasOwn()?',
     options: [
@@ -1034,6 +1108,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-75',
+    difficulty: 'intermediate',
     category: 'javascript',
     question: 'Что такое паттерн "Синглтон" (Singleton) в JavaScript и его недостатки?',
     options: [
@@ -1048,6 +1123,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-76',
+    difficulty: 'intermediate',
     category: 'javascript',
     question: 'В каком порядке Event Loop выполнит следующий код, если в нем присутствуют setTimeout, queueMicrotask, requestAnimationFrame и Promise?',
     options: [
@@ -1062,6 +1138,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-77',
+    difficulty: 'intermediate',
     category: 'javascript',
     question: 'Что делает новый API scheduler.postTask() в современных браузерах?',
     options: [
@@ -1076,6 +1153,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-78',
+    difficulty: 'intermediate',
     category: 'javascript',
     question: 'Какое значение вернет вызов generator.next(10) во втором вызове, если генератор gen() приостановлен на первом yield?',
     options: [
@@ -1090,6 +1168,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-79',
+    difficulty: 'intermediate',
     category: 'javascript',
     question: 'Как поведет себя цикл for...of при итерации по генератору, который возвращает значение через return в конце, а не через yield?',
     options: [
@@ -1104,6 +1183,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-80',
+    difficulty: 'intermediate',
     category: 'javascript',
     question: 'Что произойдет, если вызвать метод generator.throw(new Error("err")) у генератора, который сейчас приостановлен на первом yield?',
     options: [
@@ -1118,6 +1198,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-81',
+    difficulty: 'intermediate',
     category: 'javascript',
     question: 'Каким методом и с какими возвращаемыми значениями нужно итерировать асинхронный генератор вручную?',
     options: [
@@ -1132,6 +1213,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-82',
+    difficulty: 'intermediate',
     category: 'javascript',
     question: 'Что произойдет, если применить цикл for await (const x of iterable) к обычному (синхронному) массиву или объекту с Symbol.iterator?',
     options: [
@@ -1146,6 +1228,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-83',
+    difficulty: 'intermediate',
     category: 'javascript',
     question: 'Как работает метод-символ Symbol.toPrimitive при преобразовании типов объекта?',
     options: [
@@ -1160,6 +1243,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-84',
+    difficulty: 'intermediate',
     category: 'javascript',
     question: 'Как можно переопределить поведение оператора instanceof для пользовательского объекта или класса?',
     options: [
@@ -1174,6 +1258,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-85',
+    difficulty: 'intermediate',
     category: 'javascript',
     question: 'Каким образом можно заставить метод Array.prototype.concat() не "расплющивать" (flatten) конкретный массив при объединении, а добавлять его целиком как один элемент?',
     options: [
@@ -1188,6 +1273,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-86',
+    difficulty: 'intermediate',
     category: 'javascript',
     question: 'В чём основное преимущество использования Reflect.apply(target, thisArg, argsList) перед target.apply(thisArg, argsList)?',
     options: [
@@ -1202,6 +1288,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-87',
+    difficulty: 'intermediate',
     category: 'javascript',
     question: 'Что возвращает метод Reflect.defineProperty(target, propertyKey, attributes) в случае неудачи (например, если объект заморожен), в отличие от Object.defineProperty()?',
     options: [
@@ -1216,6 +1303,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-88',
+    difficulty: 'intermediate',
     category: 'javascript',
     question: 'Какие ключи возвращает метод Reflect.ownKeys(target)?',
     options: [
@@ -1230,6 +1318,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-89',
+    difficulty: 'intermediate',
     category: 'javascript',
     question: 'Какую важную особенность имеет метод Reflect.set(target, propertyKey, value, receiver) благодаря четвертому параметру receiver?',
     options: [
@@ -1244,6 +1333,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-90',
+    difficulty: 'intermediate',
     category: 'javascript',
     question: 'В каком из следующих случаев JavaScript выбросит исключение типа RangeError?',
     options: [
@@ -1258,6 +1348,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-91',
+    difficulty: 'intermediate',
     category: 'javascript',
     question: 'В каком случае в строгом режиме (strict mode) будет выброшена ошибка ReferenceError?',
     options: [
@@ -1272,6 +1363,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-92',
+    difficulty: 'intermediate',
     category: 'javascript',
     question: 'Какая ошибка возникнет при попытке запустить код JSON.parse(\'{"name": Alice}\') в среде JavaScript?',
     options: [
@@ -1286,6 +1378,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-93',
+    difficulty: 'intermediate',
     category: 'javascript',
     question: 'Как работает ретроспективная проверка (lookbehind assertion) (?<=Y)X в регулярных выражениях JavaScript?',
     options: [
@@ -1300,6 +1393,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-94',
+    difficulty: 'intermediate',
     category: 'javascript',
     question: 'Каким образом в регулярном выражении создается и используется именованная группа захвата (named capture group), и где найти её результат?',
     options: [
@@ -1314,6 +1408,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-95',
+    difficulty: 'intermediate',
     category: 'javascript',
     question: 'За что отвечает флаг /d в регулярных выражениях JavaScript (введённый в ES2022)?',
     options: [
@@ -1328,6 +1423,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-96',
+    difficulty: 'intermediate',
     category: 'javascript',
     question: 'Чем флаг /v (unicodeSets), добавленный в ES2024, отличается от флага /u?',
     options: [
@@ -1342,6 +1438,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-97',
+    difficulty: 'intermediate',
     category: 'javascript',
     question: 'Что произойдет, если запустить рекурсивную функцию, планирующую саму себя через queueMicrotask(fn), по сравнению с setTimeout(fn, 0)?',
     options: [
@@ -1356,6 +1453,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-98',
+    difficulty: 'intermediate',
     category: 'javascript',
     question: 'Что должен возвращать метод [Symbol.iterator]() объекта для того, чтобы объект стал итерируемым?',
     options: [
@@ -1370,6 +1468,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-99',
+    difficulty: 'intermediate',
     category: 'javascript',
     question: 'Для чего может быть полезен метод Reflect.construct(target, argumentsList, newTarget)?',
     options: [
@@ -1384,6 +1483,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-100',
+    difficulty: 'intermediate',
     category: 'javascript',
     question: 'Почему вызов eval("const a = 1; const a = 2;") выбрасывает SyntaxError во время выполнения программы, хотя сам eval запускается без ошибок компиляции основного файла?',
     options: [
@@ -1398,6 +1498,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-101',
+    difficulty: 'intermediate',
     category: 'javascript',
     question: 'Что произойдет при изменении значения элемента в TypedArray, который был создан на базе существующего ArrayBuffer?',
     options: [
@@ -1412,6 +1513,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-102',
+    difficulty: 'intermediate',
     category: 'javascript',
     question: 'В каком случае предпочтительнее использовать DataView вместо TypedArray для чтения и записи бинарных данных?',
     options: [
@@ -1426,6 +1528,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-103',
+    difficulty: 'intermediate',
     category: 'javascript',
     question: 'Для решения какой задачи предназначен API Intl.Collator?',
     options: [
@@ -1440,6 +1543,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-104',
+    difficulty: 'intermediate',
     category: 'javascript',
     question: 'Какой результат вернет форматирование через new Intl.RelativeTimeFormat("ru", { numeric: "auto" }).format(-1, "day")?',
     options: [
@@ -1454,6 +1558,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-105',
+    difficulty: 'intermediate',
     category: 'javascript',
     question: 'В чём ключевое преимущество использования performance.now() перед Date.now() для измерения производительности?',
     options: [
@@ -1468,6 +1573,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-106',
+    difficulty: 'intermediate',
     category: 'javascript',
     question: 'Каким образом работает PerformanceObserver в современном JavaScript?',
     options: [
@@ -1482,6 +1588,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-107',
+    difficulty: 'intermediate',
     category: 'javascript',
     question: 'Как работает двухпоколенческий (generational) сборщик мусора, используемый в V8?',
     options: [
@@ -1496,6 +1603,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-108',
+    difficulty: 'intermediate',
     category: 'javascript',
     question: 'Какое действие разработчика может привести к деоптимизации (deoptimization) функции в V8 из-за изменения скрытого класса (Hidden Class / Shape) объекта?',
     options: [
@@ -1510,6 +1618,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-109',
+    difficulty: 'intermediate',
     category: 'javascript',
     question: 'Какая из перечисленных причин является наиболее частым источником утечек памяти в современных одностраничных приложениях (SPA) на JavaScript?',
     options: [
@@ -1524,6 +1633,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-110',
+    difficulty: 'intermediate',
     category: 'javascript',
     question: 'Для чего в JavaScript (ES2021) используются объекты WeakRef и FinalizationRegistry?',
     options: [
@@ -1538,6 +1648,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-111',
+    difficulty: 'intermediate',
     category: 'javascript',
     question: 'Как работают передаваемые объекты (Transferable Objects) в методе worker.postMessage()?',
     options: [
@@ -1552,6 +1663,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-112',
+    difficulty: 'intermediate',
     category: 'javascript',
     question: 'Зачем нужен объект Atomics при работе с SharedArrayBuffer в мультипоточном JavaScript?',
     options: [
@@ -1566,6 +1678,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-113',
+    difficulty: 'intermediate',
     category: 'javascript',
     question: 'Какая стадия жизненного цикла Service Worker наступает сразу после успешной установки (install), и как заставить его немедленно активироваться, не дожидаясь закрытия старых вкладок пользователем?',
     options: [
@@ -1580,6 +1693,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-114',
+    difficulty: 'intermediate',
     category: 'javascript',
     question: 'Какое поведение описывает стратегия кэширования "Stale-While-Revalidate" в Service Worker?',
     options: [
@@ -1594,6 +1708,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-115',
+    difficulty: 'intermediate',
     category: 'javascript',
     question: 'В каком случае архитектурно необходимо использовать IndexedDB вместо localStorage или sessionStorage?',
     options: [
@@ -1608,6 +1723,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-116',
+    difficulty: 'intermediate',
     category: 'javascript',
     question: 'Как влияют параметры rootMargin и threshold в IntersectionObserver на вызов колбэка наблюдения?',
     options: [
@@ -1622,6 +1738,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-117',
+    difficulty: 'intermediate',
     category: 'javascript',
     question: 'В чем ключевая разница в назначении между ResizeObserver и MutationObserver?',
     options: [
@@ -1636,6 +1753,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-118',
+    difficulty: 'intermediate',
     category: 'javascript',
     question: 'Почему для создания плавных анимаций (60fps+) в браузере рекомендуется использовать requestAnimationFrame, а не setTimeout или setInterval?',
     options: [
@@ -1650,6 +1768,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-119',
+    difficulty: 'intermediate',
     category: 'javascript',
     question: 'Что такое Inline Caching (IC) в движке V8?',
     options: [
@@ -1664,6 +1783,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-120',
+    difficulty: 'intermediate',
     category: 'javascript',
     question: 'Как работает базовый алгоритм сборки мусора "Mark-and-Sweep" (маркировка и очистка), применяемый во всех современных JS-движках?',
     options: [
@@ -1678,6 +1798,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-121',
+    difficulty: 'advanced',
     category: 'javascript',
     question: 'Что такое "отсоединенные DOM-узлы" (detached DOM nodes) как причина утечки памяти в JavaScript?',
     options: [
@@ -1692,6 +1813,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-122',
+    difficulty: 'advanced',
     category: 'javascript',
     question: 'В каком из следующих сценариев оптимально применить IntersectionObserver вместо классического слушателя события scroll?',
     options: [
@@ -1706,6 +1828,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-123',
+    difficulty: 'advanced',
     category: 'javascript',
     question: 'Как запустить MutationObserver так, чтобы он реагировал на изменения не только самого целевого элемента, но и всех его потомков на любую глубину?',
     options: [
@@ -1720,6 +1843,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-124',
+    difficulty: 'advanced',
     category: 'javascript',
     question: 'Какой объем памяти (в байтах) выделит в системе вызов new Int32Array(10)?',
     options: [
@@ -1734,6 +1858,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-125',
+    difficulty: 'advanced',
     category: 'javascript',
     question: 'Какие заголовки безопасности (COOP и COEP) должен отдавать сервер, чтобы браузер разрешил использование SharedArrayBuffer в современных условиях безопасности?',
     options: [
@@ -1748,6 +1873,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-126',
+    difficulty: 'advanced',
     category: 'javascript',
     question: 'В чем фундаментальное различие в механизме импорта/экспорта между CommonJS (CJS) и ES Modules (ESM)?',
     options: [
@@ -1762,6 +1888,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-127',
+    difficulty: 'advanced',
     category: 'javascript',
     question: 'Какое препятствие чаще всего мешает бандлерам (Webpack, Rollup, Vite) успешно провести "Tree shaking" (удаление мертвого кода) для экспортируемой функции?',
     options: [
@@ -1776,6 +1903,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-128',
+    difficulty: 'advanced',
     category: 'javascript',
     question: 'Для чего нужен объект import.meta в модулях стандарта ESM?',
     options: [
@@ -1790,6 +1918,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-129',
+    difficulty: 'advanced',
     category: 'javascript',
     question: 'Каков ключевой архитектурный принцип, благодаря которому сервер разработки Vite запускается практически мгновенно по сравнению с Webpack?',
     options: [
@@ -1804,6 +1933,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-130',
+    difficulty: 'advanced',
     category: 'javascript',
     question: 'Что представляет собой Source Map и как браузер сопоставляет скомпилированный минифицированный файл с исходным кодом?',
     options: [
@@ -1818,6 +1948,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-131',
+    difficulty: 'advanced',
     category: 'javascript',
     question: 'Какая директива CSP (Content Security Policy) необходима, чтобы полностью запретить выполнение потенциально опасного JS-кода через функции eval() и new Function()?',
     options: [
@@ -1832,6 +1963,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-132',
+    difficulty: 'advanced',
     category: 'javascript',
     question: 'В чем разница в области видимости (scope) между вызовами eval() и new Function() в JavaScript?',
     options: [
@@ -1846,6 +1978,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-133',
+    difficulty: 'advanced',
     category: 'javascript',
     question: 'Какую давнюю проблему встроенного объекта Date решает новый стандарт Temporal API (проходящий стандартизацию ECMA)?',
     options: [
@@ -1860,6 +1993,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-134',
+    difficulty: 'advanced',
     category: 'javascript',
     question: 'Каким методом в современном JS (ES2024) можно сгруппировать элементы массива по определенному критерию в объект?',
     options: [
@@ -1874,6 +2008,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-135',
+    difficulty: 'advanced',
     category: 'javascript',
     question: 'Чем методы toSorted(), toReversed() и toSpliced() отличаются от своих классических аналогов sort(), reverse() и splice()?',
     options: [
@@ -1888,6 +2023,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-136',
+    difficulty: 'advanced',
     category: 'javascript',
     question: 'Как реализовать паттерн "Наблюдатель" (Observer) с помощью нативного класса EventTarget без создания собственных структур для хранения подписчиков?',
     options: [
@@ -1902,6 +2038,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-137',
+    difficulty: 'advanced',
     category: 'javascript',
     question: 'Как принцип разделения интерфейса (Interface Segregation Principle из SOLID) применяется в динамически типизированном JavaScript, где нет нативных интерфейсов?',
     options: [
@@ -1916,6 +2053,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-138',
+    difficulty: 'advanced',
     category: 'javascript',
     question: 'В чем разница между композицией функций (composition) и каррированием (currying) в функциональном программировании на JS?',
     options: [
@@ -1930,6 +2068,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-139',
+    difficulty: 'advanced',
     category: 'javascript',
     question: 'Какую основную концептуальную задачу решает монада Maybe в функциональном программировании на JavaScript?',
     options: [
@@ -1944,6 +2083,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-140',
+    difficulty: 'advanced',
     category: 'javascript',
     question: 'Что такое "трамплинг" (trampolining) в контексте оптимизации рекурсии в JavaScript?',
     options: [
@@ -1958,6 +2098,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-141',
+    difficulty: 'advanced',
     category: 'javascript',
     question: 'Каково ключевое различие в поведении между методами bind(), call() и apply() прототипа Function.prototype?',
     options: [
@@ -1972,6 +2113,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-142',
+    difficulty: 'advanced',
     category: 'javascript',
     question: 'Почему обращение к переменным, объявленным через let или const, до строки их объявления выбрасывает ReferenceError, хотя они поднимаются (hoisting) в начало области видимости?',
     options: [
@@ -1986,6 +2128,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-143',
+    difficulty: 'advanced',
     category: 'javascript',
     question: 'Каковы результаты неявного приведения типов (coercion) в выражениях Number([]), Number([10]) и Number([1, 2]) соответственно?',
     options: [
@@ -2000,6 +2143,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-144',
+    difficulty: 'advanced',
     category: 'javascript',
     question: 'Какое значение будет присвоено переменной x в результате операции x ??= y и в каком случае произойдет присвоение?',
     options: [
@@ -2014,6 +2158,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-145',
+    difficulty: 'advanced',
     category: 'javascript',
     question: 'В чем заключается важное различие в поведении между операцией spread const copy = { ...obj } и методом Object.assign(target, obj) при наличии геттеров/сеттеров?',
     options: [
@@ -2028,6 +2173,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-146',
+    difficulty: 'advanced',
     category: 'javascript',
     question: 'В чем главное преимущество функции structuredClone() перед методом JSON.parse(JSON.stringify()) для глубокого копирования объектов?',
     options: [
@@ -2042,6 +2188,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-147',
+    difficulty: 'advanced',
     category: 'javascript',
     question: 'Что возвращает метод String.prototype.matchAll(regexp) и в чем его отличие от match() с флагом /g?',
     options: [
@@ -2056,6 +2203,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-148',
+    difficulty: 'advanced',
     category: 'javascript',
     question: 'Как поведут себя циклы for...in и for...of при обходе обычного массива const arr = ["a", "b"]?',
     options: [
@@ -2070,6 +2218,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-149',
+    difficulty: 'advanced',
     category: 'javascript',
     question: 'В каком сценарии архитектурно необходимо предпочесть WeakMap вместо стандартного Map?',
     options: [
@@ -2084,6 +2233,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-150',
+    difficulty: 'advanced',
     category: 'javascript',
     question: 'Какие новые методы для работы со множествами появились в стандарте JavaScript (ES2025 proposals) для вычисления отношений между Set?',
     options: [
@@ -2098,6 +2248,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-151',
+    difficulty: 'advanced',
     category: 'javascript',
     question: 'Какова правильная последовательность этапов в Critical Rendering Path (критическом пути рендеринга) современного браузера при первоначальной загрузке страницы?',
     options: [
@@ -2112,6 +2263,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-152',
+    difficulty: 'advanced',
     category: 'javascript',
     question: 'Что именно по умолчанию полностью блокирует построение Render Tree и отрисовку страницы (Paint) в Critical Rendering Path браузера?',
     options: [
@@ -2126,6 +2278,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-153',
+    difficulty: 'advanced',
     category: 'javascript',
     question: 'В чём заключается ключевая разница в поведении загрузки и выполнения скриптов с атрибутами async и defer?',
     options: [
@@ -2140,6 +2293,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-154',
+    difficulty: 'advanced',
     category: 'javascript',
     question: 'Как именно устроен процесс двухфазной JIT-компиляции в современном движке V8 (Node.js / Chrome)?',
     options: [
@@ -2154,6 +2308,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-155',
+    difficulty: 'advanced',
     category: 'javascript',
     question: 'Каковы основные преимущества и недостатки AOT (Ahead-of-Time) компиляции по сравнению с JIT (Just-In-Time) компиляцией в контексте выполнения JS-подобных языков?',
     options: [
@@ -2168,6 +2323,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-156',
+    difficulty: 'advanced',
     category: 'javascript',
     question: 'Какова роль пресета @babel/preset-env в процессе транспиляции современного JavaScript-кода?',
     options: [
@@ -2182,6 +2338,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-157',
+    difficulty: 'advanced',
     category: 'javascript',
     question: 'За счет чего инструменты SWC и esbuild превосходят Babel по скорости компиляции и сборки кода в десятки раз?',
     options: [
@@ -2196,6 +2353,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-158',
+    difficulty: 'advanced',
     category: 'javascript',
     question: 'Что представляет собой Абстрактное Синтаксическое Дерево (AST) и какова его роль в работе таких инструментов, как Babel, ESLint и Prettier?',
     options: [
@@ -2210,6 +2368,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-159',
+    difficulty: 'advanced',
     category: 'javascript',
     question: 'В чём заключается принципиальное различие в ответственности и механизме работы между Loaders (загрузчиками) и Plugins (плагинами) в Webpack?',
     options: [
@@ -2224,6 +2383,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-160',
+    difficulty: 'advanced',
     category: 'javascript',
     question: 'Какую основную архитектурную проблему решает технология Webpack Module Federation?',
     options: [
@@ -2238,6 +2398,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-161',
+    difficulty: 'advanced',
     category: 'javascript',
     question: 'Как именно работает разделение кода (Code Splitting) при использовании динамического импорта import() в Webpack?',
     options: [
@@ -2252,6 +2413,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-162',
+    difficulty: 'advanced',
     category: 'javascript',
     question: 'Какое главное условие необходимо соблюсти в кодовой базе и её зависимостях, чтобы механизм Tree Shaking (удаление "мертвого" кода) работал максимально эффективно в бандлерах?',
     options: [
@@ -2266,6 +2428,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-163',
+    difficulty: 'advanced',
     category: 'javascript',
     question: 'Что сообщает бандлеру (например, Webpack/Rollup) свойство "sideEffects": false в файле package.json сторонней библиотеки?',
     options: [
@@ -2280,6 +2443,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-164',
+    difficulty: 'advanced',
     category: 'javascript',
     question: 'В чём разница между шаблонами именования файлов [hash] (или [fullhash]), [chunkhash] и [contenthash] в Webpack, и какой из них наиболее эффективен для кэширования в браузере?',
     options: [
@@ -2294,6 +2458,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-165',
+    difficulty: 'advanced',
     category: 'javascript',
     question: 'Каким образом бандлер (например, Webpack) подгружает ленивые чанки (Lazy Chunks), созданные через import(), на уровне рантайма в браузере?',
     options: [
@@ -2308,6 +2473,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-166',
+    difficulty: 'advanced',
     category: 'javascript',
     question: 'Какова принципиальная разница в архитектуре dev-сервера Vite по сравнению с традиционными бандлерами вроде Webpack?',
     options: [
@@ -2322,6 +2488,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-167',
+    difficulty: 'advanced',
     category: 'javascript',
     question: 'Как именно работает механизм HMR (Hot Module Replacement) в современных инструментах сборки без полной перезагрузки страницы в браузере?',
     options: [
@@ -2336,6 +2503,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-168',
+    difficulty: 'advanced',
     category: 'javascript',
     question: 'Каковы особенности типа сорсмапов eval-source-map и в каком окружении его целесообразно использовать?',
     options: [
@@ -2350,6 +2518,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-169',
+    difficulty: 'advanced',
     category: 'javascript',
     question: 'В отчете webpack-bundle-analyzer выводятся три размера для каждого файла: stat, parsed и gzip. Что именно означает размер parsed и почему на него нужно ориентироваться при оптимизации скорости работы JS на клиенте?',
     options: [
@@ -2364,6 +2533,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-170',
+    difficulty: 'advanced',
     category: 'javascript',
     question: 'В чём заключается принципиальное отличие между Транспиляцией (transpilation) и Полифилами (polyfills) при обеспечении совместимости JS-кода со старыми браузерами?',
     options: [
@@ -2378,6 +2548,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-171',
+    difficulty: 'advanced',
     category: 'javascript',
     question: 'Каким образом конфигурационный файл .browserslistrc координирует работу различных инструментов фронтенд-инфраструктуры?',
     options: [
@@ -2392,6 +2563,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-172',
+    difficulty: 'advanced',
     category: 'javascript',
     question: 'Что такое PostCSS по своей сути и как устроена его архитектура?',
     options: [
@@ -2406,6 +2578,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-173',
+    difficulty: 'advanced',
     category: 'javascript',
     question: 'Каким образом технология CSS Modules обеспечивает изоляцию стилей компонентов во избежание конфликтов глобальной области видимости CSS?',
     options: [
@@ -2420,6 +2593,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-174',
+    difficulty: 'advanced',
     category: 'javascript',
     question: 'Что такое WebAssembly (WASM), в каком виде он выполняется в браузере и какие у него существуют ключевые ограничения по взаимодействию со страницей?',
     options: [
@@ -2434,6 +2608,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-175',
+    difficulty: 'advanced',
     category: 'javascript',
     question: 'Какую задачу решают объекты SharedArrayBuffer и Atomics при работе с Web Workers в многопоточном JavaScript?',
     options: [
@@ -2448,6 +2623,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-176',
+    difficulty: 'advanced',
     category: 'javascript',
     question: 'Почему современные браузеры требуют включения режима кросс-оригинов изолированности (Cross-Origin Isolation) с помощью HTTP-заголовков COOP и COEP для использования SharedArrayBuffer?',
     options: [
@@ -2462,6 +2638,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-177',
+    difficulty: 'advanced',
     category: 'javascript',
     question: 'В чём разница между концепциями Compile-time (время компиляции) и Runtime (время выполнения) на примере компиляции TypeScript-кода?',
     options: [
@@ -2476,6 +2653,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-178',
+    difficulty: 'advanced',
     category: 'javascript',
     question: 'В чём заключается ключевое различие в подходе к сборке проекта между Task Runner (например, Gulp) и Module Bundler (например, Webpack / Rollup)?',
     options: [
@@ -2490,6 +2668,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-179',
+    difficulty: 'advanced',
     category: 'javascript',
     question: 'Как пакетный менеджер pnpm решает проблемы дублирования зависимостей на диске и "фантомных зависимостей" (Phantom Dependencies), свойственные npm и yarn v1 с их плоской структурой node_modules?',
     options: [
@@ -2504,6 +2683,7 @@ export const javascriptQuestions: Question[] = [
   },
   {
     id: 'js-180',
+    difficulty: 'advanced',
     category: 'javascript',
     question: 'Зачем в современном файле package.json библиотек используется поле exports вместо традиционных полей main и module?',
     options: [

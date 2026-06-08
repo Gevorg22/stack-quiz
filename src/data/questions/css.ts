@@ -3,6 +3,7 @@ import { Question } from '@/types/quiz';
 export const cssQuestions: Question[] = [
   {
     id: 'css-1',
+    difficulty: 'beginner',
     category: 'css',
     question: 'Что такое специфичность (specificity) в CSS?',
     options: [
@@ -17,6 +18,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-2',
+    difficulty: 'beginner',
     category: 'css',
     question: 'В чём разница между Flexbox и Grid?',
     options: [
@@ -31,6 +33,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-3',
+    difficulty: 'beginner',
     category: 'css',
     question: 'Что такое блочная модель (box model) в CSS?',
     options: [
@@ -45,6 +48,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-4',
+    difficulty: 'beginner',
     category: 'css',
     question: 'Что делает свойство position: sticky?',
     options: [
@@ -59,6 +63,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-5',
+    difficulty: 'beginner',
     category: 'css',
     question: 'Что такое CSS-переменные (Custom Properties)?',
     options: [
@@ -73,6 +78,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-6',
+    difficulty: 'beginner',
     category: 'css',
     question: 'Что такое медиа-запросы (media queries)?',
     options: [
@@ -87,6 +93,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-7',
+    difficulty: 'beginner',
     category: 'css',
     question: 'В чём разница между em и rem?',
     options: [
@@ -101,6 +108,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-8',
+    difficulty: 'beginner',
     category: 'css',
     question: 'Что такое z-index и как он работает?',
     options: [
@@ -115,6 +123,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-9',
+    difficulty: 'beginner',
     category: 'css',
     question: 'Что такое CSS-трансформации (transform)?',
     options: [
@@ -129,6 +138,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-10',
+    difficulty: 'beginner',
     category: 'css',
     question: 'Что такое псевдоэлементы ::before и ::after?',
     options: [
@@ -143,6 +153,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-11',
+    difficulty: 'beginner',
     category: 'css',
     question: 'Что такое CSS-каскад?',
     options: [
@@ -157,6 +168,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-12',
+    difficulty: 'beginner',
     category: 'css',
     question: 'Что такое CSS Grid и свойство grid-template-areas?',
     options: [
@@ -171,6 +183,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-13',
+    difficulty: 'beginner',
     category: 'css',
     question: 'Что делает свойство overflow: hidden?',
     options: [
@@ -185,6 +198,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-14',
+    difficulty: 'beginner',
     category: 'css',
     question: 'Что такое CSS-анимации (animation) и чем отличаются от transition?',
     options: [
@@ -199,6 +213,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-15',
+    difficulty: 'beginner',
     category: 'css',
     question: 'Что такое CSS-методология BEM?',
     options: [
@@ -213,6 +228,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-16',
+    difficulty: 'beginner',
     category: 'css',
     question: 'Что такое свойство will-change?',
     options: [
@@ -227,6 +243,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-17',
+    difficulty: 'beginner',
     category: 'css',
     question: 'Что такое CSS-переменные функции clamp(), min(), max()?',
     options: [
@@ -241,6 +258,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-18',
+    difficulty: 'beginner',
     category: 'css',
     question: 'Что такое CSS-селектор :nth-child()?',
     options: [
@@ -255,6 +273,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-19',
+    difficulty: 'beginner',
     category: 'css',
     question: 'Что такое CSS-модули (CSS Modules)?',
     options: [
@@ -269,6 +288,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-20',
+    difficulty: 'beginner',
     category: 'css',
     question: 'Что такое критический CSS (Critical CSS)?',
     options: [
@@ -283,6 +303,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-21',
+    difficulty: 'beginner',
     category: 'css',
     question: 'Что такое CSS Container Queries и чем они лучше Media Queries?',
     options: [
@@ -297,6 +318,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-22',
+    difficulty: 'beginner',
     category: 'css',
     question: 'Что такое CSS Cascade Layers (@layer)?',
     options: [
@@ -311,6 +333,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-23',
+    difficulty: 'beginner',
     category: 'css',
     question: 'Что такое CSS Subgrid?',
     options: [
@@ -325,6 +348,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-24',
+    difficulty: 'beginner',
     category: 'css',
     question: 'Что такое CSS Logical Properties?',
     options: [
@@ -339,6 +363,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-25',
+    difficulty: 'beginner',
     category: 'css',
     question: 'Что такое псевдоэлемент ::before и ::after?',
     options: [
@@ -353,6 +378,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-26',
+    difficulty: 'beginner',
     category: 'css',
     question: 'Что такое CSS transform и как работает аппаратное ускорение?',
     options: [
@@ -367,6 +393,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-27',
+    difficulty: 'beginner',
     category: 'css',
     question: 'Что такое CSS Cascade (каскад) и как он работает?',
     options: [
@@ -381,6 +408,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-28',
+    difficulty: 'beginner',
     category: 'css',
     question: 'Что такое функция clamp() в CSS и когда использовать?',
     options: [
@@ -395,6 +423,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-29',
+    difficulty: 'beginner',
     category: 'css',
     question: 'Что такое CSS revert и revert-layer?',
     options: [
@@ -409,6 +438,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-30',
+    difficulty: 'beginner',
     category: 'css',
     question: 'Что такое CSS Houdini и Paint Worklet?',
     options: [
@@ -423,6 +453,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-31',
+    difficulty: 'beginner',
     category: 'css',
     question: 'Что такое @property в CSS (Houdini Custom Properties)?',
     options: [
@@ -437,6 +468,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-32',
+    difficulty: 'beginner',
     category: 'css',
     question: 'Что такое CSS :has() псевдокласс (Parent Selector)?',
     options: [
@@ -451,6 +483,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-33',
+    difficulty: 'beginner',
     category: 'css',
     question: 'Что такое Utility-First CSS и Tailwind CSS?',
     options: [
@@ -465,6 +498,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-34',
+    difficulty: 'intermediate',
     category: 'css',
     question: 'Что такое CSS Scroll Snap?',
     options: [
@@ -479,6 +513,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-35',
+    difficulty: 'intermediate',
     category: 'css',
     question: 'Что такое CSS Anchor Positioning?',
     options: [
@@ -493,6 +528,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-36',
+    difficulty: 'intermediate',
     category: 'css',
     question: 'Что такое CSS view transitions API?',
     options: [
@@ -507,6 +543,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-37',
+    difficulty: 'intermediate',
     category: 'css',
     question: 'Что такое color-scheme, prefers-color-scheme и forced-colors?',
     options: [
@@ -521,6 +558,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-38',
+    difficulty: 'intermediate',
     category: 'css',
     question: 'Что такое CSS Nesting?',
     options: [
@@ -535,6 +573,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-39',
+    difficulty: 'intermediate',
     category: 'css',
     question: 'Что такое CSS Scroll-Driven Animations?',
     options: [
@@ -549,6 +588,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-40',
+    difficulty: 'intermediate',
     category: 'css',
     question: 'Что такое CSS Scope (@scope)?',
     options: [
@@ -563,6 +603,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-41',
+    difficulty: 'intermediate',
     category: 'css',
     question: 'Что такое CSS Gap и как работает в Flex и Grid?',
     options: [
@@ -577,6 +618,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-42',
+    difficulty: 'intermediate',
     category: 'css',
     question: 'Что такое CSS функция env() и Safe Area Insets?',
     options: [
@@ -591,6 +633,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-43',
+    difficulty: 'intermediate',
     category: 'css',
     question: 'Что такое CSS Masonry Layout?',
     options: [
@@ -605,6 +648,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-44',
+    difficulty: 'intermediate',
     category: 'css',
     question: 'Что такое CSS Counters?',
     options: [
@@ -619,6 +663,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-45',
+    difficulty: 'intermediate',
     category: 'css',
     question: 'Что такое CSS clip-path и как использовать?',
     options: [
@@ -633,6 +678,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-46',
+    difficulty: 'intermediate',
     category: 'css',
     question: 'Что такое CSS aspect-ratio?',
     options: [
@@ -647,6 +693,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-47',
+    difficulty: 'intermediate',
     category: 'css',
     question: 'Что такое CSS overscroll-behavior?',
     options: [
@@ -661,6 +708,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-48',
+    difficulty: 'intermediate',
     category: 'css',
     question: 'Что такое CSS text-overflow и line-clamp?',
     options: [
@@ -675,6 +723,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-49',
+    difficulty: 'intermediate',
     category: 'css',
     question: 'Что такое CSS custom properties (переменные) и их ограничения?',
     options: [
@@ -689,6 +738,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-50',
+    difficulty: 'intermediate',
     category: 'css',
     question: 'Что такое CSS Selector List Forgiveness (:is(), :where(), :not())?',
     options: [
@@ -703,6 +753,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-51',
+    difficulty: 'intermediate',
     category: 'css',
     question: 'Как с помощью функции `color-mix()` смешать 30% синего цвета в пространстве sRGB с красным цветом?',
     options: [
@@ -717,6 +768,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-52',
+    difficulty: 'intermediate',
     category: 'css',
     question: 'В чём основное преимущество использования функции `color(display-p3 ...)` по сравнению со стандартными цветами sRGB (например, `rgb()` или `#hex`)?',
     options: [
@@ -731,6 +783,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-53',
+    difficulty: 'intermediate',
     category: 'css',
     question: 'В чём заключается главное преимущество цветового пространства `oklch()` перед классическими `hsl()` и `rgb()` при программном изменении цветов?',
     options: [
@@ -745,6 +798,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-54',
+    difficulty: 'intermediate',
     category: 'css',
     question: 'Как с помощью относительного синтаксиса цветов (Relative Color Syntax) сделать цвет фона на 20% прозрачнее, используя существующую переменную `--primary` в формате oklch?',
     options: [
@@ -759,6 +813,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-55',
+    difficulty: 'intermediate',
     category: 'css',
     question: 'Как работает экспериментальная функция `color-contrast()` в CSS?',
     options: [
@@ -773,6 +828,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-56',
+    difficulty: 'intermediate',
     category: 'css',
     question: 'Какое поведение демонстрирует значение `font-display: optional`?',
     options: [
@@ -787,6 +843,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-57',
+    difficulty: 'intermediate',
     category: 'css',
     question: 'Какое CSS-свойство является низкоуровневым механизмом для управления кастомными осями вариативных шрифтов (например, ширина, наклон), которые не покрываются стандартными свойствами?',
     options: [
@@ -801,6 +858,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-58',
+    difficulty: 'intermediate',
     category: 'css',
     question: 'Для чего используется CSS-свойство `font-palette`?',
     options: [
@@ -815,6 +873,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-59',
+    difficulty: 'intermediate',
     category: 'css',
     question: 'Какую основную проблему решают дескрипторы `size-adjust`, `ascent-override` и `descent-override` внутри правила `@font-face`?',
     options: [
@@ -829,6 +888,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-60',
+    difficulty: 'intermediate',
     category: 'css',
     question: 'Какое условие является обязательным для того, чтобы свойство `shape-outside` начало работать на элементе и обтекаться текстом?',
     options: [
@@ -843,6 +903,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-61',
+    difficulty: 'intermediate',
     category: 'css',
     question: 'В чём разница между стандартным обтеканием `float` со свойствами CSS Shapes и концепцией CSS Exclusions?',
     options: [
@@ -857,6 +918,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-62',
+    difficulty: 'intermediate',
     category: 'css',
     question: 'Для чего используется CSS-свойство `initial-letter`?',
     options: [
@@ -871,6 +933,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-63',
+    difficulty: 'intermediate',
     category: 'css',
     question: 'Какое свойство `writing-mode` задает вертикальное направление письма с расположением строк справа налево?',
     options: [
@@ -885,6 +948,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-64',
+    difficulty: 'intermediate',
     category: 'css',
     question: 'Для чего используется CSS-свойство `text-combine-upright` в сочетании с вертикальным режимом письма (`writing-mode`)?',
     options: [
@@ -899,6 +963,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-65',
+    difficulty: 'intermediate',
     category: 'css',
     question: 'В чём ключевое различие между свойствами `clip-path` и `mask-image` при скрытии частей элемента?',
     options: [
@@ -913,6 +978,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-66',
+    difficulty: 'intermediate',
     category: 'css',
     question: 'Почему свойство `backdrop-filter` может не работать, если у самого элемента задан непрозрачный цвет фона (например, `background: #ffffff`)?',
     options: [
@@ -927,6 +993,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-67',
+    difficulty: 'advanced',
     category: 'css',
     question: 'Какое значение `mix-blend-mode` инвертирует цвета элемента на основе цветов фона, давая белый цвет на черном фоне и черный цвет на белом?',
     options: [
@@ -941,6 +1008,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-68',
+    difficulty: 'advanced',
     category: 'css',
     question: 'Какую проблему решает CSS-свойство `isolation: isolate`?',
     options: [
@@ -955,6 +1023,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-69',
+    difficulty: 'advanced',
     category: 'css',
     question: 'Что произойдет с 3D-трансформированными дочерними элементами, если у их родителя свойство `transform-style` установлено в `flat` (по умолчанию)?',
     options: [
@@ -969,6 +1038,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-70',
+    difficulty: 'advanced',
     category: 'css',
     question: 'В чём заключается главная опасность злоупотребления свойством `will-change: transform` на большом количестве элементов?',
     options: [
@@ -983,6 +1053,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-71',
+    difficulty: 'advanced',
     category: 'css',
     question: 'Какое значение свойства `contain` (CSS Containment) указывает браузеру, что внутренности элемента никак не влияют на размеры и разметку внешних элементов, а также не выходят за его границы, обеспечивая максимальную оптимизацию перерисовки?',
     options: [
@@ -997,6 +1068,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-72',
+    difficulty: 'advanced',
     category: 'css',
     question: 'Каким образом свойство `content-visibility: auto` оптимизирует производительность рендеринга длинных страниц?',
     options: [
@@ -1011,6 +1083,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-73',
+    difficulty: 'advanced',
     category: 'css',
     question: 'Каким образом подключается и используется кастомный Paint Worklet, созданный через CSS Painting API (Houdini)?',
     options: [
@@ -1025,6 +1098,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-74',
+    difficulty: 'advanced',
     category: 'css',
     question: 'Какую задачу решает экспериментальный CSS Layout API (Houdini)?',
     options: [
@@ -1039,6 +1113,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-75',
+    difficulty: 'advanced',
     category: 'css',
     question: 'Для чего используется CSS-правило `@counter-style`?',
     options: [
@@ -1053,6 +1128,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-76',
+    difficulty: 'advanced',
     category: 'css',
     question: 'Какое свойство предотвращает разрыв элемента (например, заголовка или изображения) между колонками в многоколоночной верстке (`column-count`)?',
     options: [
@@ -1067,6 +1143,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-77',
+    difficulty: 'advanced',
     category: 'css',
     question: 'В чём разница между CSS-свойствами `orphans` и `widows` при форматировании многостраничного или колоночного текста?',
     options: [
@@ -1081,6 +1158,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-78',
+    difficulty: 'advanced',
     category: 'css',
     question: 'Как принудительно заставить браузер всегда начинать конкретный элемент (например, тег `<h2>`) с новой страницы при печати документа?',
     options: [
@@ -1095,6 +1173,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-79',
+    difficulty: 'advanced',
     category: 'css',
     question: 'Какое CSS-свойство позволяет управлять печатью фоновых изображений и цветов элемента, если они отключены в настройках принтера пользователя по умолчанию?',
     options: [
@@ -1109,6 +1188,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-80',
+    difficulty: 'advanced',
     category: 'css',
     question: 'Что происходит с CSS-стилями страницы при активации медиа-функции `@media (forced-colors: active)`?',
     options: [
@@ -1123,6 +1203,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-81',
+    difficulty: 'advanced',
     category: 'css',
     question: 'Каков наилучший паттерн использования медиа-запроса `prefers-reduced-motion` для отключения анимаций без дублирования кода?',
     options: [
@@ -1137,6 +1218,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-82',
+    difficulty: 'advanced',
     category: 'css',
     question: 'Какие значения может принимать медиа-запрос `prefers-contrast`?',
     options: [
@@ -1151,6 +1233,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-83',
+    difficulty: 'advanced',
     category: 'css',
     question: 'Для чего используется медиа-запрос `prefers-reduced-transparency`?',
     options: [
@@ -1165,6 +1248,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-84',
+    difficulty: 'advanced',
     category: 'css',
     question: 'Какую проблему решает использование единицы измерения `dvh` (Dynamic Viewport Height) по сравнению со стандартной `vh` на мобильных устройствах?',
     options: [
@@ -1179,6 +1263,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-85',
+    difficulty: 'advanced',
     category: 'css',
     question: 'К чему привязана единица измерения `cqi` (Container Query Inline) в CSS?',
     options: [
@@ -1193,6 +1278,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-86',
+    difficulty: 'advanced',
     category: 'css',
     question: 'В каком случае при создании масштабируемых и доступных интерфейсов правильнее использовать единицы `em`, а не `rem`?',
     options: [
@@ -1207,6 +1293,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-87',
+    difficulty: 'advanced',
     category: 'css',
     question: 'Чему в точности равна единица измерения `1ch` в CSS?',
     options: [
@@ -1221,6 +1308,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-88',
+    difficulty: 'advanced',
     category: 'css',
     question: 'Чему равна единица измерения `1rlh`?',
     options: [
@@ -1235,6 +1323,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-89',
+    difficulty: 'advanced',
     category: 'css',
     question: 'Какое утверждение о производительности селекторов (Selector Performance) CSS является верным?',
     options: [
@@ -1249,6 +1338,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-90',
+    difficulty: 'advanced',
     category: 'css',
     question: 'Каков вес (специфичность) селектора `#nav .menu-item:not(.active) a`?',
     options: [
@@ -1263,6 +1353,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-91',
+    difficulty: 'advanced',
     category: 'css',
     question: 'Какое поведение демонстрирует сложный селектор `li:nth-child(2n of .featured)`?',
     options: [
@@ -1277,6 +1368,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-92',
+    difficulty: 'advanced',
     category: 'css',
     question: 'В чём разница между селекторами `div:nth-child(2)` и `div:nth-of-type(2)`?',
     options: [
@@ -1291,6 +1383,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-93',
+    difficulty: 'advanced',
     category: 'css',
     question: 'Какое условие должно соблюдаться для срабатывания селектора `p:only-of-type`?',
     options: [
@@ -1305,6 +1398,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-94',
+    difficulty: 'advanced',
     category: 'css',
     question: 'В чём разница между псевдоклассами `:empty` и `:blank` согласно современным спецификациям?',
     options: [
@@ -1319,6 +1413,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-95',
+    difficulty: 'advanced',
     category: 'css',
     question: 'В каком сценарии сработает селектор `:focus-visible`, но НЕ будет раздражать пользователей, кликающих мышкой по кнопкам?',
     options: [
@@ -1333,6 +1428,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-96',
+    difficulty: 'advanced',
     category: 'css',
     question: 'Какое поведение описывает псевдокласс `:focus-within`?',
     options: [
@@ -1347,6 +1443,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-97',
+    difficulty: 'advanced',
     category: 'css',
     question: 'Каким образом псевдокласс `:placeholder-shown` помогает создавать эффект плавающих подписей (floating labels) в формах без использования JS?',
     options: [
@@ -1361,6 +1458,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-98',
+    difficulty: 'advanced',
     category: 'css',
     question: 'В чём ключевое преимущество использования `:user-invalid` вместо стандартного `:invalid` при стилизации ошибок валидации полей ввода?',
     options: [
@@ -1375,6 +1473,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-99',
+    difficulty: 'advanced',
     category: 'css',
     question: 'Какое поведение демонстрирует псевдокласс `:user-valid`?',
     options: [
@@ -1389,6 +1488,7 @@ export const cssQuestions: Question[] = [
   },
   {
     id: 'css-100',
+    difficulty: 'advanced',
     category: 'css',
     question: 'Какую основную возможность открывает использование правила `@property` в CSS Houdini?',
     options: [
