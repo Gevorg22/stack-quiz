@@ -22,6 +22,7 @@ const CATEGORY_LABELS: Record<string, string> = {
   css: 'CSS',
   typescript: 'TypeScript',
   network: 'Сети и Web',
+  git: 'Git',
 };
 
 export function QuizQuestion({

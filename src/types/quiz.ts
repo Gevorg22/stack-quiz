@@ -5,6 +5,7 @@ export type Category =
   | 'css'
   | 'typescript'
   | 'network'
+  | 'git'
   | 'all';
 
 export interface Question {

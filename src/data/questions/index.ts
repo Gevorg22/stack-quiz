@@ -6,6 +6,7 @@ import { htmlQuestions } from './html';
 import { cssQuestions } from './css';
 import { typescriptQuestions } from './typescript';
 import { networkQuestions } from './network';
+import { gitQuestions } from './git';
 
 export const allQuestions: Question[] = [
   ...javascriptQuestions,
@@ -14,6 +15,7 @@ export const allQuestions: Question[] = [
   ...cssQuestions,
   ...typescriptQuestions,
   ...networkQuestions,
+  ...gitQuestions,
 ];
 
 export const questionsByCategory: Record<Exclude<Category, 'all'>, Question[]> =
@@ -24,6 +26,7 @@ export const questionsByCategory: Record<Exclude<Category, 'all'>, Question[]> =
     css: cssQuestions,
     typescript: typescriptQuestions,
     network: networkQuestions,
+    git: gitQuestions,
   };
 
 export function getQuestions(category: Category): Question[] {
@@ -81,6 +84,14 @@ export const categories: CategoryInfo[] = [
     description: `${networkQuestions.length} вопросов о HTTP, CORS, REST, WebSocket, безопасности`,
     color: 'text-teal-700',
     gradient: 'from-teal-400 to-teal-600',
+  },
+  {
+    id: 'git',
+    label: 'Git',
+    icon: 'G',
+    description: `${gitQuestions.length} вопросов о базовых командах, ветвлении, внутреннем устройстве и CI/CD`,
+    color: 'text-red-700',
+    gradient: 'from-red-400 to-orange-600',
   },
   {
     id: 'all',
