@@ -5,12 +5,12 @@ import { useHistory } from './useHistory';
 beforeEach(() => localStorage.clear());
 
 describe('useHistory', () => {
-  it('starts with empty history', () => {
+  it('начинает с пустой историей', () => {
     const { result } = renderHook(() => useHistory());
     expect(result.current.history).toEqual([]);
   });
 
-  it('addEntry adds a new record to the beginning', () => {
+  it('addEntry добавляет новую запись в начало', () => {
     const { result } = renderHook(() => useHistory());
     act(() =>
       result.current.addEntry({ category: 'javascript', score: 8, total: 10 }),
@@ -21,7 +21,7 @@ describe('useHistory', () => {
     expect(result.current.history[0].total).toBe(10);
   });
 
-  it('newer entries appear first', () => {
+  it('новые записи отображаются первыми', () => {
     const { result } = renderHook(() => useHistory());
     act(() =>
       result.current.addEntry({ category: 'react', score: 5, total: 10 }),
@@ -33,7 +33,7 @@ describe('useHistory', () => {
     expect(result.current.history[1].category).toBe('react');
   });
 
-  it('addEntry assigns a unique id and an ISO date', () => {
+  it('addEntry присваивает уникальный id и дату в формате ISO', () => {
     const { result } = renderHook(() => useHistory());
     act(() =>
       result.current.addEntry({ category: 'css', score: 3, total: 5 }),
@@ -43,7 +43,7 @@ describe('useHistory', () => {
     expect(new Date(entry.date).toISOString()).toBe(entry.date);
   });
 
-  it('clearHistory removes all entries', () => {
+  it('clearHistory удаляет все записи', () => {
     const { result } = renderHook(() => useHistory());
     act(() =>
       result.current.addEntry({ category: 'git', score: 10, total: 10 }),
@@ -52,7 +52,7 @@ describe('useHistory', () => {
     expect(result.current.history).toEqual([]);
   });
 
-  it('persists history to localStorage', () => {
+  it('сохраняет историю в localStorage', () => {
     const { result } = renderHook(() => useHistory());
     act(() =>
       result.current.addEntry({
@@ -66,7 +66,7 @@ describe('useHistory', () => {
     expect(stored[0].category).toBe('typescript');
   });
 
-  it('reads existing history from localStorage on mount', () => {
+  it('читает существующую историю из localStorage при монтировании', () => {
     const fakeHistory = [
       {
         id: '1',
@@ -82,7 +82,7 @@ describe('useHistory', () => {
     expect(result.current.history[0].category).toBe('network');
   });
 
-  it('caps history at 50 entries', () => {
+  it('ограничивает историю 50 записями', () => {
     const { result } = renderHook(() => useHistory());
     for (let i = 0; i < 55; i++) {
       act(() =>

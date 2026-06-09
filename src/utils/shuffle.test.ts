@@ -2,40 +2,40 @@ import { describe, it, expect, vi } from 'vitest';
 import { shuffle } from './shuffle';
 
 describe('shuffle', () => {
-  it('returns an array of the same length', () => {
+  it('возвращает массив той же длины', () => {
     const input = [1, 2, 3, 4, 5];
     expect(shuffle(input)).toHaveLength(input.length);
   });
 
-  it('contains all original elements', () => {
+  it('содержит все исходные элементы', () => {
     const input = [1, 2, 3, 4, 5];
     const result = shuffle(input);
     expect(result.sort()).toEqual([...input].sort());
   });
 
-  it('does not mutate the original array', () => {
+  it('не мутирует исходный массив', () => {
     const input = [1, 2, 3, 4, 5];
     const copy = [...input];
     shuffle(input);
     expect(input).toEqual(copy);
   });
 
-  it('returns an empty array when given an empty array', () => {
+  it('возвращает пустой массив при передаче пустого массива', () => {
     expect(shuffle([])).toEqual([]);
   });
 
-  it('returns a single-element array unchanged', () => {
+  it('возвращает массив с одним элементом без изменений', () => {
     expect(shuffle(['only'])).toEqual(['only']);
   });
 
-  it('works with string arrays', () => {
+  it('работает с массивами строк', () => {
     const input = ['a', 'b', 'c', 'd'];
     const result = shuffle(input);
     expect(result).toHaveLength(4);
     expect(result.sort()).toEqual([...input].sort());
   });
 
-  it('produces different orderings over multiple runs (probabilistic)', () => {
+  it('создаёт разные порядки при множественных вызовах (вероятностный тест)', () => {
     const input = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     const results = new Set(
       Array.from({ length: 20 }, () => shuffle(input).join(',')),
@@ -43,7 +43,7 @@ describe('shuffle', () => {
     expect(results.size).toBeGreaterThan(1);
   });
 
-  it('calls Math.random exactly n-1 times for array of length n (Fisher-Yates)', () => {
+  it('вызывает Math.random ровно n-1 раз для массива длины n (алгоритм Фишера-Йейтса)', () => {
     const spy = vi.spyOn(Math, 'random');
     shuffle([1, 2, 3, 4, 5]);
     expect(spy).toHaveBeenCalledTimes(4);

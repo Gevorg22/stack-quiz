@@ -13,24 +13,24 @@ const MOCK_CATEGORY: CategoryInfo = {
 };
 
 describe('CategoryCard', () => {
-  it('renders the category label', () => {
+  it('отображает название категории', () => {
     render(<CategoryCard category={MOCK_CATEGORY} onSelect={vi.fn()} />);
     expect(screen.getByText('JavaScript')).toBeInTheDocument();
   });
 
-  it('renders the category description', () => {
+  it('отображает описание категории', () => {
     render(<CategoryCard category={MOCK_CATEGORY} onSelect={vi.fn()} />);
     expect(
       screen.getByText('150 вопросов о замыканиях и промисах'),
     ).toBeInTheDocument();
   });
 
-  it('renders the category icon', () => {
+  it('отображает иконку категории', () => {
     render(<CategoryCard category={MOCK_CATEGORY} onSelect={vi.fn()} />);
     expect(screen.getByText('JS')).toBeInTheDocument();
   });
 
-  it('calls onSelect with the category id when clicked', () => {
+  it('вызывает onSelect с id категории при клике', () => {
     const onSelect = vi.fn();
     render(<CategoryCard category={MOCK_CATEGORY} onSelect={onSelect} />);
     fireEvent.click(screen.getByRole('button'));
@@ -38,12 +38,12 @@ describe('CategoryCard', () => {
     expect(onSelect).toHaveBeenCalledTimes(1);
   });
 
-  it('renders as a button element', () => {
+  it('отображается как кнопка', () => {
     render(<CategoryCard category={MOCK_CATEGORY} onSelect={vi.fn()} />);
     expect(screen.getByRole('button')).toBeInTheDocument();
   });
 
-  it('works for the "all" category', () => {
+  it('работает для категории "all"', () => {
     const allCategory: CategoryInfo = {
       ...MOCK_CATEGORY,
       id: 'all',

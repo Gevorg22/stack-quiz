@@ -10,38 +10,38 @@ beforeEach(() => {
 });
 
 describe('useLocalStorage', () => {
-  it('returns initial value when storage is empty', () => {
+  it('возвращает начальное значение, если хранилище пустое', () => {
     const { result } = renderHook(() => useLocalStorage(KEY, 42));
     expect(result.current[0]).toBe(42);
   });
 
-  it('reads existing value from storage', () => {
+  it('читает существующее значение из хранилища', () => {
     localStorage.setItem(KEY, JSON.stringify('hello'));
     const { result } = renderHook(() => useLocalStorage(KEY, 'default'));
     expect(result.current[0]).toBe('hello');
   });
 
-  it('updates the value and persists to storage', () => {
+  it('обновляет значение и сохраняет в хранилище', () => {
     const { result } = renderHook(() => useLocalStorage(KEY, 0));
     act(() => result.current[1](99));
     expect(result.current[0]).toBe(99);
     expect(JSON.parse(localStorage.getItem(KEY)!)).toBe(99);
   });
 
-  it('supports functional updates', () => {
+  it('поддерживает функциональные обновления', () => {
     const { result } = renderHook(() => useLocalStorage(KEY, 10));
     act(() => result.current[1]((prev) => prev + 5));
     expect(result.current[0]).toBe(15);
   });
 
-  it('works with array values', () => {
+  it('работает с массивами', () => {
     const { result } = renderHook(() => useLocalStorage<string[]>(KEY, []));
     act(() => result.current[1](['a', 'b']));
     expect(result.current[0]).toEqual(['a', 'b']);
     expect(JSON.parse(localStorage.getItem(KEY)!)).toEqual(['a', 'b']);
   });
 
-  it('works with object values', () => {
+  it('работает с объектами', () => {
     const { result } = renderHook(() =>
       useLocalStorage<{ name: string }>(KEY, { name: '' }),
     );
@@ -49,13 +49,13 @@ describe('useLocalStorage', () => {
     expect(result.current[0]).toEqual({ name: 'Stack Quiz' });
   });
 
-  it('falls back to initial value if storage contains invalid JSON', () => {
+  it('возвращает начальное значение при невалидном JSON в хранилище', () => {
     localStorage.setItem(KEY, 'not-valid-json{{{');
     const { result } = renderHook(() => useLocalStorage(KEY, 'fallback'));
     expect(result.current[0]).toBe('fallback');
   });
 
-  it('does not throw when localStorage is unavailable', () => {
+  it('не выбрасывает исключение, если localStorage недоступен', () => {
     vi.spyOn(Storage.prototype, 'setItem').mockImplementation(() => {
       throw new Error('QuotaExceededError');
     });

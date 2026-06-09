@@ -3,17 +3,17 @@ import { render, screen } from '@testing-library/react';
 import { ProgressBar } from './ProgressBar';
 
 describe('ProgressBar', () => {
-  it('shows current and total question numbers', () => {
+  it('показывает текущий и общий номера вопросов', () => {
     render(<ProgressBar current={3} total={10} score={2} streak={0} />);
     expect(screen.getByText('3 / 10')).toBeInTheDocument();
   });
 
-  it('shows the current score with checkmark', () => {
+  it('показывает текущий счёт с галочкой', () => {
     render(<ProgressBar current={1} total={5} score={4} streak={0} />);
     expect(screen.getByText('4 ✓')).toBeInTheDocument();
   });
 
-  it('does not render StreakBadge when streak is less than 2', () => {
+  it('не отображает StreakBadge, если серия меньше 2', () => {
     const { container } = render(
       <ProgressBar current={1} total={5} score={0} streak={1} />,
     );
@@ -21,12 +21,12 @@ describe('ProgressBar', () => {
     expect(container.textContent).not.toContain('🔥');
   });
 
-  it('renders StreakBadge with fire emoji when streak >= 2', () => {
+  it('отображает StreakBadge с огнём, если серия >= 2', () => {
     render(<ProgressBar current={3} total={10} score={3} streak={3} />);
     expect(screen.getByText('🔥 3')).toBeInTheDocument();
   });
 
-  it('renders the progress bar element', () => {
+  it('отображает элемент прогресс-бара', () => {
     const { container } = render(
       <ProgressBar current={5} total={10} score={3} streak={0} />,
     );
@@ -35,7 +35,7 @@ describe('ProgressBar', () => {
     expect((bar as HTMLElement).style.width).toBe('50%');
   });
 
-  it('shows 0% progress at the start', () => {
+  it('показывает 0% прогресса в начале', () => {
     const { container } = render(
       <ProgressBar current={0} total={10} score={0} streak={0} />,
     );
@@ -43,7 +43,7 @@ describe('ProgressBar', () => {
     expect((bar as HTMLElement).style.width).toBe('0%');
   });
 
-  it('shows 100% progress at the end', () => {
+  it('показывает 100% прогресса в конце', () => {
     const { container } = render(
       <ProgressBar current={10} total={10} score={10} streak={0} />,
     );

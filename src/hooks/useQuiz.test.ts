@@ -19,7 +19,7 @@ const THREE_QUESTIONS = [
 ];
 
 describe('useQuiz', () => {
-  it('initialises at question index 0 with score 0', () => {
+  it('инициализируется с индексом вопроса 0 и счётом 0', () => {
     const { result } = renderHook(() => useQuiz(THREE_QUESTIONS));
     expect(result.current.state.currentIndex).toBe(0);
     expect(result.current.state.score).toBe(0);
@@ -27,61 +27,61 @@ describe('useQuiz', () => {
     expect(result.current.currentQuestion).toEqual(THREE_QUESTIONS[0]);
   });
 
-  it('selectAnswer marks the question as answered', () => {
+  it('selectAnswer помечает вопрос как отвеченный', () => {
     const { result } = renderHook(() => useQuiz(THREE_QUESTIONS));
     act(() => result.current.selectAnswer(0));
     expect(result.current.state.isAnswered).toBe(true);
     expect(result.current.state.selectedAnswer).toBe(0);
   });
 
-  it('correct answer increments score and marks isCorrect=true', () => {
+  it('правильный ответ увеличивает счёт и устанавливает isCorrect=true', () => {
     const { result } = renderHook(() => useQuiz(THREE_QUESTIONS));
     act(() => result.current.selectAnswer(THREE_QUESTIONS[0].correctAnswer));
     expect(result.current.state.isCorrect).toBe(true);
     expect(result.current.state.score).toBe(1);
   });
 
-  it('wrong answer does not increment score and marks isCorrect=false', () => {
+  it('неправильный ответ не увеличивает счёт и устанавливает isCorrect=false', () => {
     const { result } = renderHook(() => useQuiz(THREE_QUESTIONS));
     act(() => result.current.selectAnswer(3));
     expect(result.current.state.isCorrect).toBe(false);
     expect(result.current.state.score).toBe(0);
   });
 
-  it('wrong answer adds question to wrongQuestions', () => {
+  it('неправильный ответ добавляет вопрос в wrongQuestions', () => {
     const { result } = renderHook(() => useQuiz(THREE_QUESTIONS));
     act(() => result.current.selectAnswer(3));
     expect(result.current.wrongQuestions).toHaveLength(1);
     expect(result.current.wrongQuestions[0].id).toBe('q1');
   });
 
-  it('correct answer does not add to wrongQuestions', () => {
+  it('правильный ответ не добавляет вопрос в wrongQuestions', () => {
     const { result } = renderHook(() => useQuiz(THREE_QUESTIONS));
     act(() => result.current.selectAnswer(THREE_QUESTIONS[0].correctAnswer));
     expect(result.current.wrongQuestions).toHaveLength(0);
   });
 
-  it('ignores a second selectAnswer call on the same question', () => {
+  it('игнорирует повторный вызов selectAnswer для того же вопроса', () => {
     const { result } = renderHook(() => useQuiz(THREE_QUESTIONS));
     act(() => result.current.selectAnswer(0));
     act(() => result.current.selectAnswer(1));
     expect(result.current.state.selectedAnswer).toBe(0);
   });
 
-  it('openExplanation is shown after selectAnswer', () => {
+  it('пояснение отображается после выбора ответа', () => {
     const { result } = renderHook(() => useQuiz(THREE_QUESTIONS));
     act(() => result.current.selectAnswer(0));
     expect(result.current.state.showExplanation).toBe(true);
   });
 
-  it('closeExplanation hides the explanation', () => {
+  it('closeExplanation скрывает пояснение', () => {
     const { result } = renderHook(() => useQuiz(THREE_QUESTIONS));
     act(() => result.current.selectAnswer(0));
     act(() => result.current.closeExplanation());
     expect(result.current.state.showExplanation).toBe(false);
   });
 
-  it('nextQuestion advances to the next question', () => {
+  it('nextQuestion переходит к следующему вопросу', () => {
     const { result } = renderHook(() => useQuiz(THREE_QUESTIONS));
     act(() => result.current.selectAnswer(0));
     act(() => result.current.nextQuestion());
@@ -90,7 +90,7 @@ describe('useQuiz', () => {
     expect(result.current.state.isAnswered).toBe(false);
   });
 
-  it('finishing the last question sets isFinished=true', () => {
+  it('после последнего вопроса устанавливается isFinished=true', () => {
     const { result } = renderHook(() => useQuiz(THREE_QUESTIONS));
 
     for (let i = 0; i < THREE_QUESTIONS.length; i++) {
@@ -101,7 +101,7 @@ describe('useQuiz', () => {
     expect(result.current.state.isFinished).toBe(true);
   });
 
-  it('streak increments with consecutive correct answers', () => {
+  it('серия увеличивается при последовательных правильных ответах', () => {
     const { result } = renderHook(() => useQuiz(THREE_QUESTIONS));
 
     act(() => result.current.selectAnswer(THREE_QUESTIONS[0].correctAnswer));
@@ -112,7 +112,7 @@ describe('useQuiz', () => {
     expect(result.current.streak).toBe(2);
   });
 
-  it('streak resets to 0 on a wrong answer', () => {
+  it('серия сбрасывается до 0 при неправильном ответе', () => {
     const { result } = renderHook(() => useQuiz(THREE_QUESTIONS));
 
     act(() => result.current.selectAnswer(THREE_QUESTIONS[0].correctAnswer));
@@ -122,7 +122,7 @@ describe('useQuiz', () => {
     expect(result.current.streak).toBe(0);
   });
 
-  it('maxStreak tracks the highest streak seen', () => {
+  it('maxStreak отслеживает максимальную серию', () => {
     const { result } = renderHook(() => useQuiz(THREE_QUESTIONS));
 
     act(() => result.current.selectAnswer(THREE_QUESTIONS[0].correctAnswer));
@@ -135,7 +135,7 @@ describe('useQuiz', () => {
     expect(result.current.streak).toBe(0);
   });
 
-  it('works correctly with a single question', () => {
+  it('корректно работает с одним вопросом', () => {
     const single = [makeQuestion('only', 2)];
     const { result } = renderHook(() => useQuiz(single));
     act(() => result.current.selectAnswer(2));
