@@ -2,20 +2,25 @@
 
 import { useCallback, useState } from 'react';
 import { Category, Difficulty, QuizCount, QuizResult, Question } from '@/types/quiz';
+import { CodingChallenge } from '@/types/challenge';
 import { categories, getQuestions, getQuestionCount } from '@/data/questions';
 import { allQuestions } from '@/data/questions';
+import { challenges } from '@/data/challenges';
 import { shuffle } from '@/utils/shuffle';
 import { useDarkMode } from '@/hooks/useDarkMode';
 import { useBookmarks } from '@/hooks/useBookmarks';
 import { useHistory } from '@/hooks/useHistory';
+import { useLocalStorage } from '@/hooks/useLocalStorage';
 import { CategoryCard } from './CategoryCard';
 import { QuizSetup } from './QuizSetup';
 import { QuizRunner } from './QuizRunner';
 import { ResultScreen } from './ResultScreen';
 import { BookmarksView } from './BookmarksView';
+import { ChallengesView } from './ChallengesView';
+import { ChallengeRunner } from './ChallengeRunner';
 import { DarkModeToggle } from './DarkModeToggle';
 
-type View = 'home' | 'setup' | 'quiz' | 'result' | 'bookmarks';
+type View = 'home' | 'setup' | 'quiz' | 'result' | 'bookmarks' | 'challenges' | 'challenge';
 
 export function QuizClient() {
   const { isDark, toggle: toggleDark } = useDarkMode();
@@ -27,6 +32,8 @@ export function QuizClient() {
   const [activeQuestions, setActiveQuestions] = useState<Question[]>([]);
   const [quizKey, setQuizKey] = useState(0);
   const [quizResult, setQuizResult] = useState<QuizResult | null>(null);
+  const [activeChallenge, setActiveChallenge] = useState<CodingChallenge | null>(null);
+  const [solvedChallenges, setSolvedChallenges] = useLocalStorage<string[]>('solved-challenges', []);
 
   const handleSelectCategory = (category: Category) => {
     setSelectedCategory(category);
@@ -75,6 +82,15 @@ export function QuizClient() {
     setQuizResult(null);
   }, []);
 
+  const handleSelectChallenge = useCallback((challenge: CodingChallenge) => {
+    setActiveChallenge(challenge);
+    setView('challenge');
+  }, []);
+
+  const handleChallengeSolved = useCallback((id: string) => {
+    setSolvedChallenges((prev) => (prev.includes(id) ? prev : [...prev, id]));
+  }, [setSolvedChallenges]);
+
   const bookmarkedQuestions = allQuestions.filter((q) =>
     bookmarks.includes(q.id),
   );
@@ -86,6 +102,31 @@ export function QuizClient() {
     setQuizKey((k) => k + 1);
     setView('quiz');
   }, [bookmarkedQuestions]);
+
+  if (view === 'challenges') {
+    return (
+      <ChallengesView
+        challenges={challenges}
+        solvedIds={solvedChallenges}
+        isDark={isDark}
+        onToggleDark={toggleDark}
+        onSelect={handleSelectChallenge}
+        onBack={handleHome}
+      />
+    );
+  }
+
+  if (view === 'challenge' && activeChallenge) {
+    return (
+      <ChallengeRunner
+        challenge={activeChallenge}
+        isDark={isDark}
+        onToggleDark={toggleDark}
+        onSolved={handleChallengeSolved}
+        onBack={() => setView('challenges')}
+      />
+    );
+  }
 
   if (view === 'bookmarks') {
     return (
@@ -161,6 +202,18 @@ export function QuizClient() {
         <div className="mb-10 text-center">
           <div className="mb-2 flex items-center justify-end">
             <div className="flex items-center gap-2">
+              <button
+                onClick={() => setView('challenges')}
+                className="flex h-9 items-center gap-1.5 rounded-xl border border-indigo-400/30 bg-indigo-400/10 px-3 text-sm text-indigo-300 backdrop-blur-sm transition-colors hover:bg-indigo-400/20"
+                aria-label="Код-редактор"
+              >
+                💻
+                {solvedChallenges.length > 0 && (
+                  <span className="rounded-full bg-indigo-400 px-1.5 py-0.5 text-xs font-bold text-slate-900">
+                    {solvedChallenges.length}
+                  </span>
+                )}
+              </button>
               <button
                 onClick={() => setView('bookmarks')}
                 className="flex h-9 items-center gap-1.5 rounded-xl border border-white/20 bg-white/10 px-3 text-sm text-white backdrop-blur-sm transition-colors hover:bg-white/20"
