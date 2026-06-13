@@ -1225,4 +1225,774 @@ export const challenges: CodingChallenge[] = [
       },
     ],
   },
+
+  // ─── АЛГОРИТМЫ (Яндекс-стиль) ────────────────────────────────────────────────
+  {
+    id: 'bubble-sort',
+    title: 'Сортировка пузырьком',
+    difficulty: 'beginner',
+    tags: ['Алгоритмы', 'Сортировка'],
+    description:
+      'Реализуй функцию `bubbleSort(arr)`, которая сортирует массив чисел по возрастанию методом пузырьковой сортировки.\n\nАлгоритм: сравниваем соседние элементы и меняем местами, если левый больше правого. Повторяем пока массив не отсортирован.\n\nПример: `bubbleSort([3,1,2])` → `[1,2,3]`',
+    hint: 'Два вложенных цикла. Внешний — N проходов, внутренний — сравнивает пары. Оптимизация: если за проход не было обменов — массив уже отсортирован.',
+    initialCode: `function bubbleSort(arr) {
+  // твой код здесь
+}`,
+    testCases: [
+      {
+        description: '[3,1,2] → [1,2,3]',
+        call: 'JSON.stringify(bubbleSort([3,1,2]))',
+        expected: '[1,2,3]',
+      },
+      {
+        description: '[5,4,3,2,1] → [1,2,3,4,5]',
+        call: 'JSON.stringify(bubbleSort([5,4,3,2,1]))',
+        expected: '[1,2,3,4,5]',
+      },
+      {
+        description: 'Уже отсортированный массив',
+        call: 'JSON.stringify(bubbleSort([1,2,3,4,5]))',
+        expected: '[1,2,3,4,5]',
+      },
+      {
+        description: 'Один элемент',
+        call: 'JSON.stringify(bubbleSort([42]))',
+        expected: '[42]',
+      },
+    ],
+  },
+  {
+    id: 'merge-sort',
+    title: 'Сортировка слиянием',
+    difficulty: 'intermediate',
+    tags: ['Алгоритмы', 'Сортировка', 'Рекурсия'],
+    description:
+      'Реализуй функцию `mergeSort(arr)`, которая сортирует массив чисел методом слияния (merge sort).\n\nАлгоритм:\n1. Если массив из 1 элемента — вернуть его\n2. Разделить массив на два равных\n3. Рекурсивно отсортировать каждую половину\n4. Слить две отсортированных половины в одну\n\nСложность: O(n log n)',
+    hint: 'Напиши вспомогательную функцию `merge(left, right)`, которая сливает два отсортированных массива.',
+    initialCode: `function mergeSort(arr) {
+  // твой код здесь
+}`,
+    testCases: [
+      {
+        description: '[3,1,4,1,5,9,2,6] сортируется',
+        call: 'JSON.stringify(mergeSort([3,1,4,1,5,9,2,6]))',
+        expected: '[1,1,2,3,4,5,6,9]',
+      },
+      {
+        description: 'Пустой массив',
+        call: 'JSON.stringify(mergeSort([]))',
+        expected: '[]',
+      },
+      {
+        description: 'Один элемент',
+        call: 'JSON.stringify(mergeSort([7]))',
+        expected: '[7]',
+      },
+      {
+        description: 'Обратный порядок',
+        call: 'JSON.stringify(mergeSort([5,4,3,2,1]))',
+        expected: '[1,2,3,4,5]',
+      },
+    ],
+  },
+  {
+    id: 'valid-parentheses',
+    title: 'Правильная скобочная последовательность',
+    difficulty: 'intermediate',
+    tags: ['Алгоритмы', 'Стек', 'Строки'],
+    description:
+      'Реализуй функцию `isValid(s)`, которая проверяет, является ли строка скобок правильной.\n\nДопустимые символы: `(`, `)`, `{`, `}`, `[`, `]`.\n\nПравила:\n- Каждая открывающая скобка должна быть закрыта правильной закрывающей\n- Скобки закрываются в правильном порядке\n\nПример: `isValid("()[]{}")` → `true`, `isValid("(]")` → `false`',
+    hint: 'Используй стек. Для каждой открывающей — кладёшь в стек. Для закрывающей — проверяешь что на вершине стека соответствующая открывающая.',
+    initialCode: `function isValid(s) {
+  // твой код здесь
+}`,
+    testCases: [
+      {
+        description: '"()[]{}" → true',
+        call: 'isValid("()[]{}")',
+        expected: 'true',
+      },
+      {
+        description: '"([])" → true',
+        call: 'isValid("([])")',
+        expected: 'true',
+      },
+      {
+        description: '"(]" → false',
+        call: 'isValid("(]")',
+        expected: 'false',
+      },
+      {
+        description: '"([)]" → false',
+        call: 'isValid("([)]")',
+        expected: 'false',
+      },
+      {
+        description: '"" → true',
+        call: 'isValid("")',
+        expected: 'true',
+      },
+    ],
+  },
+  {
+    id: 'longest-substring',
+    title: 'Самая длинная подстрока без повторений',
+    difficulty: 'intermediate',
+    tags: ['Алгоритмы', 'Строки', 'Скользящее окно'],
+    description:
+      'Реализуй функцию `lengthOfLongestSubstring(s)`, которая возвращает длину самой длинной подстроки без повторяющихся символов.\n\nПример:\n- `"abcabcbb"` → `3` (подстрока `"abc"`)\n- `"bbbbb"` → `1` (подстрока `"b"`)\n- `"pwwkew"` → `3` (подстрока `"wke"`)',
+    hint: 'Используй технику скользящего окна (sliding window) с Map или Set. Двигай левую границу когда встречаешь повтор.',
+    initialCode: `function lengthOfLongestSubstring(s) {
+  // твой код здесь
+}`,
+    testCases: [
+      {
+        description: '"abcabcbb" → 3',
+        call: 'lengthOfLongestSubstring("abcabcbb")',
+        expected: '3',
+      },
+      {
+        description: '"bbbbb" → 1',
+        call: 'lengthOfLongestSubstring("bbbbb")',
+        expected: '1',
+      },
+      {
+        description: '"pwwkew" → 3',
+        call: 'lengthOfLongestSubstring("pwwkew")',
+        expected: '3',
+      },
+      {
+        description: '"" → 0',
+        call: 'lengthOfLongestSubstring("")',
+        expected: '0',
+      },
+      {
+        description: '"au" → 2',
+        call: 'lengthOfLongestSubstring("au")',
+        expected: '2',
+      },
+    ],
+  },
+  {
+    id: 'max-subarray',
+    title: 'Максимальная сумма подмассива (алгоритм Кадане)',
+    difficulty: 'intermediate',
+    tags: ['Алгоритмы', 'Массивы', 'Динамическое программирование'],
+    description:
+      'Реализуй функцию `maxSubArray(nums)`, которая находит подмассив с наибольшей суммой и возвращает эту сумму.\n\nПример:\n- `[-2,1,-3,4,-1,2,1,-5,4]` → `6` (подмассив `[4,-1,2,1]`)\n- `[1]` → `1`\n- `[5,4,-1,7,8]` → `23`\n\nАлгоритм Кадане работает за O(n).',
+    hint: 'Храни текущую сумму `current` и максимальную `max`. На каждом шаге: `current = max(nums[i], current + nums[i])`, затем обнови `max`.',
+    initialCode: `function maxSubArray(nums) {
+  // твой код здесь
+}`,
+    testCases: [
+      {
+        description: '[-2,1,-3,4,-1,2,1,-5,4] → 6',
+        call: 'maxSubArray([-2,1,-3,4,-1,2,1,-5,4])',
+        expected: '6',
+      },
+      {
+        description: '[1] → 1',
+        call: 'maxSubArray([1])',
+        expected: '1',
+      },
+      {
+        description: '[5,4,-1,7,8] → 23',
+        call: 'maxSubArray([5,4,-1,7,8])',
+        expected: '23',
+      },
+      {
+        description: 'Все отрицательные [-3,-2,-1] → -1',
+        call: 'maxSubArray([-3,-2,-1])',
+        expected: '-1',
+      },
+    ],
+  },
+  {
+    id: 'anagram',
+    title: 'Проверка анаграммы',
+    difficulty: 'beginner',
+    tags: ['Алгоритмы', 'Строки', 'Хэш-таблица'],
+    description:
+      'Реализуй функцию `isAnagram(s, t)`, которая возвращает `true`, если строка `t` является анаграммой строки `s`.\n\nАнаграмма — слово, образованное перестановкой букв другого слова.\n\nПример:\n- `isAnagram("anagram", "nagaram")` → `true`\n- `isAnagram("rat", "car")` → `false`',
+    hint: 'Подсчитай частоту каждой буквы в обеих строках и сравни. Или отсортируй обе строки и сравни.',
+    initialCode: `function isAnagram(s, t) {
+  // твой код здесь
+}`,
+    testCases: [
+      {
+        description: '"anagram","nagaram" → true',
+        call: 'isAnagram("anagram","nagaram")',
+        expected: 'true',
+      },
+      {
+        description: '"rat","car" → false',
+        call: 'isAnagram("rat","car")',
+        expected: 'false',
+      },
+      {
+        description: 'Разная длина → false',
+        call: 'isAnagram("ab","a")',
+        expected: 'false',
+      },
+      {
+        description: '"listen","silent" → true',
+        call: 'isAnagram("listen","silent")',
+        expected: 'true',
+      },
+    ],
+  },
+  {
+    id: 'fibonacci-memo',
+    title: 'Числа Фибоначчи с мемоизацией',
+    difficulty: 'beginner',
+    tags: ['Алгоритмы', 'Рекурсия', 'Динамическое программирование'],
+    description:
+      'Реализуй функцию `fib(n)`, которая возвращает n-е число Фибоначчи.\n\n`fib(0)=0, fib(1)=1, fib(n)=fib(n-1)+fib(n-2)`\n\nОбычная рекурсия работает за O(2^n) — слишком медленно. Используй мемоизацию или итерацию чтобы достичь O(n).\n\nПример: `fib(10)` → `55`',
+    hint: 'Вариант 1: храни Map с уже посчитанными значениями. Вариант 2: итерация с двумя переменными prev и curr.',
+    initialCode: `function fib(n) {
+  // твой код здесь
+}`,
+    testCases: [
+      {
+        description: 'fib(0) → 0',
+        call: 'fib(0)',
+        expected: '0',
+      },
+      {
+        description: 'fib(1) → 1',
+        call: 'fib(1)',
+        expected: '1',
+      },
+      {
+        description: 'fib(10) → 55',
+        call: 'fib(10)',
+        expected: '55',
+      },
+      {
+        description: 'fib(20) → 6765',
+        call: 'fib(20)',
+        expected: '6765',
+      },
+    ],
+  },
+  {
+    id: 'climbing-stairs',
+    title: 'Лестница (DP)',
+    difficulty: 'intermediate',
+    tags: ['Алгоритмы', 'Динамическое программирование'],
+    description:
+      'Ты поднимаешься по лестнице из `n` ступеней. За один шаг можно подняться на 1 или 2 ступени.\n\nРеализуй функцию `climbStairs(n)`, которая возвращает количество различных способов добраться до вершины.\n\nПример:\n- `climbStairs(2)` → `2` (1+1 или 2)\n- `climbStairs(3)` → `3` (1+1+1, 1+2, 2+1)',
+    hint: 'Это последовательность Фибоначчи! ways(n) = ways(n-1) + ways(n-2). Базовые случаи: ways(1)=1, ways(2)=2.',
+    initialCode: `function climbStairs(n) {
+  // твой код здесь
+}`,
+    testCases: [
+      {
+        description: 'climbStairs(1) → 1',
+        call: 'climbStairs(1)',
+        expected: '1',
+      },
+      {
+        description: 'climbStairs(2) → 2',
+        call: 'climbStairs(2)',
+        expected: '2',
+      },
+      {
+        description: 'climbStairs(3) → 3',
+        call: 'climbStairs(3)',
+        expected: '3',
+      },
+      {
+        description: 'climbStairs(5) → 8',
+        call: 'climbStairs(5)',
+        expected: '8',
+      },
+    ],
+  },
+  {
+    id: 'missing-number',
+    title: 'Найди пропущенное число',
+    difficulty: 'beginner',
+    tags: ['Алгоритмы', 'Массивы', 'Математика'],
+    description:
+      'Дан массив из n различных чисел в диапазоне `[0, n]`. Найди единственное число, которого не хватает.\n\nРеализуй функцию `missingNumber(nums)`.\n\nПример:\n- `missingNumber([3,0,1])` → `2`\n- `missingNumber([0,1])` → `2`\n- `missingNumber([9,6,4,2,3,5,7,0,1])` → `8`',
+    hint: 'Сумма чисел от 0 до n равна n*(n+1)/2. Вычти из неё сумму элементов массива — получишь пропущенное число.',
+    initialCode: `function missingNumber(nums) {
+  // твой код здесь
+}`,
+    testCases: [
+      {
+        description: '[3,0,1] → 2',
+        call: 'missingNumber([3,0,1])',
+        expected: '2',
+      },
+      {
+        description: '[0,1] → 2',
+        call: 'missingNumber([0,1])',
+        expected: '2',
+      },
+      {
+        description: '[9,6,4,2,3,5,7,0,1] → 8',
+        call: 'missingNumber([9,6,4,2,3,5,7,0,1])',
+        expected: '8',
+      },
+    ],
+  },
+  {
+    id: 'product-except-self',
+    title: 'Произведение кроме себя',
+    difficulty: 'advanced',
+    tags: ['Алгоритмы', 'Массивы'],
+    description:
+      'Дан массив `nums`. Верни массив `output`, где `output[i]` — произведение всех элементов `nums`, кроме `nums[i]`.\n\nРеализуй функцию `productExceptSelf(nums)` без использования деления и за O(n).\n\nПример: `productExceptSelf([1,2,3,4])` → `[24,12,8,6]`',
+    hint: 'Два прохода: слева направо накапливаешь произведение элементов слева, справа налево — справа. Умножаешь оба результата.',
+    initialCode: `function productExceptSelf(nums) {
+  // твой код здесь
+}`,
+    testCases: [
+      {
+        description: '[1,2,3,4] → [24,12,8,6]',
+        call: 'JSON.stringify(productExceptSelf([1,2,3,4]))',
+        expected: '[24,12,8,6]',
+      },
+      {
+        description: '[-1,1,0,-3,3] → [0,0,9,0,0]',
+        call: 'JSON.stringify(productExceptSelf([-1,1,0,-3,3]))',
+        expected: '[0,0,9,0,0]',
+      },
+      {
+        description: '[2,3] → [3,2]',
+        call: 'JSON.stringify(productExceptSelf([2,3]))',
+        expected: '[3,2]',
+      },
+    ],
+  },
+  {
+    id: 'move-zeroes',
+    title: 'Сдвинь нули в конец',
+    difficulty: 'beginner',
+    tags: ['Алгоритмы', 'Массивы', 'Два указателя'],
+    description:
+      'Реализуй функцию `moveZeroes(nums)`, которая перемещает все нули в конец массива, сохраняя относительный порядок ненулевых элементов.\n\nФункция должна изменять массив "на месте" и возвращать его.\n\nПример: `moveZeroes([0,1,0,3,12])` → `[1,3,12,0,0]`',
+    hint: 'Используй два указателя: slow указывает на позицию для следующего ненулевого элемента, fast — перебирает все элементы.',
+    initialCode: `function moveZeroes(nums) {
+  // твой код здесь
+  return nums;
+}`,
+    testCases: [
+      {
+        description: '[0,1,0,3,12] → [1,3,12,0,0]',
+        call: 'JSON.stringify(moveZeroes([0,1,0,3,12]))',
+        expected: '[1,3,12,0,0]',
+      },
+      {
+        description: '[0,0,1] → [1,0,0]',
+        call: 'JSON.stringify(moveZeroes([0,0,1]))',
+        expected: '[1,0,0]',
+      },
+      {
+        description: 'Без нулей → без изменений',
+        call: 'JSON.stringify(moveZeroes([1,2,3]))',
+        expected: '[1,2,3]',
+      },
+    ],
+  },
+  {
+    id: 'min-stack',
+    title: 'Стек с минимумом',
+    difficulty: 'advanced',
+    tags: ['Алгоритмы', 'Стек', 'Структуры данных'],
+    description:
+      'Реализуй класс `MinStack` со следующими методами:\n- `push(val)` — добавить элемент\n- `pop()` — удалить верхний элемент\n- `top()` — вернуть верхний элемент\n- `getMin()` — вернуть минимальный элемент за O(1)\n\nПример:\n```\nconst s = new MinStack();\ns.push(-2); s.push(0); s.push(-3);\ns.getMin(); // -3\ns.pop();\ns.top();    // 0\ns.getMin(); // -2\n```',
+    hint: 'Храни два стека: основной и вспомогательный (для минимумов). При push — добавляй в стек минимумов если новый элемент ≤ текущего минимума. При pop — если удаляемый элемент равен текущему минимуму, удаляй и из стека минимумов.',
+    initialCode: `class MinStack {
+  constructor() {
+    // твой код здесь
+  }
+
+  push(val) {
+    // твой код здесь
+  }
+
+  pop() {
+    // твой код здесь
+  }
+
+  top() {
+    // твой код здесь
+  }
+
+  getMin() {
+    // твой код здесь
+  }
+}`,
+    testCases: [
+      {
+        description: 'push(-2,0,-3) → getMin() = -3',
+        call: `(() => { const s = new MinStack(); s.push(-2); s.push(0); s.push(-3); return s.getMin(); })()`,
+        expected: '-3',
+      },
+      {
+        description: 'После pop() → top() = 0',
+        call: `(() => { const s = new MinStack(); s.push(-2); s.push(0); s.push(-3); s.pop(); return s.top(); })()`,
+        expected: '0',
+      },
+      {
+        description: 'После pop() → getMin() = -2',
+        call: `(() => { const s = new MinStack(); s.push(-2); s.push(0); s.push(-3); s.pop(); return s.getMin(); })()`,
+        expected: '-2',
+      },
+    ],
+  },
+  {
+    id: 'rotate-array',
+    title: 'Поворот массива',
+    difficulty: 'intermediate',
+    tags: ['Алгоритмы', 'Массивы', 'Два указателя'],
+    description:
+      'Реализуй функцию `rotate(nums, k)`, которая поворачивает массив вправо на `k` шагов и возвращает его.\n\nПример:\n- `rotate([1,2,3,4,5,6,7], 3)` → `[5,6,7,1,2,3,4]`\n- `rotate([-1,-100,3,99], 2)` → `[3,99,-1,-100]`\n\nРешение за O(1) доп. памяти: переверни весь массив, затем первые k и оставшиеся n-k элементов.',
+    hint: 'Трюк с тремя разворотами: reverse(0, n-1), reverse(0, k-1), reverse(k, n-1). Не забудь k = k % n.',
+    initialCode: `function rotate(nums, k) {
+  // твой код здесь
+  return nums;
+}`,
+    testCases: [
+      {
+        description: '[1,2,3,4,5,6,7] k=3 → [5,6,7,1,2,3,4]',
+        call: 'JSON.stringify(rotate([1,2,3,4,5,6,7], 3))',
+        expected: '[5,6,7,1,2,3,4]',
+      },
+      {
+        description: '[-1,-100,3,99] k=2 → [3,99,-1,-100]',
+        call: 'JSON.stringify(rotate([-1,-100,3,99], 2))',
+        expected: '[3,99,-1,-100]',
+      },
+      {
+        description: 'k больше длины массива',
+        call: 'JSON.stringify(rotate([1,2,3], 5))',
+        expected: '[2,3,1]',
+      },
+    ],
+  },
+  {
+    id: 'roman-to-int',
+    title: 'Римские цифры в число',
+    difficulty: 'beginner',
+    tags: ['Алгоритмы', 'Строки', 'Хэш-таблица'],
+    description:
+      'Реализуй функцию `romanToInt(s)`, которая переводит строку с римскими цифрами в целое число.\n\nСимволы: `I=1, V=5, X=10, L=50, C=100, D=500, M=1000`\n\nПравило вычитания: если символ меньше следующего — его нужно вычесть.\n- `IV` = 4, `IX` = 9, `XL` = 40, `XC` = 90\n\nПример: `romanToInt("MCMXCIV")` → `1994`',
+    hint: 'Иди справа налево. Если текущее значение меньше максимального встреченного — вычитай его, иначе прибавляй.',
+    initialCode: `function romanToInt(s) {
+  // твой код здесь
+}`,
+    testCases: [
+      {
+        description: '"III" → 3',
+        call: 'romanToInt("III")',
+        expected: '3',
+      },
+      {
+        description: '"IV" → 4',
+        call: 'romanToInt("IV")',
+        expected: '4',
+      },
+      {
+        description: '"IX" → 9',
+        call: 'romanToInt("IX")',
+        expected: '9',
+      },
+      {
+        description: '"MCMXCIV" → 1994',
+        call: 'romanToInt("MCMXCIV")',
+        expected: '1994',
+      },
+    ],
+  },
+  {
+    id: 'coin-change',
+    title: 'Размен монет',
+    difficulty: 'advanced',
+    tags: ['Алгоритмы', 'Динамическое программирование'],
+    description:
+      'Дан массив монет `coins` и сумма `amount`. Найди минимальное количество монет, которое в сумме даёт `amount`.\n\nЕсли сдачу дать невозможно — верни `-1`.\n\nРеализуй функцию `coinChange(coins, amount)`.\n\nПример:\n- `coinChange([1,2,5], 11)` → `3` (5+5+1)\n- `coinChange([2], 3)` → `-1`',
+    hint: 'Динамическое программирование. Создай массив dp[0..amount] где dp[i] = минимальное число монет для суммы i. dp[0]=0, остальные = Infinity. Для каждой монеты: dp[i] = min(dp[i], dp[i-coin]+1).',
+    initialCode: `function coinChange(coins, amount) {
+  // твой код здесь
+}`,
+    testCases: [
+      {
+        description: 'coins=[1,2,5] amount=11 → 3',
+        call: 'coinChange([1,2,5], 11)',
+        expected: '3',
+      },
+      {
+        description: 'coins=[2] amount=3 → -1',
+        call: 'coinChange([2], 3)',
+        expected: '-1',
+      },
+      {
+        description: 'coins=[1] amount=0 → 0',
+        call: 'coinChange([1], 0)',
+        expected: '0',
+      },
+      {
+        description: 'coins=[1,5,10,25] amount=30 → 2',
+        call: 'coinChange([1,5,10,25], 30)',
+        expected: '2',
+      },
+    ],
+  },
+  {
+    id: 'queue-via-stacks',
+    title: 'Очередь через два стека',
+    difficulty: 'intermediate',
+    tags: ['Алгоритмы', 'Стек', 'Очередь', 'Структуры данных'],
+    description:
+      'Реализуй класс `MyQueue` — очередь (FIFO) используя только два стека (массива).\n\nМетоды:\n- `push(x)` — добавить элемент в конец очереди\n- `pop()` — удалить и вернуть элемент из начала\n- `peek()` — вернуть элемент из начала без удаления\n- `empty()` — вернуть `true` если очередь пустая\n\nОперации `pop` и `peek` должны работать амортизированно за O(1).',
+    hint: 'Используй два стека: `inbox` для push и `outbox` для pop/peek. Когда outbox пустой и нужен pop/peek — переложи все из inbox в outbox (это развернёт порядок).',
+    initialCode: `class MyQueue {
+  constructor() {
+    // твой код здесь
+  }
+
+  push(x) {
+    // твой код здесь
+  }
+
+  pop() {
+    // твой код здесь
+  }
+
+  peek() {
+    // твой код здесь
+  }
+
+  empty() {
+    // твой код здесь
+  }
+}`,
+    testCases: [
+      {
+        description: 'push(1),push(2),peek() → 1',
+        call: `(() => { const q = new MyQueue(); q.push(1); q.push(2); return q.peek(); })()`,
+        expected: '1',
+      },
+      {
+        description: 'push(1),push(2),pop() → 1',
+        call: `(() => { const q = new MyQueue(); q.push(1); q.push(2); return q.pop(); })()`,
+        expected: '1',
+      },
+      {
+        description: 'После pop() peek() → 2',
+        call: `(() => { const q = new MyQueue(); q.push(1); q.push(2); q.pop(); return q.peek(); })()`,
+        expected: '2',
+      },
+      {
+        description: 'empty() на пустой → true',
+        call: `(() => { const q = new MyQueue(); return q.empty(); })()`,
+        expected: 'true',
+      },
+    ],
+  },
+  {
+    id: 'quick-sort',
+    title: 'Быстрая сортировка',
+    difficulty: 'advanced',
+    tags: ['Алгоритмы', 'Сортировка', 'Рекурсия'],
+    description:
+      'Реализуй функцию `quickSort(arr)`, которая сортирует массив чисел методом быстрой сортировки.\n\nАлгоритм:\n1. Выбери опорный элемент (pivot)\n2. Раздели массив на три части: меньше pivot, равные, больше\n3. Рекурсивно отсортируй левую и правую части\n4. Объедини результаты\n\nСредняя сложность: O(n log n)',
+    hint: 'Простая реализация: pivot = средний элемент, left = элементы < pivot, mid = элементы === pivot, right = элементы > pivot. return [...quickSort(left), ...mid, ...quickSort(right)].',
+    initialCode: `function quickSort(arr) {
+  // твой код здесь
+}`,
+    testCases: [
+      {
+        description: '[3,6,8,10,1,2,1] сортируется',
+        call: 'JSON.stringify(quickSort([3,6,8,10,1,2,1]))',
+        expected: '[1,1,2,3,6,8,10]',
+      },
+      {
+        description: 'Пустой массив',
+        call: 'JSON.stringify(quickSort([]))',
+        expected: '[]',
+      },
+      {
+        description: 'Один элемент',
+        call: 'JSON.stringify(quickSort([5]))',
+        expected: '[5]',
+      },
+      {
+        description: 'Обратный порядок',
+        call: 'JSON.stringify(quickSort([5,4,3,2,1]))',
+        expected: '[1,2,3,4,5]',
+      },
+    ],
+  },
+  {
+    id: 'two-sum-hash',
+    title: 'Два числа в сумму (за O(n))',
+    difficulty: 'beginner',
+    tags: ['Алгоритмы', 'Массивы', 'Хэш-таблица'],
+    description:
+      'Дан массив чисел `nums` и целое число `target`. Найди два числа, которые в сумме дают `target`, и верни их индексы.\n\nРеализуй функцию `twoSum(nums, target)`. Гарантируется ровно одно решение.\n\nПример: `twoSum([2,7,11,15], 9)` → `[0,1]`\n\nРешение за O(n) используя хэш-таблицу.',
+    hint: 'Создай Map. Для каждого элемента проверяй: есть ли в Map значение (target - nums[i])? Если да — нашёл пару. Если нет — добавь nums[i] в Map с индексом i.',
+    initialCode: `function twoSum(nums, target) {
+  // твой код здесь
+}`,
+    testCases: [
+      {
+        description: '[2,7,11,15] target=9 → [0,1]',
+        call: 'JSON.stringify(twoSum([2,7,11,15], 9))',
+        expected: '[0,1]',
+      },
+      {
+        description: '[3,2,4] target=6 → [1,2]',
+        call: 'JSON.stringify(twoSum([3,2,4], 6))',
+        expected: '[1,2]',
+      },
+      {
+        description: '[3,3] target=6 → [0,1]',
+        call: 'JSON.stringify(twoSum([3,3], 6))',
+        expected: '[0,1]',
+      },
+    ],
+  },
+  {
+    id: 'reverse-linked-list',
+    title: 'Разворот связного списка',
+    difficulty: 'intermediate',
+    tags: ['Алгоритмы', 'Связный список', 'Структуры данных'],
+    description:
+      'Реализуй функцию `reverseList(head)`, которая разворачивает односвязный список.\n\nУзел списка: `{ val, next }`\n\nПример: `1→2→3→4→5` → `5→4→3→2→1`\n\nВспомогательная функция `makeList(arr)` создаёт список из массива, `listToArray(head)` — наоборот. Они уже доступны в тестах.',
+    hint: 'Три переменные: prev=null, curr=head, next. В цикле: сохрани next, curr.next = prev, prev = curr, curr = next. В конце верни prev.',
+    initialCode: `function reverseList(head) {
+  // твой код здесь
+}`,
+    testCases: [
+      {
+        description: '[1,2,3,4,5] разворачивается',
+        call: `(() => {
+  function makeList(arr) { let h=null; for(let i=arr.length-1;i>=0;i--) h={val:arr[i],next:h}; return h; }
+  function listToArray(h) { const r=[]; while(h){r.push(h.val);h=h.next;} return r; }
+  return JSON.stringify(listToArray(reverseList(makeList([1,2,3,4,5]))));
+})()`,
+        expected: '[5,4,3,2,1]',
+      },
+      {
+        description: '[1,2] разворачивается',
+        call: `(() => {
+  function makeList(arr) { let h=null; for(let i=arr.length-1;i>=0;i--) h={val:arr[i],next:h}; return h; }
+  function listToArray(h) { const r=[]; while(h){r.push(h.val);h=h.next;} return r; }
+  return JSON.stringify(listToArray(reverseList(makeList([1,2]))));
+})()`,
+        expected: '[2,1]',
+      },
+      {
+        description: 'null → null',
+        call: `String(reverseList(null))`,
+        expected: 'null',
+      },
+    ],
+  },
+  {
+    id: 'flatten-deep',
+    title: 'Глубокое выравнивание массива',
+    difficulty: 'intermediate',
+    tags: ['Алгоритмы', 'Массивы', 'Рекурсия'],
+    description:
+      'Реализуй функцию `flattenDeep(arr)`, которая рекурсивно выравнивает вложенный массив любой глубины.\n\nНельзя использовать `Array.prototype.flat(Infinity)`.\n\nПример: `flattenDeep([1,[2,[3,[4]],5]])` → `[1,2,3,4,5]`',
+    hint: 'Рекурсия: для каждого элемента — если массив, вызывай flattenDeep, иначе добавляй в результат. Или используй reduce.',
+    initialCode: `function flattenDeep(arr) {
+  // твой код здесь
+}`,
+    testCases: [
+      {
+        description: '[1,[2,[3,[4]],5]] → [1,2,3,4,5]',
+        call: 'JSON.stringify(flattenDeep([1,[2,[3,[4]],5]]))',
+        expected: '[1,2,3,4,5]',
+      },
+      {
+        description: 'Уже плоский массив',
+        call: 'JSON.stringify(flattenDeep([1,2,3]))',
+        expected: '[1,2,3]',
+      },
+      {
+        description: 'Пустой массив',
+        call: 'JSON.stringify(flattenDeep([]))',
+        expected: '[]',
+      },
+      {
+        description: 'Глубокая вложенность',
+        call: 'JSON.stringify(flattenDeep([[[[1]]],[[[2]]]]))',
+        expected: '[1,2]',
+      },
+    ],
+  },
+  {
+    id: 'group-anagrams',
+    title: 'Группировка анаграмм',
+    difficulty: 'intermediate',
+    tags: ['Алгоритмы', 'Строки', 'Хэш-таблица'],
+    description:
+      'Дан массив строк. Сгруппируй анаграммы вместе.\n\nРеализуй функцию `groupAnagrams(strs)` которая возвращает массив групп.\n\nПример:\n`groupAnagrams(["eat","tea","tan","ate","nat","bat"])`\n→ `[["eat","tea","ate"],["tan","nat"],["bat"]]`\n\nПорядок групп и слов внутри не важен.',
+    hint: 'Ключ для группировки — отсортированные буквы слова. "eat" и "tea" оба дают "aet". Используй Map где ключ — sorted string.',
+    initialCode: `function groupAnagrams(strs) {
+  // твой код здесь
+}`,
+    testCases: [
+      {
+        description: 'Количество групп = 3',
+        call: 'groupAnagrams(["eat","tea","tan","ate","nat","bat"]).length',
+        expected: '3',
+      },
+      {
+        description: 'Группа "bat" содержит только "bat"',
+        call: `(() => {
+  const res = groupAnagrams(["eat","tea","tan","ate","nat","bat"]);
+  const batGroup = res.find(g => g.includes("bat"));
+  return batGroup ? batGroup.length : -1;
+})()`,
+        expected: '1',
+      },
+      {
+        description: 'Пустой массив → [[""]]',
+        call: 'JSON.stringify(groupAnagrams([""]))',
+        expected: '[[""]]',
+      },
+    ],
+  },
+  {
+    id: 'power-function',
+    title: 'Возведение в степень (быстрое)',
+    difficulty: 'intermediate',
+    tags: ['Алгоритмы', 'Математика', 'Рекурсия'],
+    description:
+      'Реализуй функцию `myPow(x, n)` которая вычисляет `x` в степени `n`.\n\nПоддержи отрицательные степени. Реши за O(log n) — нельзя просто умножать n раз.\n\nПример:\n- `myPow(2, 10)` → `1024`\n- `myPow(2, -2)` → `0.25`\n- `myPow(2, 0)` → `1`',
+    hint: 'Быстрое возведение: если n чётное — myPow(x*x, n/2). Если нечётное — x * myPow(x, n-1). Для отрицательного n: myPow(1/x, -n).',
+    initialCode: `function myPow(x, n) {
+  // твой код здесь
+}`,
+    testCases: [
+      {
+        description: 'myPow(2, 10) → 1024',
+        call: 'myPow(2, 10)',
+        expected: '1024',
+      },
+      {
+        description: 'myPow(2, -2) → 0.25',
+        call: 'myPow(2, -2)',
+        expected: '0.25',
+      },
+      {
+        description: 'myPow(2, 0) → 1',
+        call: 'myPow(2, 0)',
+        expected: '1',
+      },
+      {
+        description: 'myPow(3, 3) → 27',
+        call: 'myPow(3, 3)',
+        expected: '27',
+      },
+    ],
+  },
 ];
