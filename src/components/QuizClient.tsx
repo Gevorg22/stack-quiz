@@ -18,9 +18,10 @@ import { ResultScreen } from './ResultScreen';
 import { BookmarksView } from './BookmarksView';
 import { ChallengesView } from './ChallengesView';
 import { ChallengeRunner } from './ChallengeRunner';
+import { Playground } from './Playground';
 import { DarkModeToggle } from './DarkModeToggle';
 
-type View = 'home' | 'setup' | 'quiz' | 'result' | 'bookmarks' | 'challenges' | 'challenge';
+type View = 'home' | 'setup' | 'quiz' | 'result' | 'bookmarks' | 'challenges' | 'challenge' | 'playground';
 
 export function QuizClient() {
   const { isDark, toggle: toggleDark } = useDarkMode();
@@ -103,6 +104,16 @@ export function QuizClient() {
     setView('quiz');
   }, [bookmarkedQuestions]);
 
+  if (view === 'playground') {
+    return (
+      <Playground
+        isDark={isDark}
+        onToggleDark={toggleDark}
+        onBack={() => setView('challenges')}
+      />
+    );
+  }
+
   if (view === 'challenges') {
     return (
       <ChallengesView
@@ -111,6 +122,7 @@ export function QuizClient() {
         isDark={isDark}
         onToggleDark={toggleDark}
         onSelect={handleSelectChallenge}
+        onPlayground={() => setView('playground')}
         onBack={handleHome}
       />
     );

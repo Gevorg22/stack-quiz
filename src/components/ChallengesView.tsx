@@ -9,6 +9,7 @@ interface ChallengesViewProps {
   isDark: boolean;
   onToggleDark: () => void;
   onSelect: (challenge: CodingChallenge) => void;
+  onPlayground: () => void;
   onBack: () => void;
 }
 
@@ -30,6 +31,7 @@ export function ChallengesView({
   isDark,
   onToggleDark,
   onSelect,
+  onPlayground,
   onBack,
 }: ChallengesViewProps) {
   return (
@@ -62,6 +64,20 @@ export function ChallengesView({
             </p>
           </div>
         </div>
+
+        <button
+          onClick={onPlayground}
+          className="mb-3 flex w-full items-center gap-4 rounded-2xl border border-indigo-400/30 bg-indigo-400/10 p-5 text-left transition-all duration-200 hover:border-indigo-400/60 hover:bg-indigo-400/15 active:scale-[0.99]"
+        >
+          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-indigo-500/20 text-2xl">
+            🛝
+          </div>
+          <div>
+            <p className="font-bold text-white">Playground</p>
+            <p className="text-sm text-slate-400">Пустой редактор — пиши любой JS код</p>
+          </div>
+          <span className="ml-auto text-slate-600">→</span>
+        </button>
 
         <div className="flex flex-col gap-3">
           {challenges.map((challenge) => {
