@@ -5,7 +5,7 @@ import dynamic from 'next/dynamic';
 const MonacoEditor = dynamic(() => import('@monaco-editor/react'), {
   ssr: false,
   loading: () => (
-    <div className="flex h-full items-center justify-center bg-[#1e1e1e] text-slate-400 text-sm">
+    <div className="flex h-full items-center justify-center bg-[#1e1e1e] text-sm text-slate-400">
       Загрузка редактора...
     </div>
   ),
@@ -14,14 +14,15 @@ const MonacoEditor = dynamic(() => import('@monaco-editor/react'), {
 interface CodeEditorProps {
   value: string;
   onChange: (value: string) => void;
+  isDark?: boolean;
 }
 
-export function CodeEditor({ value, onChange }: CodeEditorProps) {
+export function CodeEditor({ value, onChange, isDark = true }: CodeEditorProps) {
   return (
     <MonacoEditor
       height="100%"
       defaultLanguage="javascript"
-      theme="vs-dark"
+      theme={isDark ? 'vs-dark' : 'vs'}
       value={value}
       onChange={(v) => onChange(v ?? '')}
       options={{

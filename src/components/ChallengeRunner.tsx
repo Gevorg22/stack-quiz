@@ -35,18 +35,32 @@ export function ChallengeRunner({
 
   const descriptionLines = challenge.description.split('\n');
 
+  const bg = isDark ? 'bg-[#0f1117]' : 'bg-gray-50';
+  const sidebarBg = isDark ? 'bg-[#13151f]' : 'bg-white';
+  const consoleBg = isDark ? 'bg-[#13151f]' : 'bg-gray-50';
+  const border = isDark ? 'border-white/10' : 'border-gray-200';
+  const textPrimary = isDark ? 'text-white' : 'text-gray-900';
+  const textSecondary = isDark ? 'text-slate-300' : 'text-gray-600';
+  const textMuted = isDark ? 'text-slate-500' : 'text-gray-400';
+  const btnBack = isDark
+    ? 'border-white/10 bg-white/5 text-slate-300 hover:bg-white/10'
+    : 'border-gray-200 bg-gray-100 text-gray-600 hover:bg-gray-200';
+  const testDefault = isDark
+    ? 'border-white/10 bg-white/5 text-slate-400'
+    : 'border-gray-200 bg-gray-50 text-gray-500';
+
   return (
-    <div className="flex h-screen flex-col bg-[#0f1117] text-white">
-      <div className="flex h-12 shrink-0 items-center justify-between border-b border-white/10 px-4">
+    <div className={`flex h-screen flex-col ${bg} ${textPrimary}`}>
+      <div className={`flex h-12 shrink-0 items-center justify-between border-b ${border} px-4`}>
         <div className="flex items-center gap-3">
           <button
             onClick={onBack}
-            className="flex items-center gap-1.5 rounded-lg border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-slate-300 transition-colors hover:bg-white/10"
+            className={`flex items-center gap-1.5 rounded-lg border px-3 py-1.5 text-xs transition-colors ${btnBack}`}
           >
             ← Назад
           </button>
-          <span className="text-sm font-semibold text-white">{challenge.title}</span>
-          <span className="rounded-full bg-indigo-500/20 px-2 py-0.5 text-xs text-indigo-300">
+          <span className={`text-sm font-semibold ${textPrimary}`}>{challenge.title}</span>
+          <span className="rounded-full bg-indigo-500/20 px-2 py-0.5 text-xs text-indigo-400">
             JavaScript
           </span>
         </div>
@@ -54,7 +68,7 @@ export function ChallengeRunner({
           {challenge.hint && (
             <button
               onClick={() => setShowHint((v) => !v)}
-              className="rounded-lg border border-yellow-400/20 bg-yellow-400/10 px-3 py-1.5 text-xs text-yellow-300 transition-colors hover:bg-yellow-400/20"
+              className="rounded-lg border border-yellow-400/20 bg-yellow-400/10 px-3 py-1.5 text-xs text-yellow-500 transition-colors hover:bg-yellow-400/20"
             >
               {showHint ? 'Скрыть подсказку' : '💡 Подсказка'}
             </button>
@@ -64,10 +78,10 @@ export function ChallengeRunner({
       </div>
 
       <div className="flex flex-1 overflow-hidden">
-        <div className="flex w-80 shrink-0 flex-col overflow-y-auto border-r border-white/10 bg-[#13151f]">
+        <div className={`flex w-80 shrink-0 flex-col overflow-y-auto border-r ${border} ${sidebarBg}`}>
           <div className="p-4">
-            <h2 className="mb-3 text-base font-bold text-white">{challenge.title}</h2>
-            <div className="space-y-1.5 text-sm text-slate-300 leading-relaxed">
+            <h2 className={`mb-3 text-base font-bold ${textPrimary}`}>{challenge.title}</h2>
+            <div className={`space-y-1.5 text-sm ${textSecondary} leading-relaxed`}>
               {descriptionLines.map((line, i) =>
                 line.startsWith('```') ? null : line.trim() === '' ? (
                   <div key={i} className="h-2" />
@@ -78,14 +92,14 @@ export function ChallengeRunner({
             </div>
 
             {showHint && challenge.hint && (
-              <div className="mt-4 rounded-xl border border-yellow-400/20 bg-yellow-400/10 p-3 text-xs text-yellow-200">
+              <div className="mt-4 rounded-xl border border-yellow-400/20 bg-yellow-400/10 p-3 text-xs text-yellow-600">
                 <span className="font-semibold">💡 Подсказка: </span>
                 {challenge.hint}
               </div>
             )}
 
             <div className="mt-5">
-              <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-slate-500">
+              <p className={`mb-2 text-xs font-semibold uppercase tracking-wider ${textMuted}`}>
                 Тест-кейсы
               </p>
               <div className="space-y-2">
@@ -96,10 +110,10 @@ export function ChallengeRunner({
                       key={i}
                       className={`rounded-lg border p-2.5 text-xs transition-colors ${
                         !tr
-                          ? 'border-white/10 bg-white/5 text-slate-400'
+                          ? testDefault
                           : tr.passed
-                            ? 'border-emerald-400/30 bg-emerald-400/10 text-emerald-300'
-                            : 'border-red-400/30 bg-red-400/10 text-red-300'
+                            ? 'border-emerald-400/30 bg-emerald-400/10 text-emerald-600'
+                            : 'border-red-400/30 bg-red-400/10 text-red-500'
                       }`}
                     >
                       <div className="flex items-start gap-2">
@@ -125,12 +139,12 @@ export function ChallengeRunner({
 
         <div className="flex flex-1 flex-col overflow-hidden">
           <div className="flex-1 overflow-hidden">
-            <CodeEditor value={code} onChange={setCode} />
+            <CodeEditor value={code} onChange={setCode} isDark={isDark} />
           </div>
 
-          <div className="flex h-44 shrink-0 flex-col border-t border-white/10 bg-[#13151f]">
-            <div className="flex h-9 items-center justify-between border-b border-white/10 px-4">
-              <span className="text-xs font-semibold uppercase tracking-wider text-slate-500">
+          <div className={`flex h-44 shrink-0 flex-col border-t ${border} ${consoleBg}`}>
+            <div className={`flex h-9 items-center justify-between border-b ${border} px-4`}>
+              <span className={`text-xs font-semibold uppercase tracking-wider ${textMuted}`}>
                 Консоль
               </span>
               <button
@@ -138,7 +152,7 @@ export function ChallengeRunner({
                 disabled={running}
                 className={`flex items-center gap-2 rounded-lg px-4 py-1.5 text-xs font-semibold transition-all ${
                   running
-                    ? 'bg-slate-600 text-slate-400 cursor-not-allowed'
+                    ? 'bg-slate-300 text-slate-500 cursor-not-allowed dark:bg-slate-600 dark:text-slate-400'
                     : result?.allPassed
                       ? 'bg-emerald-500 text-white hover:bg-emerald-400'
                       : 'bg-indigo-500 text-white hover:bg-indigo-400 active:scale-95'
@@ -159,18 +173,18 @@ export function ChallengeRunner({
 
             <div className="flex-1 overflow-y-auto p-3 font-mono text-xs">
               {!result && !running && (
-                <p className="text-slate-600">Нажми «Запустить» чтобы выполнить код...</p>
+                <p className={textMuted}>Нажми «Запустить» чтобы выполнить код...</p>
               )}
               {result?.error && (
-                <p className="text-red-400">✕ {result.error}</p>
+                <p className="text-red-500">✕ {result.error}</p>
               )}
               {result?.logs.map((log, i) => (
-                <p key={i} className="text-slate-300 leading-relaxed">
+                <p key={i} className={`${textSecondary} leading-relaxed`}>
                   {log}
                 </p>
               ))}
               {result && !result.error && result.logs.length === 0 && (
-                <p className="text-slate-600">Нет вывода console.log</p>
+                <p className={textMuted}>Нет вывода console.log</p>
               )}
             </div>
           </div>

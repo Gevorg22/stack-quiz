@@ -27,6 +27,18 @@ export function Playground({ isDark, onToggleDark, onBack }: PlaygroundProps) {
   const [running, setRunning] = useState(false);
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
+  const bg = isDark ? 'bg-[#0f1117]' : 'bg-gray-50';
+  const consoleBg = isDark ? 'bg-[#13151f]' : 'bg-white';
+  const border = isDark ? 'border-white/10' : 'border-gray-200';
+  const textPrimary = isDark ? 'text-white' : 'text-gray-900';
+  const textMuted = isDark ? 'text-slate-500' : 'text-gray-400';
+  const btnBack = isDark
+    ? 'border-white/10 bg-white/5 text-slate-300 hover:bg-white/10'
+    : 'border-gray-200 bg-gray-100 text-gray-600 hover:bg-gray-200';
+  const clearBtn = isDark
+    ? 'text-slate-600 hover:text-slate-400'
+    : 'text-gray-400 hover:text-gray-600';
+
   const run = useCallback(() => {
     setRunning(true);
     setLogs([]);
@@ -95,41 +107,41 @@ export function Playground({ isDark, onToggleDark, onBack }: PlaygroundProps) {
   }, [run]);
 
   return (
-    <div className="flex h-screen flex-col bg-[#0f1117] text-white" onKeyDown={handleKeyDown}>
-      <div className="flex h-12 shrink-0 items-center justify-between border-b border-white/10 px-4">
+    <div className={`flex h-screen flex-col ${bg} ${textPrimary}`} onKeyDown={handleKeyDown}>
+      <div className={`flex h-12 shrink-0 items-center justify-between border-b ${border} px-4`}>
         <div className="flex items-center gap-3">
           <button
             onClick={onBack}
-            className="flex items-center gap-1.5 rounded-lg border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-slate-300 transition-colors hover:bg-white/10"
+            className={`flex items-center gap-1.5 rounded-lg border px-3 py-1.5 text-xs transition-colors ${btnBack}`}
           >
             ← Назад
           </button>
-          <span className="text-sm font-semibold text-white">Playground</span>
-          <span className="rounded-full bg-indigo-500/20 px-2 py-0.5 text-xs text-indigo-300">
+          <span className={`text-sm font-semibold ${textPrimary}`}>Playground</span>
+          <span className="rounded-full bg-indigo-500/20 px-2 py-0.5 text-xs text-indigo-400">
             JavaScript
           </span>
         </div>
         <div className="flex items-center gap-2">
-          <span className="hidden text-xs text-slate-600 sm:block">⌘ + Enter — запустить</span>
+          <span className={`hidden text-xs sm:block ${textMuted}`}>⌘ + Enter — запустить</span>
           <DarkModeToggle isDark={isDark} onToggle={onToggleDark} />
         </div>
       </div>
 
       <div className="flex flex-1 flex-col overflow-hidden">
         <div className="flex-1 overflow-hidden">
-          <CodeEditor value={code} onChange={setCode} />
+          <CodeEditor value={code} onChange={setCode} isDark={isDark} />
         </div>
 
-        <div className="flex h-52 shrink-0 flex-col border-t border-white/10 bg-[#13151f]">
-          <div className="flex h-9 shrink-0 items-center justify-between border-b border-white/10 px-4">
-            <span className="text-xs font-semibold uppercase tracking-wider text-slate-500">
+        <div className={`flex h-52 shrink-0 flex-col border-t ${border} ${consoleBg}`}>
+          <div className={`flex h-9 shrink-0 items-center justify-between border-b ${border} px-4`}>
+            <span className={`text-xs font-semibold uppercase tracking-wider ${textMuted}`}>
               Консоль
             </span>
             <div className="flex items-center gap-2">
               {logs.length > 0 && (
                 <button
                   onClick={() => setLogs([])}
-                  className="text-xs text-slate-600 transition-colors hover:text-slate-400"
+                  className={`text-xs transition-colors ${clearBtn}`}
                 >
                   Очистить
                 </button>
@@ -139,7 +151,7 @@ export function Playground({ isDark, onToggleDark, onBack }: PlaygroundProps) {
                 disabled={running}
                 className={`flex items-center gap-2 rounded-lg px-4 py-1.5 text-xs font-semibold transition-all ${
                   running
-                    ? 'cursor-not-allowed bg-slate-600 text-slate-400'
+                    ? 'cursor-not-allowed bg-slate-300 text-slate-500'
                     : 'bg-indigo-500 text-white hover:bg-indigo-400 active:scale-95'
                 }`}
               >
@@ -157,21 +169,21 @@ export function Playground({ isDark, onToggleDark, onBack }: PlaygroundProps) {
 
           <div className="flex-1 overflow-y-auto p-3 font-mono text-xs">
             {logs.length === 0 && !running && (
-              <p className="text-slate-600">Нажми «Запустить» или ⌘+Enter...</p>
+              <p className={textMuted}>Нажми «Запустить» или ⌘+Enter...</p>
             )}
             {logs.map((entry, i) => (
               <div
                 key={i}
                 className={`leading-relaxed whitespace-pre-wrap ${
                   entry.type === 'error'
-                    ? 'text-red-400'
+                    ? 'text-red-500'
                     : entry.type === 'warn'
-                      ? 'text-yellow-400'
-                      : 'text-slate-300'
+                      ? 'text-yellow-600'
+                      : isDark ? 'text-slate-300' : 'text-gray-700'
                 }`}
               >
-                {entry.type === 'error' && <span className="text-red-500 mr-1">✕</span>}
-                {entry.type === 'warn' && <span className="text-yellow-500 mr-1">⚠</span>}
+                {entry.type === 'error' && <span className="mr-1">✕</span>}
+                {entry.type === 'warn' && <span className="mr-1">⚠</span>}
                 {entry.text}
               </div>
             ))}
