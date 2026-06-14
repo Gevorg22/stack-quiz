@@ -25,7 +25,10 @@ export function Playground({ isDark, onToggleDark, onBack }: PlaygroundProps) {
   const [code, setCode] = useState(INITIAL_CODE);
   const [logs, setLogs] = useState<{ text: string; type: 'log' | 'error' | 'warn' }[]>([]);
   const [running, setRunning] = useState(false);
+  const [consoleHeight, setConsoleHeight] = useState(208);
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const dragging = useRef(false);
 
   const bg = isDark ? 'bg-[#0f1117]' : 'bg-gray-50';
   const consoleBg = isDark ? 'bg-[#13151f]' : 'bg-white';
@@ -38,6 +41,32 @@ export function Playground({ isDark, onToggleDark, onBack }: PlaygroundProps) {
   const clearBtn = isDark
     ? 'text-slate-600 hover:text-slate-400'
     : 'text-gray-400 hover:text-gray-600';
+
+  const onDragStart = useCallback((e: React.MouseEvent | React.TouchEvent) => {
+    dragging.current = true;
+    e.preventDefault();
+
+    const onMove = (ev: MouseEvent | TouchEvent) => {
+      if (!dragging.current || !containerRef.current) return;
+      const clientY = 'touches' in ev ? ev.touches[0].clientY : ev.clientY;
+      const rect = containerRef.current.getBoundingClientRect();
+      const newHeight = rect.bottom - clientY;
+      setConsoleHeight(Math.max(80, Math.min(newHeight, rect.height * 0.8)));
+    };
+
+    const onUp = () => {
+      dragging.current = false;
+      document.removeEventListener('mousemove', onMove);
+      document.removeEventListener('touchmove', onMove as EventListener);
+      document.removeEventListener('mouseup', onUp);
+      document.removeEventListener('touchend', onUp);
+    };
+
+    document.addEventListener('mousemove', onMove);
+    document.addEventListener('touchmove', onMove as EventListener, { passive: false });
+    document.addEventListener('mouseup', onUp);
+    document.addEventListener('touchend', onUp);
+  }, []);
 
   const run = useCallback(() => {
     setRunning(true);
@@ -108,16 +137,16 @@ export function Playground({ isDark, onToggleDark, onBack }: PlaygroundProps) {
 
   return (
     <div className={`flex h-screen flex-col ${bg} ${textPrimary}`} onKeyDown={handleKeyDown}>
-      <div className={`flex h-12 shrink-0 items-center justify-between border-b ${border} px-4`}>
-        <div className="flex items-center gap-3">
+      <div className={`flex h-12 shrink-0 items-center justify-between border-b ${border} px-3 sm:px-4`}>
+        <div className="flex items-center gap-2 sm:gap-3">
           <button
             onClick={onBack}
-            className={`flex items-center gap-1.5 rounded-lg border px-3 py-1.5 text-xs transition-colors ${btnBack}`}
+            className={`flex items-center gap-1.5 rounded-lg border px-2.5 py-1.5 text-xs transition-colors ${btnBack}`}
           >
-            ← Назад
+            ← <span className="hidden sm:inline">Назад</span>
           </button>
           <span className={`text-sm font-semibold ${textPrimary}`}>Playground</span>
-          <span className="rounded-full bg-indigo-500/20 px-2 py-0.5 text-xs text-indigo-400">
+          <span className="hidden rounded-full bg-indigo-500/20 px-2 py-0.5 text-xs text-indigo-400 sm:inline">
             JavaScript
           </span>
         </div>
@@ -127,13 +156,24 @@ export function Playground({ isDark, onToggleDark, onBack }: PlaygroundProps) {
         </div>
       </div>
 
-      <div className="flex flex-1 flex-col overflow-hidden">
+      <div className="flex flex-1 flex-col overflow-hidden" ref={containerRef}>
         <div className="flex-1 overflow-hidden">
           <CodeEditor value={code} onChange={setCode} isDark={isDark} />
         </div>
 
-        <div className={`flex h-52 shrink-0 flex-col border-t ${border} ${consoleBg}`}>
-          <div className={`flex h-9 shrink-0 items-center justify-between border-b ${border} px-4`}>
+        <div
+          className={`flex shrink-0 flex-col border-t ${border} ${consoleBg}`}
+          style={{ height: consoleHeight }}
+        >
+          <div
+            className={`flex h-2 shrink-0 cursor-row-resize items-center justify-center border-b ${border} select-none`}
+            onMouseDown={onDragStart}
+            onTouchStart={onDragStart}
+          >
+            <div className={`h-1 w-10 rounded-full ${isDark ? 'bg-white/20' : 'bg-gray-300'}`} />
+          </div>
+
+          <div className={`flex h-9 shrink-0 items-center justify-between px-4`}>
             <span className={`text-xs font-semibold uppercase tracking-wider ${textMuted}`}>
               Консоль
             </span>
@@ -149,7 +189,7 @@ export function Playground({ isDark, onToggleDark, onBack }: PlaygroundProps) {
               <button
                 onClick={run}
                 disabled={running}
-                className={`flex items-center gap-2 rounded-lg px-4 py-1.5 text-xs font-semibold transition-all ${
+                className={`flex items-center gap-2 rounded-lg px-3 py-1.5 text-xs font-semibold transition-all sm:px-4 ${
                   running
                     ? 'cursor-not-allowed bg-slate-300 text-slate-500'
                     : 'bg-indigo-500 text-white hover:bg-indigo-400 active:scale-95'
@@ -158,7 +198,7 @@ export function Playground({ isDark, onToggleDark, onBack }: PlaygroundProps) {
                 {running ? (
                   <>
                     <span className="h-3 w-3 animate-spin rounded-full border-2 border-slate-400 border-t-transparent" />
-                    Выполняется...
+                    <span className="hidden sm:inline">Выполняется...</span>
                   </>
                 ) : (
                   '▶ Запустить'
