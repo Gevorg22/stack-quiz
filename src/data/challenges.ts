@@ -1995,4 +1995,563 @@ export const challenges: CodingChallenge[] = [
       },
     ],
   },
+
+  {
+    id: 'three-sum',
+    title: 'Три числа с нулевой суммой',
+    difficulty: 'advanced',
+    tags: ['Алгоритмы', 'Массивы', 'Два указателя'],
+    description:
+      'Дан массив чисел. Найди все уникальные тройки `[a, b, c]` такие что `a + b + c = 0`.\n\nРеализуй функцию `threeSum(nums)`. Тройки не должны повторяться.\n\nПример:\n`threeSum([-1,0,1,2,-1,-4])` → `[[-1,-1,2],[-1,0,1]]`\n\nПодход: отсортируй массив, затем для каждого элемента используй два указателя.',
+    hint: 'Сортируй массив. Для каждого i фиксируй nums[i] и ищи пару через два указателя left=i+1, right=n-1. Пропускай дубликаты для i, left, right.',
+    initialCode: `function threeSum(nums) {
+  // твой код здесь
+}`,
+    testCases: [
+      {
+        description: '[-1,0,1,2,-1,-4] → 2 тройки',
+        call: 'threeSum([-1,0,1,2,-1,-4]).length',
+        expected: '2',
+      },
+      {
+        description: 'Первая тройка содержит -1,-1,2',
+        call: `(() => {
+  const res = threeSum([-1,0,1,2,-1,-4]);
+  return res.some(t => t.includes(-1) && t.includes(2) && t.filter(x=>x===-1).length===2) ? 'true' : 'false';
+})()`,
+        expected: 'true',
+      },
+      {
+        description: '[0,0,0] → [[0,0,0]]',
+        call: 'JSON.stringify(threeSum([0,0,0]))',
+        expected: '[[0,0,0]]',
+      },
+      {
+        description: '[1,2,3] → [] (нет нулевых троек)',
+        call: 'JSON.stringify(threeSum([1,2,3]))',
+        expected: '[]',
+      },
+    ],
+  },
+  {
+    id: 'container-water',
+    title: 'Контейнер с наибольшим количеством воды',
+    difficulty: 'intermediate',
+    tags: ['Алгоритмы', 'Массивы', 'Два указателя'],
+    description:
+      'Дан массив высот столбцов `height`. Найди два столбца, которые вместе с осью X образуют контейнер с наибольшим объёмом воды.\n\nРеализуй функцию `maxArea(height)`.\n\nОбъём = расстояние между столбцами × минимальная высота.\n\nПример: `maxArea([1,8,6,2,5,4,8,3,7])` → `49`',
+    hint: 'Два указателя: left=0, right=n-1. Считай площадь, двигай тот указатель, у которого высота меньше — ищем большую высоту.',
+    initialCode: `function maxArea(height) {
+  // твой код здесь
+}`,
+    testCases: [
+      {
+        description: '[1,8,6,2,5,4,8,3,7] → 49',
+        call: 'maxArea([1,8,6,2,5,4,8,3,7])',
+        expected: '49',
+      },
+      {
+        description: '[1,1] → 1',
+        call: 'maxArea([1,1])',
+        expected: '1',
+      },
+      {
+        description: '[4,3,2,1,4] → 16',
+        call: 'maxArea([4,3,2,1,4])',
+        expected: '16',
+      },
+      {
+        description: '[1,2,1] → 2',
+        call: 'maxArea([1,2,1])',
+        expected: '2',
+      },
+    ],
+  },
+  {
+    id: 'trapping-rain',
+    title: 'Сбор дождевой воды',
+    difficulty: 'advanced',
+    tags: ['Алгоритмы', 'Массивы', 'Два указателя'],
+    description:
+      'Дан массив высот `height`, где каждый элемент — высота столбца. Сколько единиц воды может скопиться после дождя?\n\nРеализуй функцию `trap(height)`.\n\nПример: `trap([0,1,0,2,1,0,1,3,2,1,2,1])` → `6`\n\nВода над позицией i = `min(maxLeft[i], maxRight[i]) - height[i]`',
+    hint: 'Два указателя: left=0, right=n-1, leftMax=0, rightMax=0. Если leftMax < rightMax — обрабатывай левый столбец, иначе правый. Добавляй max(0, соответствующий Max - height[i]).',
+    initialCode: `function trap(height) {
+  // твой код здесь
+}`,
+    testCases: [
+      {
+        description: '[0,1,0,2,1,0,1,3,2,1,2,1] → 6',
+        call: 'trap([0,1,0,2,1,0,1,3,2,1,2,1])',
+        expected: '6',
+      },
+      {
+        description: '[4,2,0,3,2,5] → 9',
+        call: 'trap([4,2,0,3,2,5])',
+        expected: '9',
+      },
+      {
+        description: 'Нет ям → 0',
+        call: 'trap([1,2,3,4,5])',
+        expected: '0',
+      },
+    ],
+  },
+  {
+    id: 'longest-palindrome-substr',
+    title: 'Самая длинная палиндромная подстрока',
+    difficulty: 'intermediate',
+    tags: ['Алгоритмы', 'Строки', 'Динамическое программирование'],
+    description:
+      'Дана строка `s`. Найди самую длинную подстроку, которая является палиндромом.\n\nРеализуй функцию `longestPalindrome(s)`.\n\nПример:\n- `longestPalindrome("babad")` → `"bab"` или `"aba"`\n- `longestPalindrome("cbbd")` → `"bb"`\n- `longestPalindrome("racecar")` → `"racecar"`',
+    hint: 'Метод "расширения от центра": для каждой позиции расширяй palindrome влево и вправо (два варианта: нечётная и чётная длина). Следи за максимальной длиной.',
+    initialCode: `function longestPalindrome(s) {
+  // твой код здесь
+}`,
+    testCases: [
+      {
+        description: '"racecar" → "racecar"',
+        call: 'longestPalindrome("racecar")',
+        expected: 'racecar',
+      },
+      {
+        description: '"cbbd" → "bb"',
+        call: 'longestPalindrome("cbbd")',
+        expected: 'bb',
+      },
+      {
+        description: '"a" → "a"',
+        call: 'longestPalindrome("a")',
+        expected: 'a',
+      },
+      {
+        description: 'Длина "babad" ≥ 3',
+        call: 'longestPalindrome("babad").length >= 3 ? "true" : "false"',
+        expected: 'true',
+      },
+    ],
+  },
+  {
+    id: 'first-unique-char',
+    title: 'Первый уникальный символ',
+    difficulty: 'beginner',
+    tags: ['Алгоритмы', 'Строки', 'Хэш-таблица'],
+    description:
+      'Дана строка `s`. Найди первый символ, который встречается в строке только один раз, и верни его индекс.\n\nЕсли такого нет — верни `-1`.\n\nРеализуй функцию `firstUniqChar(s)`.\n\nПример:\n- `firstUniqChar("leetcode")` → `0`\n- `firstUniqChar("loveleetcode")` → `2`\n- `firstUniqChar("aabb")` → `-1`',
+    hint: 'Два прохода: первый — подсчёт частоты каждого символа в Map. Второй — найди первый символ с частотой 1.',
+    initialCode: `function firstUniqChar(s) {
+  // твой код здесь
+}`,
+    testCases: [
+      {
+        description: '"leetcode" → 0',
+        call: 'firstUniqChar("leetcode")',
+        expected: '0',
+      },
+      {
+        description: '"loveleetcode" → 2',
+        call: 'firstUniqChar("loveleetcode")',
+        expected: '2',
+      },
+      {
+        description: '"aabb" → -1',
+        call: 'firstUniqChar("aabb")',
+        expected: '-1',
+      },
+    ],
+  },
+  {
+    id: 'compress-string',
+    title: 'Сжатие строки',
+    difficulty: 'beginner',
+    tags: ['Алгоритмы', 'Строки'],
+    description:
+      'Реализуй функцию `compressString(s)`, которая выполняет базовое сжатие строки.\n\nАлгоритм: подсчитывай повторяющиеся символы и записывай в формате `символ+количество`.\n\nЕсли сжатая строка не короче исходной — верни исходную.\n\nПример:\n- `compressString("aabcccdddd")` → `"a2b1c3d4"`\n- `compressString("abc")` → `"abc"` (не короче)',
+    hint: 'Иди по строке, считай consecutive символы. Когда символ меняется — записывай пару char+count в результат.',
+    initialCode: `function compressString(s) {
+  // твой код здесь
+}`,
+    testCases: [
+      {
+        description: '"aabcccdddd" → "a2b1c3d4"',
+        call: 'compressString("aabcccdddd")',
+        expected: 'a2b1c3d4',
+      },
+      {
+        description: '"abc" → "abc" (без сжатия)',
+        call: 'compressString("abc")',
+        expected: 'abc',
+      },
+      {
+        description: '"aaaa" → "a4"',
+        call: 'compressString("aaaa")',
+        expected: 'a4',
+      },
+      {
+        description: '"aabb" → "aabb" (a2b2 не короче)',
+        call: 'compressString("aabb")',
+        expected: 'aabb',
+      },
+    ],
+  },
+  {
+    id: 'spiral-matrix',
+    title: 'Спиральная матрица',
+    difficulty: 'advanced',
+    tags: ['Алгоритмы', 'Матрицы', 'Симуляция'],
+    description:
+      'Дана матрица `m×n`. Верни все элементы в порядке обхода по спирали (по часовой стрелке).\n\nРеализуй функцию `spiralOrder(matrix)`.\n\nПример:\n```\n[[1,2,3],\n [4,5,6],\n [7,8,9]]\n→ [1,2,3,6,9,8,7,4,5]\n```',
+    hint: 'Используй 4 границы: top, bottom, left, right. Обходи: слева→направо, сверху→вниз, справа→налево, снизу→вверх. После каждого прохода сужай соответствующую границу.',
+    initialCode: `function spiralOrder(matrix) {
+  // твой код здесь
+}`,
+    testCases: [
+      {
+        description: '3×3 матрица',
+        call: 'JSON.stringify(spiralOrder([[1,2,3],[4,5,6],[7,8,9]]))',
+        expected: '[1,2,3,6,9,8,7,4,5]',
+      },
+      {
+        description: '3×4 матрица',
+        call: 'JSON.stringify(spiralOrder([[1,2,3,4],[5,6,7,8],[9,10,11,12]]))',
+        expected: '[1,2,3,4,8,12,11,10,9,5,6,7]',
+      },
+      {
+        description: '1×1 матрица',
+        call: 'JSON.stringify(spiralOrder([[1]]))',
+        expected: '[1]',
+      },
+    ],
+  },
+  {
+    id: 'pascal-triangle',
+    title: 'Треугольник Паскаля',
+    difficulty: 'beginner',
+    tags: ['Алгоритмы', 'Массивы', 'Математика'],
+    description:
+      'Реализуй функцию `generate(numRows)`, которая генерирует первые `numRows` строк треугольника Паскаля.\n\nКаждый элемент — сумма двух элементов над ним.\n\nПример:\n```\ngenerate(5) →\n[[1],[1,1],[1,2,1],[1,3,3,1],[1,4,6,4,1]]\n```',
+    hint: 'Строй каждую строку на основе предыдущей. Первый и последний элемент всегда 1. Остальные: row[i] = prev[i-1] + prev[i].',
+    initialCode: `function generate(numRows) {
+  // твой код здесь
+}`,
+    testCases: [
+      {
+        description: 'generate(1) → [[1]]',
+        call: 'JSON.stringify(generate(1))',
+        expected: '[[1]]',
+      },
+      {
+        description: 'generate(5) → 5 строк',
+        call: 'generate(5).length',
+        expected: '5',
+      },
+      {
+        description: 'Последняя строка generate(5)',
+        call: 'JSON.stringify(generate(5)[4])',
+        expected: '[1,4,6,4,1]',
+      },
+      {
+        description: 'generate(3)',
+        call: 'JSON.stringify(generate(3))',
+        expected: '[[1],[1,1],[1,2,1]]',
+      },
+    ],
+  },
+  {
+    id: 'count-bits',
+    title: 'Подсчёт единичных битов',
+    difficulty: 'beginner',
+    tags: ['Алгоритмы', 'Битовые операции', 'Динамическое программирование'],
+    description:
+      'Для каждого числа от `0` до `n` посчитай количество единиц в его двоичном представлении.\n\nРеализуй функцию `countBits(n)` которая возвращает массив длиной `n+1`.\n\nПример:\n- `countBits(2)` → `[0,1,1]`\n- `countBits(5)` → `[0,1,1,2,1,2]`\n\nРеши за O(n) без встроенных функций подсчёта битов.',
+    hint: 'DP: bits[i] = bits[i >> 1] + (i & 1). Число битов в i равно числу битов в i/2 плюс последний бит.',
+    initialCode: `function countBits(n) {
+  // твой код здесь
+}`,
+    testCases: [
+      {
+        description: 'countBits(2) → [0,1,1]',
+        call: 'JSON.stringify(countBits(2))',
+        expected: '[0,1,1]',
+      },
+      {
+        description: 'countBits(5) → [0,1,1,2,1,2]',
+        call: 'JSON.stringify(countBits(5))',
+        expected: '[0,1,1,2,1,2]',
+      },
+      {
+        description: 'countBits(0) → [0]',
+        call: 'JSON.stringify(countBits(0))',
+        expected: '[0]',
+      },
+    ],
+  },
+  {
+    id: 'find-peak',
+    title: 'Найти пиковый элемент',
+    difficulty: 'intermediate',
+    tags: ['Алгоритмы', 'Бинарный поиск', 'Массивы'],
+    description:
+      'Пиковый элемент — элемент, который строго больше своих соседей.\n\nДан массив `nums`, где `nums[-1] = nums[n] = -∞`.\n\nРеализуй функцию `findPeakElement(nums)`, которая возвращает индекс любого пикового элемента за O(log n).\n\nПример:\n- `findPeakElement([1,2,3,1])` → `2`\n- `findPeakElement([1,2,1,3,5,6,4])` → `1` или `5`',
+    hint: 'Бинарный поиск. Если nums[mid] < nums[mid+1] — пик правее, иначе левее или mid сам является пиком.',
+    initialCode: `function findPeakElement(nums) {
+  // твой код здесь
+}`,
+    testCases: [
+      {
+        description: '[1,2,3,1] → 2',
+        call: 'findPeakElement([1,2,3,1])',
+        expected: '2',
+      },
+      {
+        description: '[1] → 0',
+        call: 'findPeakElement([1])',
+        expected: '0',
+      },
+      {
+        description: '[1,2,1,3,5,6,4] — результат валиден',
+        call: `(() => {
+  const nums = [1,2,1,3,5,6,4];
+  const i = findPeakElement(nums);
+  const left = i === 0 ? -Infinity : nums[i-1];
+  const right = i === nums.length-1 ? -Infinity : nums[i+1];
+  return nums[i] > left && nums[i] > right ? 'true' : 'false';
+})()`,
+        expected: 'true',
+      },
+    ],
+  },
+  {
+    id: 'search-rotated',
+    title: 'Поиск в повёрнутом массиве',
+    difficulty: 'advanced',
+    tags: ['Алгоритмы', 'Бинарный поиск', 'Массивы'],
+    description:
+      'Отсортированный массив был повёрнут в неизвестной точке: `[4,5,6,7,0,1,2]`.\n\nРеализуй функцию `search(nums, target)` которая ищет `target` за O(log n).\n\nВерни индекс элемента или `-1` если не найден.\n\nПример:\n- `search([4,5,6,7,0,1,2], 0)` → `4`\n- `search([4,5,6,7,0,1,2], 3)` → `-1`',
+    hint: 'Модифицированный бинарный поиск. Определяй на каком из двух отсортированных участков находится mid, затем сужай поиск.',
+    initialCode: `function search(nums, target) {
+  // твой код здесь
+}`,
+    testCases: [
+      {
+        description: '[4,5,6,7,0,1,2] target=0 → 4',
+        call: 'search([4,5,6,7,0,1,2], 0)',
+        expected: '4',
+      },
+      {
+        description: '[4,5,6,7,0,1,2] target=3 → -1',
+        call: 'search([4,5,6,7,0,1,2], 3)',
+        expected: '-1',
+      },
+      {
+        description: '[1] target=0 → -1',
+        call: 'search([1], 0)',
+        expected: '-1',
+      },
+      {
+        description: '[1,3] target=3 → 1',
+        call: 'search([1,3], 3)',
+        expected: '1',
+      },
+    ],
+  },
+  {
+    id: 'longest-common-prefix',
+    title: 'Наибольший общий префикс',
+    difficulty: 'beginner',
+    tags: ['Алгоритмы', 'Строки'],
+    description:
+      'Дан массив строк. Найди наибольший общий префикс среди всех строк.\n\nРеализуй функцию `longestCommonPrefix(strs)`.\n\nЕсли общего префикса нет — верни пустую строку `""`.\n\nПример:\n- `longestCommonPrefix(["flower","flow","flight"])` → `"fl"`\n- `longestCommonPrefix(["dog","racecar","car"])` → `""`',
+    hint: 'Возьми первую строку как кандидата. Сокращай её пока она не является префиксом всех остальных строк.',
+    initialCode: `function longestCommonPrefix(strs) {
+  // твой код здесь
+}`,
+    testCases: [
+      {
+        description: '["flower","flow","flight"] → "fl"',
+        call: 'longestCommonPrefix(["flower","flow","flight"])',
+        expected: 'fl',
+      },
+      {
+        description: '["dog","racecar","car"] → ""',
+        call: 'longestCommonPrefix(["dog","racecar","car"])',
+        expected: '',
+      },
+      {
+        description: '["abc"] → "abc"',
+        call: 'longestCommonPrefix(["abc"])',
+        expected: 'abc',
+      },
+      {
+        description: '["a","a","b"] → ""',
+        call: 'longestCommonPrefix(["a","a","b"])',
+        expected: '',
+      },
+    ],
+  },
+  {
+    id: 'number-of-islands',
+    title: 'Количество островов',
+    difficulty: 'advanced',
+    tags: ['Алгоритмы', 'Матрицы', 'BFS', 'DFS'],
+    description:
+      'Дана матрица из `"1"` (суша) и `"0"` (вода). Посчитай количество островов.\n\nОстров — группа смежных клеток с `"1"` (по горизонтали и вертикали).\n\nРеализуй функцию `numIslands(grid)`.\n\nПример:\n```\n[["1","1","0"],\n ["1","0","0"],\n ["0","0","1"]]\n→ 2\n```',
+    hint: 'DFS или BFS: для каждой непосещённой клетки "1" запускай обход и "затапливай" (меняй на "0") все смежные клетки. Счётчик островов увеличивай при каждом новом запуске.',
+    initialCode: `function numIslands(grid) {
+  // твой код здесь
+}`,
+    testCases: [
+      {
+        description: '2 острова',
+        call: `numIslands([["1","1","0"],["1","0","0"],["0","0","1"]])`,
+        expected: '2',
+      },
+      {
+        description: '1 большой остров',
+        call: `numIslands([["1","1","1"],["0","1","0"],["1","1","1"]])`,
+        expected: '1',
+      },
+      {
+        description: '3 острова',
+        call: `numIslands([["1","0","1"],["0","0","0"],["1","0","1"]])`,
+        expected: '4',
+      },
+      {
+        description: 'Вся вода → 0',
+        call: `numIslands([["0","0"],["0","0"]])`,
+        expected: '0',
+      },
+    ],
+  },
+  {
+    id: 'num-to-words',
+    title: 'Число прописью',
+    difficulty: 'advanced',
+    tags: ['Алгоритмы', 'Строки', 'Математика'],
+    description:
+      'Реализуй функцию `numberToWords(num)`, которая переводит число в его английское словесное представление.\n\nПример:\n- `numberToWords(123)` → `"One Hundred Twenty Three"`\n- `numberToWords(12345)` → `"Twelve Thousand Three Hundred Forty Five"`\n- `numberToWords(0)` → `"Zero"`\n\nПоддержи числа до 999 999.',
+    hint: 'Раздели число на тысячи и сотни. Создай словари ones = ["","One","Two",...], teens = ["Ten","Eleven",...], tens = ["","","Twenty",...]. Рекурсивно обрабатывай группы из трёх цифр.',
+    initialCode: `function numberToWords(num) {
+  // твой код здесь
+}`,
+    testCases: [
+      {
+        description: '0 → "Zero"',
+        call: 'numberToWords(0)',
+        expected: 'Zero',
+      },
+      {
+        description: '13 → "Thirteen"',
+        call: 'numberToWords(13)',
+        expected: 'Thirteen',
+      },
+      {
+        description: '100 → "One Hundred"',
+        call: 'numberToWords(100)',
+        expected: 'One Hundred',
+      },
+      {
+        description: '1000 → "One Thousand"',
+        call: 'numberToWords(1000)',
+        expected: 'One Thousand',
+      },
+    ],
+  },
+  {
+    id: 'implement-strstr',
+    title: 'Реализуй indexOf (strStr)',
+    difficulty: 'beginner',
+    tags: ['Алгоритмы', 'Строки'],
+    description:
+      'Реализуй функцию `strStr(haystack, needle)`, которая возвращает индекс первого вхождения строки `needle` в строку `haystack`.\n\nЕсли не найдено — верни `-1`.\n\nНельзя использовать `String.prototype.indexOf`.\n\nПример:\n- `strStr("hello", "ll")` → `2`\n- `strStr("aaaaa", "bba")` → `-1`\n- `strStr("", "")` → `0`',
+    hint: 'Скользящее окно: для каждой позиции i проверяй совпадает ли подстрока haystack[i..i+needle.length] с needle.',
+    initialCode: `function strStr(haystack, needle) {
+  // твой код здесь
+}`,
+    testCases: [
+      {
+        description: '"hello","ll" → 2',
+        call: 'strStr("hello","ll")',
+        expected: '2',
+      },
+      {
+        description: '"aaaaa","bba" → -1',
+        call: 'strStr("aaaaa","bba")',
+        expected: '-1',
+      },
+      {
+        description: '"","" → 0',
+        call: 'strStr("","")',
+        expected: '0',
+      },
+      {
+        description: '"mississippi","issip" → 4',
+        call: 'strStr("mississippi","issip")',
+        expected: '4',
+      },
+    ],
+  },
+  {
+    id: 'majority-element',
+    title: 'Мажоритарный элемент',
+    difficulty: 'beginner',
+    tags: ['Алгоритмы', 'Массивы', 'Алгоритм Бойера-Мура'],
+    description:
+      'Дан массив, в котором один элемент встречается более `n/2` раз. Найди его.\n\nРеализуй функцию `majorityElement(nums)`.\n\nРеши за O(n) времени и O(1) памяти — алгоритм голосования Бойера-Мура.\n\nПример:\n- `majorityElement([3,2,3])` → `3`\n- `majorityElement([2,2,1,1,1,2,2])` → `2`',
+    hint: 'Алгоритм Бойера-Мура: держи candidate и count. Если count=0 — смени кандидата. Если текущий = candidate, count++, иначе count--.',
+    initialCode: `function majorityElement(nums) {
+  // твой код здесь
+}`,
+    testCases: [
+      {
+        description: '[3,2,3] → 3',
+        call: 'majorityElement([3,2,3])',
+        expected: '3',
+      },
+      {
+        description: '[2,2,1,1,1,2,2] → 2',
+        call: 'majorityElement([2,2,1,1,1,2,2])',
+        expected: '2',
+      },
+      {
+        description: '[1] → 1',
+        call: 'majorityElement([1])',
+        expected: '1',
+      },
+    ],
+  },
+  {
+    id: 'sort-colors',
+    title: 'Сортировка цветов (Dutch flag)',
+    difficulty: 'intermediate',
+    tags: ['Алгоритмы', 'Массивы', 'Три указателя'],
+    description:
+      'Дан массив из 0, 1 и 2 (нидерландский флаг: красный/белый/синий). Отсортируй его на месте за один проход.\n\nРеализуй функцию `sortColors(nums)` (верни массив).\n\nНельзя использовать встроенную сортировку.\n\nПример: `sortColors([2,0,2,1,1,0])` → `[0,0,1,1,2,2]`',
+    hint: 'Алгоритм Дейкстры: три указателя low=0, mid=0, high=n-1. Пока mid<=high: 0→swap(low,mid),low++,mid++; 1→mid++; 2→swap(mid,high),high--.',
+    initialCode: `function sortColors(nums) {
+  // твой код здесь
+  return nums;
+}`,
+    testCases: [
+      {
+        description: '[2,0,2,1,1,0] → [0,0,1,1,2,2]',
+        call: 'JSON.stringify(sortColors([2,0,2,1,1,0]))',
+        expected: '[0,0,1,1,2,2]',
+      },
+      {
+        description: '[2,0,1] → [0,1,2]',
+        call: 'JSON.stringify(sortColors([2,0,1]))',
+        expected: '[0,1,2]',
+      },
+      {
+        description: '[0] → [0]',
+        call: 'JSON.stringify(sortColors([0]))',
+        expected: '[0]',
+      },
+      {
+        description: '[1,2,0] → [0,1,2]',
+        call: 'JSON.stringify(sortColors([1,2,0]))',
+        expected: '[0,1,2]',
+      },
+    ],
+  },
 ];
